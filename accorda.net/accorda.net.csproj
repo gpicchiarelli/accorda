@@ -6,6 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>accorda.net.Program</StartupObject>
+    <SignAssembly>False</SignAssembly>
+    <Title>Accorda</Title>
   </PropertyGroup>
 
 </Project>
