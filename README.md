@@ -2,7 +2,6 @@
 Programma per accordare la chitarra.
 
 ## ✨ Requisiti:
----------------	
 - .NET 7 
 - Windows 11
 
