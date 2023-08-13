@@ -1,4 +1,4 @@
-# ⚡ Accorda
+#⚡ Accorda
 Programma per accordare la chitarra.
 
 Requisiti:
