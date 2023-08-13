@@ -4,5 +4,8 @@
     <Compile Update="Accorda.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Informazioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
