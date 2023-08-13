@@ -461,9 +461,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.net.csproj",
-      "projectName": "accorda.net",
-      "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.net.csproj",
+      "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
+      "projectName": "accorda",
+      "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
       "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
       "projectStyle": "PackageReference",
