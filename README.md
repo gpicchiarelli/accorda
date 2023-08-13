@@ -6,4 +6,4 @@ Programma per accordare la chitarra.
 - .Net 7 
 - Windows 11
 
-[Segnala problema](https://github.com/gpicchiarelli/accorda/issues).
+[Segnala un problema](https://github.com/gpicchiarelli/accorda/issues).
