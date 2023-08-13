@@ -14,3 +14,12 @@ C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\r
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.pdb
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\ref\accorda.net.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.Asio.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.Core.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.Midi.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.Wasapi.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.WinForms.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.WinMM.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.csproj.AssemblyReference.cache
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.csproj.CopyComplete
