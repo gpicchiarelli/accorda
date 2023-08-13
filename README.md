@@ -1,5 +1,5 @@
 # accorda
-Programma per accordare la chitarra. ([website]([https://gpicchiarelli.github.io/accorda](https://gpicchiarelli.github.io/accorda)))
+Programma per accordare la chitarra. ([website]([https://gpicchiarelli.github.io/accorda]))
 
 Requisiti:
 ---------------	
