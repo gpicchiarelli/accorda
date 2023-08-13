@@ -1,0 +1,16 @@
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\accorda.net.exe
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\accorda.net.deps.json
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\accorda.net.runtimeconfig.json
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\accorda.net.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\accorda.net.pdb
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.Accorda.resources
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.csproj.GenerateResource.cache
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.AssemblyInfoInputs.cache
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.AssemblyInfo.cs
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.csproj.CoreCompileInputs.cache
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\refint\accorda.net.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.pdb
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\accorda.net.genruntimeconfig.cache
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\ref\accorda.net.dll
