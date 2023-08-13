@@ -1,5 +1,6 @@
-# accorda
+## accorda
 Programma per accordare la chitarra.
 
-Requisiti:
-.Net 7 Windows 11
+# Requisiti:
+* .Net 7 
+* Windows 11
