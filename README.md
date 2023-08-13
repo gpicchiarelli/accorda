@@ -8,5 +8,5 @@ Programma per accordare la chitarra.
 ## 📖 Licenza
 Il software di questo repository è rilasciato sotto licenza [MIT](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE).
 
-## Bugs
+## ❌ Bugs
 [Segnala un problema](https://github.com/gpicchiarelli/accorda/issues).
