@@ -1,3 +1,5 @@
+using NAudio;
+
 namespace accorda.net
 {
     public partial class Accorda : Form
