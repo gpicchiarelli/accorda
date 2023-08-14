@@ -36,6 +36,7 @@
             labelCompanyName = new Label();
             textBoxDescription = new TextBox();
             okButton = new Button();
+            progressBar1 = new ProgressBar();
             tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
             SuspendLayout();
@@ -151,6 +152,14 @@
             okButton.Size = new Size(88, 27);
             okButton.TabIndex = 24;
             okButton.Text = "&OK";
+            okButton.Click += okButton_Click;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(65, 328);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(100, 23);
+            progressBar1.TabIndex = 1;
             // 
             // Informazioni
             // 
@@ -158,6 +167,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(507, 327);
+            Controls.Add(progressBar1);
             Controls.Add(tableLayoutPanel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(4, 3, 4, 3);
@@ -185,5 +195,6 @@
         private Label labelCompanyName;
         private TextBox textBoxDescription;
         private Button okButton;
+        private ProgressBar progressBar1;
     }
 }

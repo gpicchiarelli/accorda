@@ -1,31 +1,33 @@
-﻿using NAudio.Wave;
-using NAudio.Dsp;
+﻿using NAudio.Dsp;
+using NAudio.Wave;
 
 namespace Accorda.Audio
 {
     public class Audio
     {
-        private WaveInEvent waveIn;
-        private BufferedWaveProvider bufferedWaveProvider;
+        private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
         private const int bufferSize = 1024;
-        private float[] buffer;
-        private Complex[] complexBuffer;
-        private BiQuadFilter filter;
-        private double lastFrequency = 0;
-        private double deadbandThreshold = 5; // Regola questo valore in base alle tue esigenze
+        private readonly float[] buffer;
+        private readonly Complex[] complexBuffer;
+        private readonly BiQuadFilter filter;
+        private readonly double lastFrequency = 0;
+        private readonly double stabilityThreshold = 5; // Regola questo valore in base alle tue esigenze
+        private readonly Queue<double> frequencyHistory = new();
+        private readonly int stableWindowSamples = sampleRate; // Finestra temporale di 1 secondo
 
-
-        public BufferedWaveProvider BufferedWave => bufferedWaveProvider;
+        public BufferedWaveProvider BufferedWave { get; }
 
         public event EventHandler<double> DominantFrequencyDetected;
 
         public Audio(int InputDeviceSelector = 0)
         {
-            waveIn = new WaveInEvent();
-            waveIn.DeviceNumber = InputDeviceSelector;
-            waveIn.BufferMilliseconds = bufferSize * 1000 / sampleRate;
-            waveIn.WaveFormat = new WaveFormat(sampleRate, 1); // 44100 Hz sample rate, 1 channel (mono)
+            waveIn = new WaveInEvent
+            {
+                DeviceNumber = InputDeviceSelector,
+                BufferMilliseconds = bufferSize * 1000 / sampleRate,
+                WaveFormat = new WaveFormat(sampleRate, 1) // 44100 Hz sample rate, 1 channel (mono)
+            };
 
             buffer = new float[bufferSize];
             complexBuffer = new Complex[bufferSize];
@@ -34,19 +36,21 @@ namespace Accorda.Audio
             filter = BiQuadFilter.LowPassFilter(sampleRate, 1000, (float)0.7071);
 
 
-            bufferedWaveProvider = new BufferedWaveProvider(waveIn.WaveFormat);
-            bufferedWaveProvider.BufferLength = 4096;
-            bufferedWaveProvider.DiscardOnBufferOverflow = true;
+            BufferedWave = new BufferedWaveProvider(waveIn.WaveFormat)
+            {
+                BufferLength = 4096,
+                DiscardOnBufferOverflow = true
+            };
 
             waveIn.DataAvailable += WaveIn_DataAvailable;
             waveIn.DataAvailable += DatiGrafico;
             StartRecording();
         }
 
-        public List<string> ElencaDispositiviIngresso() 
+        public List<string> ElencaDispositiviIngresso()
         {
             int inputDeviceCount = WaveInEvent.DeviceCount;
-            var dispositivi = new List<string>();
+            List<string> dispositivi = new();
             for (int deviceIndex = 0; deviceIndex < inputDeviceCount; deviceIndex++)
             {
                 WaveInCapabilities deviceInfo = WaveInEvent.GetCapabilities(deviceIndex);
@@ -57,28 +61,48 @@ namespace Accorda.Audio
 
         private void DatiGrafico(object? sender, WaveInEventArgs e)
         {
-            bufferedWaveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
+            BufferedWave.AddSamples(e.Buffer, 0, e.BytesRecorded);
         }
 
-        private void StartRecording() => waveIn.StartRecording();
-        public void StopRecording() => waveIn.StopRecording();
+        private void StartRecording()
+        {
+            waveIn.StartRecording();
+        }
 
-        public async Task StopRecordingAsync()
+        public void StopRecording()
         {
             waveIn.StopRecording();
         }
+
         private double CalculateMagnitude(Complex complex)
         {
-            return Math.Sqrt(complex.X * complex.X + complex.Y * complex.Y);
+            return Math.Sqrt((complex.X * complex.X) + (complex.Y * complex.Y));
         }
+
+        private double GetAverageFrequency()
+        {
+            if (frequencyHistory.Count == 0)
+            {
+                return 0;
+            }
+
+            double sum = 0;
+            foreach (double frequency in frequencyHistory)
+            {
+                sum += frequency;
+            }
+
+            return sum / frequencyHistory.Count;
+        }
+
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
             for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
-                short sample = (short)((e.Buffer[2 * i + 1] << 8) | e.Buffer[2 * i]);
+                short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
                 buffer[i] = (float)sample / short.MaxValue;
-                buffer[i] = (float)filter.Transform(buffer[i]);
+                buffer[i] = filter.Transform(buffer[i]);
                 complexBuffer[i].X = buffer[i];
                 complexBuffer[i].Y = 0;
             }
@@ -98,11 +122,25 @@ namespace Accorda.Audio
                 }
             }
             double frequency = maxIndex * sampleRate / bufferSize;
-            if (Math.Abs(frequency - lastFrequency) > deadbandThreshold)
+            if (Math.Abs(frequency - GetAverageFrequency()) < stabilityThreshold)
             {
-                lastFrequency = frequency;
+                frequencyHistory.Enqueue(frequency);
+
+                // Mantieni la dimensione della finestra temporale
+                if (frequencyHistory.Count > stableWindowSamples)
+                {
+                    _ = frequencyHistory.Dequeue();
+                }
+
+                if (frequencyHistory.Count == stableWindowSamples)
+                {
+                    DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
+                }
             }
-            DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
+            else
+            {
+                frequencyHistory.Clear();
+            }
         }
     }
 }

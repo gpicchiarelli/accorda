@@ -62,5 +62,20 @@ namespace Accorda.net
         {
             audioRecorder = new Audio.Audio(DispositiviIngresso.SelectedIndex);
         }
+
+        private void chiudiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void chiudiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void informazioniToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Informazioni i = new Informazioni();
+            i.ShowDialog();
+        }
     }
 }
