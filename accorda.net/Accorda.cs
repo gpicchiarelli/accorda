@@ -1,6 +1,9 @@
 using accorda.Audio;
 using Microsoft.VisualBasic.Devices;
 using static System.Net.Mime.MediaTypeNames;
+using NAudio;
+using NAudio.Wave.SampleProviders;
+using NAudio.Wave;
 
 namespace accorda.net
 {
@@ -13,6 +16,8 @@ namespace accorda.net
             audioRecorder = new Audio.Audio();
             InitializeComponent();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+            // audioRecorder.BufferedWave.
+            //waveViewer1.WaveStream = audioRecorder.BufferedWave;
         }
 
         private void AggiornaFrequenza(double dominantFrequency)
@@ -35,6 +40,8 @@ namespace accorda.net
 
         private void Accorda_Load(object sender, EventArgs e)
         {
+            DispositiviIngresso.Items.AddRange(audioRecorder.ElencaDispositiviIngresso().ToArray());
+            DispositiviIngresso.SelectedIndex = 0;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -49,6 +56,11 @@ namespace accorda.net
         private void Accorda_FormClosing(object sender, FormClosingEventArgs e)
         {
             audioRecorder?.StopRecording();
+        }
+
+        private void DispositiviIngresso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            audioRecorder = new Audio.Audio(DispositiviIngresso.SelectedIndex);
         }
     }
 }

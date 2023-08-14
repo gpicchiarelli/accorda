@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using NAudio.Wave;
 using NAudio.Dsp;
+using NAudio.Wave.SampleProviders;
+
 
 namespace accorda.Audio
 {
@@ -13,17 +15,44 @@ namespace accorda.Audio
         private WaveInEvent waveIn;
         private Complex[] fftBuffer;
         private int fftLength = 1024;
+        private BufferedWaveProvider bufferedWaveProvider;
+
+        public BufferedWaveProvider BufferedWave => bufferedWaveProvider;
 
         public event EventHandler<double> DominantFrequencyDetected;
 
-        public Audio()
+        public Audio(int InputDeviceSelector = 0)
         {
             fftBuffer = new Complex[fftLength];
             waveIn = new WaveInEvent();
+            waveIn.DeviceNumber = InputDeviceSelector;
             waveIn.BufferMilliseconds = 500;
             waveIn.WaveFormat = new WaveFormat(44100, 1); // 44100 Hz sample rate, 1 channel (mono)
+
+            bufferedWaveProvider = new BufferedWaveProvider(waveIn.WaveFormat);
+            bufferedWaveProvider.BufferLength = 4096;
+            bufferedWaveProvider.DiscardOnBufferOverflow = true;
+
             waveIn.DataAvailable += WaveIn_DataAvailable;
+            waveIn.DataAvailable += DatiGrafico;
             StartRecording();
+        }
+
+        public List<string> ElencaDispositiviIngresso() 
+        {
+            int inputDeviceCount = WaveInEvent.DeviceCount;
+            var dispositivi = new List<string>();
+            for (int deviceIndex = 0; deviceIndex < inputDeviceCount; deviceIndex++)
+            {
+                WaveInCapabilities deviceInfo = WaveInEvent.GetCapabilities(deviceIndex);
+                dispositivi.Add($"Dispositivo {deviceIndex + 1}: {deviceInfo.ProductName}");
+            }
+            return dispositivi;
+        }
+
+        private void DatiGrafico(object? sender, WaveInEventArgs e)
+        {
+            bufferedWaveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
         }
 
         private void StartRecording() => waveIn.StartRecording();

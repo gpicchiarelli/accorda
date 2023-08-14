@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accorda));
             dominante = new RichTextBox();
+            waveViewer1 = new NAudio.Gui.WaveViewer();
+            DispositiviIngresso = new ComboBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // dominante
@@ -39,10 +42,34 @@
             dominante.ReadOnly = true;
             dominante.TextChanged += richTextBox1_TextChanged;
             // 
+            // waveViewer1
+            // 
+            resources.ApplyResources(waveViewer1, "waveViewer1");
+            waveViewer1.Name = "waveViewer1";
+            waveViewer1.SamplesPerPixel = 128;
+            waveViewer1.StartPosition = 0L;
+            waveViewer1.WaveStream = null;
+            // 
+            // DispositiviIngresso
+            // 
+            DispositiviIngresso.DropDownStyle = ComboBoxStyle.DropDownList;
+            resources.ApplyResources(DispositiviIngresso, "DispositiviIngresso");
+            DispositiviIngresso.FormattingEnabled = true;
+            DispositiviIngresso.Name = "DispositiviIngresso";
+            DispositiviIngresso.SelectedIndexChanged += DispositiviIngresso_SelectedIndexChanged;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
+            // 
             // Accorda
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Controls.Add(DispositiviIngresso);
+            Controls.Add(waveViewer1);
             Controls.Add(dominante);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -52,10 +79,14 @@
             Load += Accorda_Load;
             Shown += Accorda_Shown;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private RichTextBox dominante;
+        private NAudio.Gui.WaveViewer waveViewer1;
+        private ComboBox DispositiviIngresso;
+        private Label label1;
     }
 }

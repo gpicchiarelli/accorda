@@ -122,7 +122,7 @@
     <value>Segoe UI, 20.25pt</value>
   </data>
   <data name="dominante.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>422, 2</value>
   </data>
   <data name="dominante.Size" type="System.Drawing.Size, System.Drawing">
     <value>277, 96</value>
@@ -144,6 +144,78 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dominante.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="waveViewer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 2</value>
+  </data>
+  <data name="waveViewer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 150</value>
+  </data>
+  <data name="waveViewer1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;waveViewer1.Name" xml:space="preserve">
+    <value>waveViewer1</value>
+  </data>
+  <data name="&gt;&gt;waveViewer1.Type" xml:space="preserve">
+    <value>NAudio.Gui.WaveViewer, NAudio.WinForms, Culture=neutral, PublicKeyToken=e279aa5131008a41</value>
+  </data>
+  <data name="&gt;&gt;waveViewer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;waveViewer1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DispositiviIngresso.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="DispositiviIngresso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 129</value>
+  </data>
+  <data name="DispositiviIngresso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 23</value>
+  </data>
+  <data name="DispositiviIngresso.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;DispositiviIngresso.Name" xml:space="preserve">
+    <value>DispositiviIngresso</value>
+  </data>
+  <data name="&gt;&gt;DispositiviIngresso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DispositiviIngresso.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DispositiviIngresso.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>425, 109</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 15</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Dispositivi in ingresso</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
