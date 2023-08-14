@@ -1,5 +1,5 @@
 ## ⚡ Accorda
-Programma per accordare la chitarra. [br]
+Programma per accordare la chitarra.  
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## ✨ Requisiti
