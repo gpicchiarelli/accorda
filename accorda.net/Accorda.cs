@@ -1,11 +1,11 @@
-using accorda.Audio;
+using Accorda.Audio;
 using Microsoft.VisualBasic.Devices;
 using static System.Net.Mime.MediaTypeNames;
 using NAudio;
 using NAudio.Wave.SampleProviders;
 using NAudio.Wave;
 
-namespace accorda.net
+namespace Accorda.net
 {
     public partial class Accorda : Form
     {

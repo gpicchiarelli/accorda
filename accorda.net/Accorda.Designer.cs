@@ -1,4 +1,4 @@
-﻿namespace accorda.net
+﻿namespace Accorda.net
 {
     partial class Accorda
     {
@@ -33,6 +33,7 @@
             waveViewer1 = new NAudio.Gui.WaveViewer();
             DispositiviIngresso = new ComboBox();
             label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // dominante
@@ -63,10 +64,16 @@
             resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
             // 
+            // label2
+            // 
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
+            // 
             // Accorda
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(DispositiviIngresso);
             Controls.Add(waveViewer1);
@@ -89,5 +96,6 @@
         private NAudio.Gui.WaveViewer waveViewer1;
         private ComboBox DispositiviIngresso;
         private Label label1;
+        private Label label2;
     }
 }

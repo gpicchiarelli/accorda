@@ -1,4 +1,4 @@
-﻿namespace accorda
+﻿namespace Accorda
 {
     partial class Informazioni
     {

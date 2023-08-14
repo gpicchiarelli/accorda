@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace accorda
+namespace Accorda
 {
     partial class Informazioni : Form
     {

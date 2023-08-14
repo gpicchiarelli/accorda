@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 using NAudio.Wave;
 using NAudio.Dsp;
 using NAudio.Wave.SampleProviders;
+using MathNet.Numerics;
+using MathNet.Numerics.IntegralTransforms;
 
 
-namespace accorda.Audio
+
+namespace Accorda.Audio
 {
     public class Audio
     {
         private WaveInEvent waveIn;
-        private Complex[] fftBuffer;
-        private int fftLength = 1024;
         private BufferedWaveProvider bufferedWaveProvider;
+        private const int sampleRate = 44100;
+        private const int bufferSize = 1024;
+        private float[] buffer;
+        private Complex[] complexBuffer;
+
 
         public BufferedWaveProvider BufferedWave => bufferedWaveProvider;
 
@@ -23,11 +29,13 @@ namespace accorda.Audio
 
         public Audio(int InputDeviceSelector = 0)
         {
-            fftBuffer = new Complex[fftLength];
             waveIn = new WaveInEvent();
             waveIn.DeviceNumber = InputDeviceSelector;
-            waveIn.BufferMilliseconds = 500;
-            waveIn.WaveFormat = new WaveFormat(44100, 1); // 44100 Hz sample rate, 1 channel (mono)
+            waveIn.BufferMilliseconds = bufferSize * 1000 / sampleRate;
+            waveIn.WaveFormat = new WaveFormat(sampleRate, 1); // 44100 Hz sample rate, 1 channel (mono)
+
+            buffer = new float[bufferSize];
+            complexBuffer = new Complex[bufferSize];
 
             bufferedWaveProvider = new BufferedWaveProvider(waveIn.WaveFormat);
             bufferedWaveProvider.BufferLength = 4096;
@@ -62,28 +70,37 @@ namespace accorda.Audio
         {
             waveIn.StopRecording();
         }
+        private double CalculateMagnitude(Complex complex)
+        {
+            return Math.Sqrt(complex.X * complex.X + complex.Y * complex.Y);
+        }
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
-            for (int i = 0; i < fftBuffer.Length; i++)
+            for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
-                int index = i * 2;
-                short sample = (short)((e.Buffer[index + 1] << 8) | e.Buffer[index]);
-
-                fftBuffer[i].X = (float)(sample / 32768.0);
-                fftBuffer[i].Y = 0;
+                short sample = (short)((e.Buffer[2 * i + 1] << 8) | e.Buffer[2 * i]);
+                buffer[i] = (float)sample / short.MaxValue;
+                complexBuffer[i].X = buffer[i];
+                complexBuffer[i].Y = 0;
             }
 
-            FastFourierTransform.FFT(true, (int)Math.Log(fftLength, 2.0), fftBuffer);
+            FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
 
-            double[] magnitudes = fftBuffer.Select(c => Math.Sqrt(c.X * c.X + c.Y * c.Y)).ToArray();
+            int maxIndex = 0;
+            double maxMagnitude = 0;
 
-            // Trova la frequenza dell'armonica dominante
-            int dominantIndex = Array.IndexOf(magnitudes, magnitudes.Max());
-            double sampleRate = waveIn.WaveFormat.SampleRate;
-            double dominantFrequency = dominantIndex * sampleRate / fftLength;
-
-            DominantFrequencyDetected?.Invoke(this, double.Round(dominantFrequency,2));
+            for (int i = 0; i < bufferSize / 2; i++)
+            {
+                double magnitude = CalculateMagnitude(complexBuffer[i]);
+                if (magnitude > maxMagnitude)
+                {
+                    maxMagnitude = magnitude;
+                    maxIndex = i;
+                }
+            }
+            double frequency = maxIndex * sampleRate / bufferSize;
+            DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
         }
     }
 }

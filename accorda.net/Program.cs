@@ -1,4 +1,4 @@
-namespace accorda.net
+namespace Accorda.net
 {
     internal static class Program
     {
