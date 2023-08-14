@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StartupObject>accorda.net.Program</StartupObject>
+    <StartupObject>Accorda.net.Program</StartupObject>
     <SignAssembly>False</SignAssembly>
     <Title>Accorda</Title>
     <PackageProjectUrl>https://github.com/gpicchiarelli/accorda</PackageProjectUrl>
