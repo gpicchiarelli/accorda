@@ -72,6 +72,7 @@
             Controls.Add(waveViewer1);
             Controls.Add(dominante);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            HelpButton = true;
             MaximizeBox = false;
             Name = "Accorda";
             TopMost = true;
