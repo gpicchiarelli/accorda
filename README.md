@@ -1,12 +1,11 @@
 ## ⚡ Accorda
 Programma per accordare la chitarra.
 
-## ✨ Requisiti:
+## ✨ Requisiti
 - [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) 
 - Windows 11
 
 ## 📖 Licenza
-License: MIT
 Il software di questo repository è rilasciato sotto licenza [MIT](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE).
 
 ## ❌ Bugs
