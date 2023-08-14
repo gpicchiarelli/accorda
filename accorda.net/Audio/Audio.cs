@@ -19,20 +19,26 @@ namespace accorda.Audio
         public Audio()
         {
             waveIn = new WaveInEvent();
+            waveIn.DeviceNumber = 0;
+            waveIn.BufferMilliseconds = 500;
             waveIn.WaveFormat = new WaveFormat(44100, 1); // 44100 Hz sample rate, 1 channel (mono)
             waveIn.DataAvailable += WaveIn_DataAvailable;
             fftBuffer = new Complex[fftLength];
         }
 
-        public void StartRecording()
+        public void StartRecording() => waveIn.StartRecording();
+        public void StopRecording() => waveIn.StopRecording();
+
+        public async Task StartRecordingAsync()
         {
             waveIn.StartRecording();
         }
 
-        public void StopRecording()
+        public async Task StopRecordingAsync()
         {
             waveIn.StopRecording();
         }
+
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
             for (int i = 0; i < e.BytesRecorded / 2; i++)

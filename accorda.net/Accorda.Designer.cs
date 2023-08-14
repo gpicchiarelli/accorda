@@ -36,6 +36,7 @@
             // 
             resources.ApplyResources(dominante, "dominante");
             dominante.Name = "dominante";
+            dominante.ReadOnly = true;
             dominante.TextChanged += richTextBox1_TextChanged;
             // 
             // Accorda
@@ -49,6 +50,7 @@
             TopMost = true;
             FormClosing += Accorda_FormClosing;
             Load += Accorda_Load;
+            Shown += Accorda_Shown;
             ResumeLayout(false);
         }
 
