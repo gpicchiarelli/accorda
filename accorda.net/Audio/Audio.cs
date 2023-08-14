@@ -11,10 +11,9 @@ namespace Accorda.Audio
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
         private readonly BiQuadFilter filter;
-        private readonly double lastFrequency = 0;
         private readonly double stabilityThreshold = 5; // Regola questo valore in base alle tue esigenze
-        private readonly Queue<double> frequencyHistory = new();
-        private readonly int stableWindowSamples = sampleRate; // Finestra temporale di 1 secondo
+        private readonly List<double> frequencyHistory = new();
+        private readonly int stableWindowSamples = sampleRate/2; 
 
         public BufferedWaveProvider BufferedWave { get; }
 
@@ -95,6 +94,20 @@ namespace Accorda.Audio
             return sum / frequencyHistory.Count;
         }
 
+        private bool IsStable()
+        {
+            double sumOfSquares = 0;
+            double average = GetAverageFrequency();
+
+            foreach (double frequency in frequencyHistory)
+            {
+                sumOfSquares += Math.Pow(frequency - average, 2);
+            }
+
+            double standardDeviation = Math.Sqrt(sumOfSquares / frequencyHistory.Count);
+            return standardDeviation < stabilityThreshold;
+        }
+
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
@@ -122,25 +135,23 @@ namespace Accorda.Audio
                 }
             }
             double frequency = maxIndex * sampleRate / bufferSize;
-            if (Math.Abs(frequency - GetAverageFrequency()) < stabilityThreshold)
+            frequency = double.Round(frequency, 2);
+            //DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
+            if (frequencyHistory.Count == 0)
             {
-                frequencyHistory.Enqueue(frequency);
-
-                // Mantieni la dimensione della finestra temporale
-                if (frequencyHistory.Count > stableWindowSamples)
-                {
-                    _ = frequencyHistory.Dequeue();
-                }
-
-                if (frequencyHistory.Count == stableWindowSamples)
-                {
-                    DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
-                }
+                frequencyHistory.Add(frequency);
             }
-            else
+            else 
             {
-                frequencyHistory.Clear();
-            }
+                if (IsStable())
+                {
+                    DominantFrequencyDetected?.Invoke(this, frequency);
+                }
+                else 
+                {
+                    frequencyHistory.Clear();
+                }
+            }            
         }
     }
 }
