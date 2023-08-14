@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "B9YUT2Cf6LXfJaf19NfKj8pz95YVU1z61B8O+aHTvxclVukaX7VpalRwT06b+SzXMF7cn9W97+o6CHhBQR/z6g==",
+  "dgSpecHash": "CSQZugs9lc6H5iolIl+nMS+P4mpDE+NaysB4kL0to0ArSZKEBoig4HwKJDKsr+zUDpYEX/oL1BPHDCtIrnDMnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Giacomo\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\naudio\\2.1.0\\naudio.2.1.0.nupkg.sha512",

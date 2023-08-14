@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NAudio.Wave;
+﻿using NAudio.Wave;
 using NAudio.Dsp;
-using NAudio.Wave.SampleProviders;
-using MathNet.Numerics;
-using MathNet.Numerics.IntegralTransforms;
-
-
 
 namespace Accorda.Audio
 {
@@ -21,7 +11,7 @@ namespace Accorda.Audio
         private const int bufferSize = 1024;
         private float[] buffer;
         private Complex[] complexBuffer;
-
+        private BiQuadFilter filter;
 
         public BufferedWaveProvider BufferedWave => bufferedWaveProvider;
 
@@ -36,6 +26,10 @@ namespace Accorda.Audio
 
             buffer = new float[bufferSize];
             complexBuffer = new Complex[bufferSize];
+
+            // Configura il filtro passa-basso
+            filter = BiQuadFilter.LowPassFilter(sampleRate, 1000, (float)0.7071);
+
 
             bufferedWaveProvider = new BufferedWaveProvider(waveIn.WaveFormat);
             bufferedWaveProvider.BufferLength = 4096;
@@ -81,6 +75,7 @@ namespace Accorda.Audio
             {
                 short sample = (short)((e.Buffer[2 * i + 1] << 8) | e.Buffer[2 * i]);
                 buffer[i] = (float)sample / short.MaxValue;
+                buffer[i] = (float)filter.Transform(buffer[i]);
                 complexBuffer[i].X = buffer[i];
                 complexBuffer[i].Y = 0;
             }
