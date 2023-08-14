@@ -54,7 +54,7 @@ namespace accorda.Audio
             double sampleRate = waveIn.WaveFormat.SampleRate;
             double dominantFrequency = dominantIndex * sampleRate / fftLength;
 
-            DominantFrequencyDetected?.Invoke(this, dominantFrequency);
+            DominantFrequencyDetected?.Invoke(this, double.Round(dominantFrequency,2));
         }
     }
 }
