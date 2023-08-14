@@ -1,4 +1,4 @@
-# ⚡ Accorda
+## ⚡ Accorda
 Programma per accordare la chitarra.
 
 ## ✨ Requisiti:
@@ -6,6 +6,7 @@ Programma per accordare la chitarra.
 - Windows 11
 
 ## 📖 Licenza
+License: MIT
 Il software di questo repository è rilasciato sotto licenza [MIT](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE).
 
 ## ❌ Bugs
