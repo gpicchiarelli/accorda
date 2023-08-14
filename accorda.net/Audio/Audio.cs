@@ -21,7 +21,6 @@ namespace accorda.Audio
             waveIn = new WaveInEvent();
             waveIn.WaveFormat = new WaveFormat(44100, 1); // 44100 Hz sample rate, 1 channel (mono)
             waveIn.DataAvailable += WaveIn_DataAvailable;
-
             fftBuffer = new Complex[fftLength];
         }
 
@@ -55,6 +54,5 @@ namespace accorda.Audio
 
             DominantFrequencyDetected?.Invoke(this, dominantFrequency);
         }
-
     }
 }
