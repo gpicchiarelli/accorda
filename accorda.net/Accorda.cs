@@ -7,14 +7,19 @@ namespace accorda.net
         public Accorda()
         {
             InitializeComponent();
-            accorda.Audio.Audio audioRecorder = new accorda.Audio.Audio();
+            var audioRecorder = new Audio.Audio();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
 
         }
 
         private static void AudioRecorder_DominantFrequencyDetected(object sender, double dominantFrequency)
         {
-            Console.WriteLine($"Armonica dominante rilevata: {dominantFrequency} Hz");
+            richTextBox1.Text = dominantFrequency.ToString();
+        }
+
+        private void Accorda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
