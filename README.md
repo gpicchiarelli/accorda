@@ -1,6 +1,6 @@
 ## ⚡ Accorda
 Programma per accordare la chitarra.
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## ✨ Requisiti
 - [.NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) 
