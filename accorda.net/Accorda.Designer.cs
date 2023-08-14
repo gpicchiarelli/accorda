@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accorda));
-            richTextBox1 = new RichTextBox();
+            dominante = new RichTextBox();
             SuspendLayout();
             // 
-            // richTextBox1
+            // dominante
             // 
-            resources.ApplyResources(richTextBox1, "richTextBox1");
-            richTextBox1.Name = "richTextBox1";
+            resources.ApplyResources(dominante, "dominante");
+            dominante.Name = "dominante";
+            dominante.TextChanged += richTextBox1_TextChanged;
             // 
             // Accorda
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(richTextBox1);
+            Controls.Add(dominante);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Accorda";
             TopMost = true;
+            FormClosing += Accorda_FormClosing;
             Load += Accorda_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private RichTextBox richTextBox1;
+        private RichTextBox dominante;
     }
 }
