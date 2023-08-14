@@ -12,6 +12,9 @@ namespace Accorda.Audio
         private float[] buffer;
         private Complex[] complexBuffer;
         private BiQuadFilter filter;
+        private double lastFrequency = 0;
+        private double deadbandThreshold = 5; // Regola questo valore in base alle tue esigenze
+
 
         public BufferedWaveProvider BufferedWave => bufferedWaveProvider;
 
@@ -95,6 +98,10 @@ namespace Accorda.Audio
                 }
             }
             double frequency = maxIndex * sampleRate / bufferSize;
+            if (Math.Abs(frequency - lastFrequency) > deadbandThreshold)
+            {
+                lastFrequency = frequency;
+            }
             DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
         }
     }
