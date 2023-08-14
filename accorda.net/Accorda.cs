@@ -7,11 +7,9 @@ namespace accorda.net
     public partial class Accorda : Form
     {
         private Audio.Audio audioRecorder { set; get; }
-        private object sem1 { set; get; }
 
         public Accorda()
         {
-            sem1 = new object();
             audioRecorder = new Audio.Audio();
             InitializeComponent();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
