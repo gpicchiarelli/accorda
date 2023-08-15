@@ -144,27 +144,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dominante.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="waveViewer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 34</value>
-  </data>
-  <data name="waveViewer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>503, 150</value>
-  </data>
-  <data name="waveViewer1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;waveViewer1.Name" xml:space="preserve">
-    <value>waveViewer1</value>
-  </data>
-  <data name="&gt;&gt;waveViewer1.Type" xml:space="preserve">
-    <value>NAudio.Gui.WaveViewer, NAudio.WinForms, Culture=neutral, PublicKeyToken=e279aa5131008a41</value>
-  </data>
-  <data name="&gt;&gt;waveViewer1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;waveViewer1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="DispositiviIngresso.Font" type="System.Drawing.Font, System.Drawing">
@@ -294,7 +273,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -303,7 +282,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>800, 227</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">

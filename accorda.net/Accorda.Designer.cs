@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accorda));
             dominante = new RichTextBox();
-            waveViewer1 = new NAudio.Gui.WaveViewer();
             DispositiviIngresso = new ComboBox();
             label1 = new Label();
             label2 = new Label();
@@ -48,14 +47,6 @@
             dominante.Name = "dominante";
             dominante.ReadOnly = true;
             dominante.TextChanged += richTextBox1_TextChanged;
-            // 
-            // waveViewer1
-            // 
-            resources.ApplyResources(waveViewer1, "waveViewer1");
-            waveViewer1.Name = "waveViewer1";
-            waveViewer1.SamplesPerPixel = 128;
-            waveViewer1.StartPosition = 0L;
-            waveViewer1.WaveStream = null;
             // 
             // DispositiviIngresso
             // 
@@ -113,7 +104,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(DispositiviIngresso);
-            Controls.Add(waveViewer1);
             Controls.Add(dominante);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -133,7 +123,6 @@
         #endregion
 
         private RichTextBox dominante;
-        private NAudio.Gui.WaveViewer waveViewer1;
         private ComboBox DispositiviIngresso;
         private Label label1;
         private Label label2;

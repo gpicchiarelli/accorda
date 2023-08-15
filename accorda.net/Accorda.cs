@@ -16,8 +16,6 @@ namespace Accorda.net
             audioRecorder = new Audio.Audio();
             InitializeComponent();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
-            // audioRecorder.BufferedWave.
-            //waveViewer1.WaveStream = audioRecorder.BufferedWave;
         }
 
         private void AggiornaFrequenza(double dominantFrequency)
