@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accorda));
-            dominante = new RichTextBox();
+            dominante = new TextBox();
             DispositiviIngresso = new ComboBox();
             label1 = new Label();
             label2 = new Label();
@@ -40,6 +40,7 @@
             informazioniToolStripMenuItem1 = new ToolStripMenuItem();
             label3 = new Label();
             selezionaCorda = new ComboBox();
+            progressBar1 = new ProgressBar();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,12 +111,18 @@
             resources.ApplyResources(selezionaCorda, "selezionaCorda");
             selezionaCorda.FormattingEnabled = true;
             selezionaCorda.Name = "selezionaCorda";
-            selezionaCorda.SelectedIndexChanged += DispositiviIngresso_SelectedIndexChanged;
+            selezionaCorda.SelectedIndexChanged += selezionaCorda_SelectedIndexChanged;
+            // 
+            // progressBar1
+            // 
+            resources.ApplyResources(progressBar1, "progressBar1");
+            progressBar1.Name = "progressBar1";
             // 
             // Accorda
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(progressBar1);
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(label1);
@@ -139,7 +146,7 @@
 
         #endregion
 
-        private RichTextBox dominante;
+        private TextBox dominante;
         private ComboBox DispositiviIngresso;
         private Label label1;
         private Label label2;
@@ -150,5 +157,6 @@
         private ToolStripMenuItem informazioniToolStripMenuItem1;
         private Label label3;
         private ComboBox selezionaCorda;
+        private ProgressBar progressBar1;
     }
 }

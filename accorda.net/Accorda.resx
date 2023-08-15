@@ -122,42 +122,39 @@
     <value>Segoe UI, 20.25pt, style=Bold</value>
   </data>
   <data name="dominante.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 55</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dominante.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
-    <value>None</value>
+    <value>394, 55</value>
   </data>
   <data name="dominante.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 59</value>
+    <value>162, 43</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dominante.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="dominante.Text" xml:space="preserve">
-    <value />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dominante.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;dominante.Name" xml:space="preserve">
     <value>dominante</value>
   </data>
   <data name="&gt;&gt;dominante.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dominante.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dominante.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="DispositiviIngresso.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="DispositiviIngresso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>513, 145</value>
+    <value>12, 55</value>
   </data>
   <data name="DispositiviIngresso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 23</value>
+    <value>354, 23</value>
   </data>
   <data name="DispositiviIngresso.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -172,13 +169,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DispositiviIngresso.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>516, 125</value>
+    <value>15, 35</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 15</value>
@@ -199,22 +196,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 35</value>
+    <value>395, 35</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 15</value>
+    <value>127, 15</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Frequenza (Hz)</value>
+    <value>Frequenza rilevata (Hz)</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -226,7 +223,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -259,7 +256,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 24</value>
+    <value>568, 24</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -277,7 +274,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -286,7 +283,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 35</value>
+    <value>12, 83</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 15</value>
@@ -307,13 +304,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="selezionaCorda.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="selezionaCorda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 53</value>
+    <value>12, 101</value>
   </data>
   <data name="selezionaCorda.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 23</value>
@@ -331,7 +328,28 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;selezionaCorda.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 133</value>
+  </data>
+  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>544, 85</value>
+  </data>
+  <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
+    <value>progressBar1</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -340,7 +358,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 227</value>
+    <value>568, 227</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
