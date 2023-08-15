@@ -14,7 +14,7 @@ namespace Accorda.Audio
         private readonly double stabilityThreshold = 5; // Regola questo valore in base alle tue esigenze
         private readonly List<double> frequencyHistory;
         private readonly int stableWindowSamples = sampleRate;
-        private double magnitudeThreshold = 0.1; // Regola questo valore in base alle tue esigenze
+        private double magnitudeThreshold = 0.004; // Regola questo valore in base alle tue esigenze
 
 
         public BufferedWaveProvider BufferedWave { get; }
