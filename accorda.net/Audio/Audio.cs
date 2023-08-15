@@ -11,7 +11,7 @@ namespace Accorda.Audio
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
         private readonly BiQuadFilter filter;
-        private readonly double stabilityThreshold = 5; // Regola questo valore in base alle tue esigenze
+        private readonly double stabilityThreshold = 1; // Regola questo valore in base alle tue esigenze
         private readonly List<double> frequencyHistory;
         private readonly int stableWindowSamples = sampleRate;
         private double magnitudeThreshold = 0.004; // Regola questo valore in base alle tue esigenze
