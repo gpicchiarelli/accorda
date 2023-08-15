@@ -16,6 +16,13 @@ namespace Accorda.net
             audioRecorder = new Audio.Audio();
             InitializeComponent();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+            selezionaCorda.Items.Add("Corda 1 - Mi (alto) [E] " + NoteMusicali.Mi_Alto + "Hz");
+            selezionaCorda.Items.Add("Corda 2 - Si [B] " + NoteMusicali.Si + "Hz");
+            selezionaCorda.Items.Add("Corda 3 - Sol [G] " + NoteMusicali.Sol + "Hz");
+            selezionaCorda.Items.Add("Corda 4 - Re [D] " + NoteMusicali.Re + "Hz");
+            selezionaCorda.Items.Add("Corda 5 - La [A] " + NoteMusicali.La + "Hz");
+            selezionaCorda.Items.Add("Corda 6 - Mi (basso) [E] " + NoteMusicali.Mi_Basso + "Hz");
+            selezionaCorda.SelectedIndex = 0;
         }
 
         private void AggiornaFrequenza(double dominantFrequency)

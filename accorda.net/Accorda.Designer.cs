@@ -38,6 +38,8 @@
             chiudiToolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
             informazioniToolStripMenuItem1 = new ToolStripMenuItem();
+            label3 = new Label();
+            selezionaCorda = new ComboBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,12 +99,27 @@
             resources.ApplyResources(informazioniToolStripMenuItem1, "informazioniToolStripMenuItem1");
             informazioniToolStripMenuItem1.Click += informazioniToolStripMenuItem1_Click;
             // 
+            // label3
+            // 
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
+            // 
+            // selezionaCorda
+            // 
+            selezionaCorda.DropDownStyle = ComboBoxStyle.DropDownList;
+            resources.ApplyResources(selezionaCorda, "selezionaCorda");
+            selezionaCorda.FormattingEnabled = true;
+            selezionaCorda.Name = "selezionaCorda";
+            selezionaCorda.SelectedIndexChanged += DispositiviIngresso_SelectedIndexChanged;
+            // 
             // Accorda
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label2);
+            Controls.Add(label3);
             Controls.Add(label1);
+            Controls.Add(selezionaCorda);
             Controls.Add(DispositiviIngresso);
             Controls.Add(dominante);
             Controls.Add(menuStrip1);
@@ -131,5 +148,7 @@
         private ToolStripMenuItem informazioniToolStripMenuItem;
         private ToolStripMenuItem chiudiToolStripMenuItem1;
         private ToolStripMenuItem informazioniToolStripMenuItem1;
+        private Label label3;
+        private ComboBox selezionaCorda;
     }
 }
