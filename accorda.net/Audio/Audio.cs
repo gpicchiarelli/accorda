@@ -13,7 +13,9 @@ namespace Accorda.Audio
         private readonly BiQuadFilter filter;
         private readonly double stabilityThreshold = 5; // Regola questo valore in base alle tue esigenze
         private readonly List<double> frequencyHistory;
-        private readonly int stableWindowSamples = sampleRate; 
+        private readonly int stableWindowSamples = sampleRate;
+        private double magnitudeThreshold = 0.1; // Regola questo valore in base alle tue esigenze
+
 
         public BufferedWaveProvider BufferedWave { get; }
 
@@ -128,7 +130,7 @@ namespace Accorda.Audio
             for (int i = 0; i < bufferSize / 2; i++)
             {
                 double magnitude = CalculateMagnitude(complexBuffer[i]);
-                if (magnitude > maxMagnitude)
+                if (magnitude > maxMagnitude && magnitude > magnitudeThreshold)
                 {
                     maxMagnitude = magnitude;
                     maxIndex = i;
@@ -137,7 +139,7 @@ namespace Accorda.Audio
             double frequency = maxIndex * sampleRate / bufferSize;
             frequency = double.Round(frequency, 2);
             //DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
-            if (frequencyHistory.Count <= stableWindowSamples/2)
+            if (frequencyHistory.Count == 0)
             {
                 frequencyHistory.Add(frequency);
             }
