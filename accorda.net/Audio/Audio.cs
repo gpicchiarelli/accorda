@@ -12,8 +12,8 @@ namespace Accorda.Audio
         private readonly Complex[] complexBuffer;
         private readonly BiQuadFilter filter;
         private readonly double stabilityThreshold = 5; // Regola questo valore in base alle tue esigenze
-        private readonly List<double> frequencyHistory = new();
-        private readonly int stableWindowSamples = sampleRate/2; 
+        private readonly List<double> frequencyHistory;
+        private readonly int stableWindowSamples = sampleRate; 
 
         public BufferedWaveProvider BufferedWave { get; }
 
@@ -33,7 +33,7 @@ namespace Accorda.Audio
 
             // Configura il filtro passa-basso
             filter = BiQuadFilter.LowPassFilter(sampleRate, 1000, (float)0.7071);
-
+            frequencyHistory = new();
 
             BufferedWave = new BufferedWaveProvider(waveIn.WaveFormat)
             {
@@ -137,7 +137,7 @@ namespace Accorda.Audio
             double frequency = maxIndex * sampleRate / bufferSize;
             frequency = double.Round(frequency, 2);
             //DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
-            if (frequencyHistory.Count == 0)
+            if (frequencyHistory.Count <= stableWindowSamples/2)
             {
                 frequencyHistory.Add(frequency);
             }
