@@ -12,8 +12,8 @@ Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per m
 ## 🔥 Caratteristiche Principali
 
 - 💎 Accordatura precisa e affidabile per ogni corda della chitarra.
-- 🎸 Interfaccia intuitiva, progettata per musicisti di tutti i livelli.
-- 🎵 Rilevazione istantanea della frequenza delle corde per un'accordatura perfetta.
+- 🎸 Interfaccia intuitiva.
+- 🎵 Rilevazione istantanea della frequenza delle corde.
 
 ## ⚙️ Requisiti
 
