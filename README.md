@@ -18,7 +18,7 @@ Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per m
 ## 🚀 Installazione e Utilizzo
 
 1. Scarica l'ultima versione di Accorda dal [repository GitHub](https://github.com/gpicchiarelli/accorda/releases).
-2. Esegui l'installazione, è un gioco da ragazzi!
+2. Esegui l'installazione.
 3. Collegherai la tua chitarra al computer e il nostro strumento farà il resto.
 
 ## 📜 Licenza
