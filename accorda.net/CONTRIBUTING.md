@@ -9,21 +9,27 @@ Per contribuire ad Accorda, segui questi passaggi:
 1. Fai il fork del repository su GitHub.
 2. Clona il repository forkato sulla tua macchina locale.
 3. Crea un nuovo branch per le tue modifiche:
+```
 git checkout -b feature/mia-funzionalita
-
 markdown
 Copy code
+```
+
 4. Effettua le tue modifiche e testale accuratamente.
 5. Effettua il commit delle tue modifiche con messaggi descrittivi:
+```
 git commit -m "Aggiunge nuova funzionalità: Mia Funzionalità"
 
 markdown
 Copy code
+```
 6. Effettua il push delle tue modifiche nel repository forkato:
+```
 git push origin feature/mia-funzionalita
-
 markdown
 Copy code
+```
+
 7. Crea una pull request (PR) nel repository principale:
 - Vai nel tuo repository forkato su GitHub.
 - Clicca sulla scheda "Pull Requests".
@@ -44,8 +50,8 @@ Se trovi un bug o hai un suggerimento, apri una issue su GitHub. Fornisci una de
 
 ## Licenza
 
-Contribuendo ad Accorda, accetti che le tue contribuzioni saranno concesse in licenza sotto la [Licenza MIT](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE) del progetto.
+Contribuendo ad Accorda, accetti che i tuoi contributi saranno concesse in licenza sotto la [Licenza MIT](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE) del progetto.
 
 ---
 
-Grazie per il tuo interesse nel migliorare Accorda! Le tue contribuzioni sono molto apprezzate.
+Grazie per il tuo interesse nel migliorare Accorda! I tuoi contributi sono molto apprezzate.
