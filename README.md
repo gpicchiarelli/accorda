@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per mantenere le tue corde perfettamente accordate e far risplendere il tuo suono.
+Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per mantenere le tue corde perfettamente accordate.
 
 ## 🔥 Caratteristiche Principali
 
