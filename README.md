@@ -1,6 +1,11 @@
 # Accorda - Accordatore per Chitarra
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Open Issues](https://img.shields.io/github/issues-raw/gpicchiarelli/accorda.svg)
+![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/gpicchiarelli/accorda.svg)
+![Last Commit](https://img.shields.io/github/last-commit/gpicchiarelli/accorda.svg)
+![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
+![Stars](https://img.shields.io/github/stars/gpicchiarelli/accorda.svg)
 
 Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per mantenere le tue corde perfettamente accordate.
 
