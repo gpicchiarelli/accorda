@@ -18,7 +18,7 @@ Per contribuire a Accorda, segui questi passaggi:
 
 - Segui le linee guida di stile specificate nel progetto.
 - Scrivi codice chiaro e conciso con nomi di variabili e funzioni significativi.
-- Mantieni la base di codice pulita e priva di commenti e codice superflui.
+- Mantieni la base di codice pulita e priva di commenti e codice superfluo.
 - Testa le tue modifiche per assicurarti che funzionino correttamente.
 
 ## Segnalazione Problemi
@@ -27,7 +27,7 @@ Se trovi un bug o hai un suggerimento, apri una issue su GitHub. Fornisci una de
 
 ## Licenza
 
-Contribuendo ad Accorda, accetti che le tue contribuzioni saranno concesse in licenza sotto la Licenza MIT del progetto.
+Contribuendo ad Accorda, accetti che i tuoi contributi saranno concesse in licenza sotto la Licenza MIT del progetto.
 
 ---
 
