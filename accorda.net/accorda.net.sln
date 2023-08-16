@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "El
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "..\Installer\Installer.vdproj", "{73DB2257-6D98-437C-9B64-20DBACA69BEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Release|x86.Build.0 = Release|Any CPU
+		{73DB2257-6D98-437C-9B64-20DBACA69BEE}.Debug|Any CPU.ActiveCfg = Debug
+		{73DB2257-6D98-437C-9B64-20DBACA69BEE}.Debug|x86.ActiveCfg = Debug
+		{73DB2257-6D98-437C-9B64-20DBACA69BEE}.Release|Any CPU.ActiveCfg = Release
+		{73DB2257-6D98-437C-9B64-20DBACA69BEE}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
