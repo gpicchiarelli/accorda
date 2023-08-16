@@ -9,6 +9,7 @@ Per contribuire ad Accorda, segui questi passaggi:
 1. Fai il fork del repository su GitHub.
 2. Clona il repository forkato sulla tua macchina locale.
 3. Crea un nuovo branch per le tue modifiche:
+
 ```
 git checkout -b feature/mia-funzionalita
 markdown
@@ -17,13 +18,16 @@ Copy code
 
 4. Effettua le tue modifiche e testale accuratamente.
 5. Effettua il commit delle tue modifiche con messaggi descrittivi:
+
 ```
 git commit -m "Aggiunge nuova funzionalità: Mia Funzionalità"
 
 markdown
 Copy code
 ```
+
 6. Effettua il push delle tue modifiche nel repository forkato:
+
 ```
 git push origin feature/mia-funzionalita
 markdown
