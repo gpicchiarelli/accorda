@@ -44,8 +44,6 @@ namespace Accorda.net
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            progressBar1.ForeColor = Color.Red;
-
             if (selezionaCorda.SelectedIndex != -1)
             {
                 var frequenza = 0.0;
@@ -78,18 +76,15 @@ namespace Accorda.net
                 int progressValue = 0;
                 if (sgn > 0)
                 {
-                    progressBar1.ForeColor = Color.Red;
                     // Calcola quanto la ProgressBar deve riempirsi in base alla percentuale di differenza
                     progressValue = 50 + (int)(differencePercentage / 2.0); // Imposta il 50% come valore di riferimento
                 } 
                 if(sgn < 0)
                 {
-                    progressBar1.ForeColor = Color.Red;
                     progressValue = 50 - (int)(differencePercentage / 2.0); // Imposta il 50% come valore di riferimento
                 }
                 if (sgn == 0) 
                 {
-                    progressBar1.ForeColor = Color.Green;
                     progressValue = 50 - (int)(differencePercentage / 2.0); // Imposta il 50% come valore di riferimento
                 }
                 // Limita il valore tra 0 e 100
@@ -97,6 +92,16 @@ namespace Accorda.net
 
                 // Imposta il valore della ProgressBar
                 progressBar1.Value = progressValue;
+
+                // Cambia il colore della ProgressBar in base alla differenza
+                if (progressBar1.Value == 50)
+                {
+                    progressBar1.ForeColor = Color.Green; // Accordato
+                }
+                else
+                {
+                    progressBar1.ForeColor = Color.Red; // Non accordato
+                }
             }
         }
 
