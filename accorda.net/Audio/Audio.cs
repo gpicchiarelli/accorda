@@ -19,7 +19,7 @@ namespace Accorda.Audio
         /// <summary>
         /// The buffer size
         /// </summary>
-        private const int bufferSize = 512;
+        private const int bufferSize = 1024;
         /// <summary>
         /// The buffer
         /// </summary>
@@ -82,15 +82,7 @@ namespace Accorda.Audio
             // Configura il filtro passa-basso
             filter = BiQuadFilter.LowPassFilter(sampleRate, 1000, (float)0.7071);
             frequencyHistory = new();
-
-            BufferedWave = new BufferedWaveProvider(waveIn.WaveFormat)
-            {
-                BufferLength = 4096,
-                DiscardOnBufferOverflow = true
-            };
-
             waveIn.DataAvailable += WaveIn_DataAvailable;
-            waveIn.DataAvailable += DatiGrafico;
             StartRecording();
         }
 

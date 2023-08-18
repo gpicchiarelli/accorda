@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj": {}
+    "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj": {
+    "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
+        "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
         "projectName": "accorda",
-        "projectPath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
+        "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
         "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
+        "outputPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
