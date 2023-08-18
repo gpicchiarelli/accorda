@@ -138,7 +138,6 @@ namespace Accorda.Audio
             }
             double frequency = maxIndex * sampleRate / bufferSize;
             frequency = double.Round(frequency, 2);
-            //DominantFrequencyDetected?.Invoke(this, double.Round(frequency, 2));
             if (frequencyHistory.Count == 0)
             {
                 frequencyHistory.Add(frequency);
