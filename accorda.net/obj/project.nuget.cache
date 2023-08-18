@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0z3BCH4elokCCSpJo4H1QWFmwXTNfKCdx/TYBSrHO7Tb+ZwS1qsKvgx1qEW2/0gsGW6efLg1EwsGBRfD5mRGyg==",
+  "dgSpecHash": "6MButYjF8T+UOJt6pRGeVo0b+CwCV4CT2J5IPDOe06xhzwyct43KE7HNuZ60dCx6U4xp0NgxFtmCN2PJnO7JWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
+  "projectFilePath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\accorda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
