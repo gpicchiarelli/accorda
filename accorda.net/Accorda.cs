@@ -46,62 +46,43 @@ namespace Accorda.net
         {
             if (selezionaCorda.SelectedIndex != -1)
             {
-                var frequenza = 0.0;
-                switch (selezionaCorda.SelectedIndex)
+                var selectedString = selezionaCorda.SelectedIndex;
+
+                double targetFrequency = 0.0;
+                switch (selectedString)
                 {
                     case 0:
-                        frequenza = NoteMusicali.Mi_Alto;
+                        targetFrequency = NoteMusicali.Mi_Alto;
                         break;
                     case 1:
-                        frequenza = NoteMusicali.Si;
+                        targetFrequency = NoteMusicali.Si;
                         break;
                     case 2:
-                        frequenza = NoteMusicali.Sol;
+                        targetFrequency = NoteMusicali.Sol;
                         break;
                     case 3:
-                        frequenza = NoteMusicali.Re;
+                        targetFrequency = NoteMusicali.Re;
                         break;
                     case 4:
-                        frequenza = NoteMusicali.La;
+                        targetFrequency = NoteMusicali.La;
                         break;
                     case 5:
-                        frequenza = NoteMusicali.Mi_Basso;
+                        targetFrequency = NoteMusicali.Mi_Basso;
                         break;
                 }
-                var frequency = double.Parse(dominante.Text);
-                double frequencyDifference = Math.Abs(frequency - frequenza);
-                int sgn = frequency.CompareTo(frequenza);
-                // Calcola la percentuale di differenza rispetto alla frequenza attesa
-                double differencePercentage = (frequencyDifference / frequenza) * 100.0;
-                int progressValue = 0;
-                if (sgn > 0)
-                {
-                    // Calcola quanto la ProgressBar deve riempirsi in base alla percentuale di differenza
-                    progressValue = 50 + (int)(differencePercentage / 2.0); // Imposta il 50% come valore di riferimento
-                } 
-                if(sgn < 0)
-                {
-                    progressValue = 50 - (int)(differencePercentage / 2.0); // Imposta il 50% come valore di riferimento
-                }
-                if (sgn == 0) 
-                {
-                    progressValue = 50 - (int)(differencePercentage / 2.0); // Imposta il 50% come valore di riferimento
-                }
-                // Limita il valore tra 0 e 100
+
+                double currentFrequency = double.Parse(dominante.Text);
+                double frequencyDifference = Math.Abs(currentFrequency - targetFrequency);
+                int sgn = currentFrequency.CompareTo(targetFrequency);
+                double differencePercentage = (frequencyDifference / targetFrequency) * 100.0;
+
+                const int ReferenceValue = 50;
+                int progressValue = ReferenceValue - (int)(differencePercentage / 2.0);
                 progressValue = Math.Max(0, Math.Min(100, progressValue));
 
-                // Imposta il valore della ProgressBar
                 progressBar1.Value = progressValue;
 
-                // Cambia il colore della ProgressBar in base alla differenza
-                if (progressBar1.Value == 50)
-                {
-                    progressBar1.ForeColor = Color.Green; // Accordato
-                }
-                else
-                {
-                    progressBar1.ForeColor = Color.Red; // Non accordato
-                }
+                progressBar1.ForeColor = progressValue == ReferenceValue ? Color.Green : Color.Red;
             }
         }
 
