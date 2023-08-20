@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Accorda
@@ -14,97 +9,47 @@ namespace Accorda
         public Informazioni()
         {
             InitializeComponent();
-            this.Text = String.Format("Informazioni su {0}", AssemblyTitle);
+            InitializeAppInfo();
+        }
+
+        private void InitializeAppInfo()
+        {
+            this.Text = $"Informazioni su {AssemblyTitle}";
             this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Versione {0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
+            this.labelVersion.Text = $"Versione {AssemblyVersion}";
+            this.labelCopyright.Text = $"© {DateTime.Now.Year} {AssemblyCompany}";
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.textBoxDescription.Text = AssemblyDescription + Environment.NewLine + Environment.NewLine +
+                "Questo software è rilasciato sotto licenza MIT." + Environment.NewLine +
+                "Per maggiori dettagli, consulta il file LICENSE." + Environment.NewLine + Environment.NewLine +
+                "Repository GitHub: https://github.com/gpicchiarelli/accorda" + Environment.NewLine +
+                "File README: Leggi il file README.md per informazioni sull'utilizzo." + Environment.NewLine +
+                "Contributi: Se desideri contribuire, consulta il file CONTRIBUTING.md per le linee guida.";
+
+
         }
 
         #region Funzioni di accesso attributo assembly
 
-        public string AssemblyTitle
+        private string GetAttributeValue<T>(Func<T, string> valueGetter)
+            where T : Attribute
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0)
-                {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
-                    {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-            }
+            var attribute = Assembly.GetExecutingAssembly().GetCustomAttribute<T>();
+            return attribute != null ? valueGetter(attribute) : "";
         }
 
-        public string AssemblyVersion
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
+        public string AssemblyTitle => GetAttributeValue<AssemblyTitleAttribute>(a => a.Title);
+        public string AssemblyVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public string AssemblyDescription => GetAttributeValue<AssemblyDescriptionAttribute>(a => a.Description);
+        public string AssemblyProduct => GetAttributeValue<AssemblyProductAttribute>(a => a.Product);
+        public string AssemblyCopyright => GetAttributeValue<AssemblyCopyrightAttribute>(a => a.Copyright);
+        public string AssemblyCompany => GetAttributeValue<AssemblyCompanyAttribute>(a => a.Company);
 
-        public string AssemblyDescription
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
-            }
-        }
-
-        public string AssemblyProduct
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
-            }
-        }
-
-        public string AssemblyCopyright
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
-            }
-        }
-
-        public string AssemblyCompany
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
-            }
-        }
         #endregion
 
         private void okButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
