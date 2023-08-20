@@ -32,6 +32,3 @@ Contribuendo ad Accorda, accetti che i tuoi contributi siano rilasciati sotto la
 ---
 
 Grazie per essere parte del nostro team! I tuoi contributi sono preziosi e ci aiutano a rendere Accorda sempre migliore. 🎉
-
-
-
