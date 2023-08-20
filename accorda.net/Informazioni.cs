@@ -19,14 +19,13 @@ namespace Accorda
             this.labelVersion.Text = $"Versione {AssemblyVersion}";
             this.labelCopyright.Text = $"© {DateTime.Now.Year} {AssemblyCompany}";
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription + Environment.NewLine +
-                "Questo software è rilasciato sotto licenza MIT." + Environment.NewLine +
-                "Per maggiori dettagli, consulta il file LICENSE." + Environment.NewLine + Environment.NewLine +
-                "Repository GitHub: https://github.com/gpicchiarelli/accorda" + Environment.NewLine +
-                "File README: Leggi il file README.md per informazioni sull'utilizzo." + Environment.NewLine +
-                "Contributi: Se desideri contribuire, consulta il file CONTRIBUTING.md per le linee guida.";
-
-
+            this.textBoxDescription.Text =
+                $"{AssemblyDescription}{Environment.NewLine}{Environment.NewLine}" +
+                "🎵 Questo software è rilasciato sotto licenza MIT. 🎵" +
+                $"{Environment.NewLine}Per maggiori dettagli, consulta il file LICENSE.{Environment.NewLine}{Environment.NewLine}" +
+                "🌟 Repository GitHub: https://github.com/tuousername/tuoprogetto 🌟" +
+                $"{Environment.NewLine}📜 Leggi il file README.md per informazioni sull'utilizzo. 📜" +
+                $"{Environment.NewLine}💡 Se desideri contribuire, consulta CONTRIBUTING.md. 💡";
         }
 
         #region Funzioni di accesso attributo assembly
