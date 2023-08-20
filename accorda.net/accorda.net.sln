@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "El
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Installer", "..\Installer\Installer.wixproj", "{C875F7F4-1D56-4134-B78C-7C787969C532}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,14 +28,6 @@ Global
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Release|x86.Build.0 = Release|Any CPU
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Debug|Any CPU.Build.0 = Debug|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Debug|x86.ActiveCfg = Debug|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Debug|x86.Build.0 = Debug|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Release|Any CPU.ActiveCfg = Release|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Release|Any CPU.Build.0 = Release|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Release|x86.ActiveCfg = Release|x86
-		{C875F7F4-1D56-4134-B78C-7C787969C532}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
