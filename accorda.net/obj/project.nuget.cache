@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "rUaH93p2q6+dCrmqKIzIbHnA75m07KmQuWYRK+Xnkt3vJnwLVxB7HV1Vzq+j39EJ7Ba34n7nGTr4igIm9rkeMQ==",
-=======
-  "dgSpecHash": "0z3BCH4elokCCSpJo4H1QWFmwXTNfKCdx/TYBSrHO7Tb+ZwS1qsKvgx1qEW2/0gsGW6efLg1EwsGBRfD5mRGyg==",
->>>>>>> 96f451dc764bc75c715ee0e644ec336d8d9062ae
+  "dgSpecHash": "YC91NbAZSl8MlLXEju2yApgdfBdx4kj9HaYwrQ9CqWn2tWEUQtatL1gM9VweGMjwuRYDz5dJDZ3FvNWuuLyHCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\accorda.csproj",
+  "projectFilePath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gpicc\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\gpicc\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -20,5 +16,12 @@
     "C:\\Users\\gpicc\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\gpicc\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Si è verificato un problema durante la lettura del file di cache c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
