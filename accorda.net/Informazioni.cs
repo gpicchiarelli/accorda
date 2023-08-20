@@ -23,7 +23,7 @@ namespace Accorda
                 $"{AssemblyDescription}{Environment.NewLine}{Environment.NewLine}" +
                 "🎵 Questo software è rilasciato sotto licenza MIT. 🎵" +
                 $"{Environment.NewLine}Per maggiori dettagli, consulta il file LICENSE.{Environment.NewLine}{Environment.NewLine}" +
-                "🌟 Repository GitHub: https://github.com/tuousername/tuoprogetto 🌟" +
+                "🌟 Repository GitHub: https://github.com/gpicchiarelli/accorda 🌟" +
                 $"{Environment.NewLine}📜 Leggi il file README.md per informazioni sull'utilizzo. 📜" +
                 $"{Environment.NewLine}💡 Se desideri contribuire, consulta CONTRIBUTING.md. 💡";
         }
