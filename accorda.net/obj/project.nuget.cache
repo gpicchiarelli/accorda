@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "rUaH93p2q6+dCrmqKIzIbHnA75m07KmQuWYRK+Xnkt3vJnwLVxB7HV1Vzq+j39EJ7Ba34n7nGTr4igIm9rkeMQ==",
+=======
+  "dgSpecHash": "0z3BCH4elokCCSpJo4H1QWFmwXTNfKCdx/TYBSrHO7Tb+ZwS1qsKvgx1qEW2/0gsGW6efLg1EwsGBRfD5mRGyg==",
+>>>>>>> 96f451dc764bc75c715ee0e644ec336d8d9062ae
   "success": true,
   "projectFilePath": "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\accorda.csproj",
   "expectedPackageFiles": [
