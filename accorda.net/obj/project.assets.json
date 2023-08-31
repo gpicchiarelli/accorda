@@ -461,19 +461,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
+      "projectUniqueName": "C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
       "projectName": "Accorda",
-      "projectPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
+      "projectPath": "C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
       "packagesPath": "C:\\Users\\gpicc\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\",
-=======
-      "projectUniqueName": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
-      "projectName": "Accorda",
-      "projectPath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
-      "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
->>>>>>> e38d99c6c04b46a8e1c7a5d4f440f98bf30e5de5
+      "outputPath": "C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -539,7 +531,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Si è verificato un problema durante la lettura del file di cache c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Si è verificato un problema durante la lettura del file di cache C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
