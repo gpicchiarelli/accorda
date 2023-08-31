@@ -1,39 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj": {}
-=======
-<<<<<<< HEAD
-    "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {}
-  },
-  "projects": {
-    "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
-        "projectName": "accorda",
-        "projectPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
-        "packagesPath": "C:\\Users\\gpicc\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\",
-=======
     "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj": {}
->>>>>>> e4d0280377351dcee1eadfdbfc03e53a0c7121d4
   },
   "projects": {
-    "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj": {
+    "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
+        "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
         "projectName": "Accorda",
-        "projectPath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
+        "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
         "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
-<<<<<<< HEAD
-        "outputPath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
-=======
         "outputPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
->>>>>>> 3212acbee9425e177d6342c586a47cd21a5620e2
->>>>>>> e4d0280377351dcee1eadfdbfc03e53a0c7121d4
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

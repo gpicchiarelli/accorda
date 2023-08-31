@@ -1,20 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "x789WH3FKNep77u17+rPPPoPqKJw0lgPyxff0J8Sbxkdz4CTVKiVrblp5OJfaEKgMhRgNVJwBl5IZ0VPpbZgDQ==",
-  "success": true,
-  "projectFilePath": "c:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
-=======
-<<<<<<< HEAD
-  "dgSpecHash": "YC91NbAZSl8MlLXEju2yApgdfBdx4kj9HaYwrQ9CqWn2tWEUQtatL1gM9VweGMjwuRYDz5dJDZ3FvNWuuLyHCA==",
-  "success": true,
-  "projectFilePath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
-=======
   "dgSpecHash": "44TBceq/ow6fQG9gWu282iODcCxKhyA0PVVeKoCieOpAxi8UxGAI2vuLFFCu5sp3qaku/jsgYTllHMemTZ1+tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
->>>>>>> 3212acbee9425e177d6342c586a47cd21a5620e2
->>>>>>> e4d0280377351dcee1eadfdbfc03e53a0c7121d4
   "expectedPackageFiles": [
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -28,5 +16,12 @@
     "C:\\Users\\Giacomo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Si è verificato un problema durante la lettura del file di cache C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
