@@ -211,7 +211,7 @@ namespace Accorda.Audio
             }
             double frequency = maxIndex * sampleRate / bufferSize;
             frequency = double.Round(frequency, 2);
-            if (frequencyHistory.Count == 0)
+            if (frequencyHistory.Count < 10)
             {
                 frequencyHistory.Add(frequency);
             }
