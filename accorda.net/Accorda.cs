@@ -41,7 +41,6 @@ namespace Accorda.net
         {
             if (dominante.InvokeRequired)
             {
-                void safeWrite() { AggiornaFrequenza(dominantFrequency); }
                 _ = dominante.Invoke(AggiornaFrequenza, dominantFrequency);
             }
             else
@@ -55,10 +54,7 @@ namespace Accorda.net
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="dominantFrequency">The dominant frequency.</param>
-        private void AudioRecorder_DominantFrequencyDetected(object sender, double dominantFrequency)
-        {
-            AggiornaFrequenza(dominantFrequency);
-        }
+        private void AudioRecorder_DominantFrequencyDetected(object sender, double dominantFrequency) => AggiornaFrequenza(dominantFrequency);
 
         /// <summary>
         /// Handles the Load event of the Accorda control.

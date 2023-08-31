@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\accorda.csproj": {}
+    "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\accorda.csproj": {
+    "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\accorda.csproj",
+        "projectUniqueName": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
         "projectName": "accorda",
-        "projectPath": "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\accorda.csproj",
+        "projectPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
         "packagesPath": "C:\\Users\\gpicc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gpicc\\Source\\Repos\\accorda\\accorda.net\\obj\\",
+        "outputPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
