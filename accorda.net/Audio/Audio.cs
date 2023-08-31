@@ -35,7 +35,7 @@ namespace Accorda.Audio
         /// <summary>
         /// The stability threshold
         /// </summary>
-        private readonly double stabilityThreshold = 1;
+        private readonly double stabilityThreshold = 3;
         /// <summary>
         /// The frequency history
         /// </summary>
@@ -47,7 +47,7 @@ namespace Accorda.Audio
         /// <summary>
         /// The magnitude threshold
         /// </summary>
-        private double magnitudeThreshold = 0.004;
+        private double magnitudeThreshold = 0.001;
 
 
         /// <summary>

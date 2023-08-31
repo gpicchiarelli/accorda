@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "accorda/1.0.0": {
+      "Accorda/1.0.0": {
         "dependencies": {
           "NAudio": "2.1.0"
         },
         "runtime": {
-          "accorda.dll": {}
+          "Accorda.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -112,7 +112,7 @@
     }
   },
   "libraries": {
-    "accorda/1.0.0": {
+    "Accorda/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

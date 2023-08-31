@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
         "packagesPath": "C:\\Users\\gpicc\\.nuget\\packages\\",
         "outputPath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\",
+=======
+    "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
+        "projectName": "Accorda",
+        "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
+        "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\obj\\",
+>>>>>>> 3212acbee9425e177d6342c586a47cd21a5620e2
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gpicc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Giacomo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +40,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
