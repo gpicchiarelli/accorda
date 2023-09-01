@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HFoV/L15UecjB4M70Ju1rgGNTtqBeVaAtQGRbXjL4PuSItv5T9hS7sYMH1HOfgvOB7NbfHrKN8wV4ptkWJBdHg==",
+  "dgSpecHash": "JAxUdJWrdRIWAnF7gXGd2E1J/Td/Gufq+qfZikq2Ap1je0P+r2sPeYw6fIWf+AKpYa56eJbfaun4paDRtfQQAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda.net\\accorda.net\\Accorda.csproj",
+  "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Giacomo\\.nuget\\packages\\markdig\\0.33.0\\markdig.0.33.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
