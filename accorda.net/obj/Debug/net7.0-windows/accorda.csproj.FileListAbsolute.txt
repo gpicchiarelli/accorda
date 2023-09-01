@@ -50,3 +50,4 @@ C:\Users\gpicc\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\refint\
 C:\Users\gpicc\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\accorda.pdb
 C:\Users\gpicc\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\accorda.genruntimeconfig.cache
 C:\Users\gpicc\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\ref\accorda.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.Properties.Resources.resources
