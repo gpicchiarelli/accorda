@@ -6,6 +6,7 @@
 ![Last Commit](https://img.shields.io/github/last-commit/gpicchiarelli/accorda.svg)
 ![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
 ![Stars](https://img.shields.io/github/stars/gpicchiarelli/accorda.svg)
+[![pages-build-deployment](https://github.com/gpicchiarelli/accorda/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/gpicchiarelli/accorda/actions/workflows/pages/pages-build-deployment)
 
 Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per mantenere le tue corde perfettamente accordate.
 
