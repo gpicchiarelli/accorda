@@ -22,7 +22,7 @@ namespace Accorda.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Accorda.Properties {
         ///   Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Accorda.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Accorda.Properties {
         ///   ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -67,7 +67,7 @@ namespace Accorda.Properties {
         ///- **ChatGPT** - Assistenza automatizzata
         ///- **Bing Chat** - Generazione automatica di immagini.
         /// </summary>
-        internal static string AUTHORS {
+        public static string AUTHORS {
             get {
                 return ResourceManager.GetString("AUTHORS", resourceCulture);
             }
@@ -87,7 +87,7 @@ namespace Accorda.Properties {
         ///3. 🌿 Crea un nuovo branch per le tue modifiche.
         ///4. ✨ Apporta le tue modifiche e assic [stringa troncata]&quot;;.
         /// </summary>
-        internal static string CONTRIBUTING {
+        public static string CONTRIBUTING {
             get {
                 return ResourceManager.GetString("CONTRIBUTING", resourceCulture);
             }
@@ -107,7 +107,7 @@ namespace Accorda.Properties {
         ///
         ///The above cop [stringa troncata]&quot;;.
         /// </summary>
-        internal static string LICENSE {
+        public static string LICENSE {
             get {
                 return ResourceManager.GetString("LICENSE", resourceCulture);
             }
@@ -116,7 +116,7 @@ namespace Accorda.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logoPictureBox_Image {
+        public static System.Drawing.Bitmap logoPictureBox_Image {
             get {
                 object obj = ResourceManager.GetObject("logoPictureBox_Image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -126,7 +126,7 @@ namespace Accorda.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
         /// </summary>
-        internal static System.Drawing.Icon logoPictureBox_Image1 {
+        public static System.Drawing.Icon logoPictureBox_Image1 {
             get {
                 object obj = ResourceManager.GetObject("logoPictureBox_Image1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -143,7 +143,7 @@ namespace Accorda.Properties {
         ///![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
         ///![Stars](https://img.shields.io/github/stars/gpicchiar [stringa troncata]&quot;;.
         /// </summary>
-        internal static string README {
+        public static string README {
             get {
                 return ResourceManager.GetString("README", resourceCulture);
             }

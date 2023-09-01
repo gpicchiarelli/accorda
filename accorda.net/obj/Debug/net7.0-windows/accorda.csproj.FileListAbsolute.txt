@@ -29,6 +29,7 @@ C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\A
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Accorda.runtimeconfig.json
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Accorda.dll
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Accorda.pdb
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Accorda.xml
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Markdig.dll
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.dll
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\NAudio.Asio.dll
@@ -49,8 +50,7 @@ C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\A
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.csproj.CopyComplete
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.dll
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\refint\Accorda.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.xml
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.pdb
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\ref\Accorda.dll
-C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Accorda.xml
-C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.xml

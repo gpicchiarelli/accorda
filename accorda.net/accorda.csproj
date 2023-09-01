@@ -13,8 +13,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <PackageIcon>logo.jpeg</PackageIcon>
+    <PackageIcon>logoPictureBox.Image.png</PackageIcon>
     <RepositoryUrl>https://github.com/gpicchiarelli/accorda</RepositoryUrl>
     <RepositoryType>https://gpicchiarelli.github.io/accorda/</RepositoryType>
     <IncludeSymbols>False</IncludeSymbols>
@@ -28,10 +27,6 @@
 
   <ItemGroup>
     <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\logo.jpeg">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -56,13 +51,20 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\logoPictureBox.Image.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
