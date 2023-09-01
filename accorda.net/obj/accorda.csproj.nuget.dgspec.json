@@ -45,9 +45,13 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
+            "Markdig": {
+              "target": "Package",
+              "version": "[0.33.0, )"
+            },
             "NAudio": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

@@ -59,5 +59,74 @@ namespace Accorda.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a # Autori 🚀
+        ///
+        ///- **Giacomo Picchiarelli** (https://github.com/gpicchiarelli)
+        ///- **ChatGPT** - Assistenza automatizzata
+        ///- **Bing Chat** - Generazione automatica di immagini.
+        /// </summary>
+        internal static string AUTHORS {
+            get {
+                return ResourceManager.GetString("AUTHORS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a # Contribuire a Accorda
+        ///
+        ///Grazie per aver scelto di contribuire ad Accorda! La tua passione e le tue idee sono il motore che spinge questo progetto a crescere e migliorare.
+        ///
+        ///## 🚀 Pronti a Iniziare
+        ///
+        ///Contribuire ad Accorda è facile e gratificante. Ecco come puoi partecipare:
+        ///
+        ///1. 🍴 [Forka il repository](https://github.com/gpicchiarelli/accorda/fork) su GitHub.
+        ///2. 👩‍💻 Clona il tuo fork sulla tua macchina locale.
+        ///3. 🌿 Crea un nuovo branch per le tue modifiche.
+        ///4. ✨ Apporta le tue modifiche e assic [stringa troncata]&quot;;.
+        /// </summary>
+        internal static string CONTRIBUTING {
+            get {
+                return ResourceManager.GetString("CONTRIBUTING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a MIT License
+        ///
+        ///Copyright (c) 2023 Giacomo Picchiarelli
+        ///
+        ///Permission is hereby granted, free of charge, to any person obtaining a copy
+        ///of this software and associated documentation files (the &quot;Software&quot;), to deal
+        ///in the Software without restriction, including without limitation the rights
+        ///to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        ///copies of the Software, and to permit persons to whom the Software is
+        ///furnished to do so, subject to the following conditions:
+        ///
+        ///The above cop [stringa troncata]&quot;;.
+        /// </summary>
+        internal static string LICENSE {
+            get {
+                return ResourceManager.GetString("LICENSE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a # Accorda - Accordatore per Chitarra
+        ///
+        ///![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+        ///![Open Issues](https://img.shields.io/github/issues-raw/gpicchiarelli/accorda.svg)
+        ///![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/gpicchiarelli/accorda.svg)
+        ///![Last Commit](https://img.shields.io/github/last-commit/gpicchiarelli/accorda.svg)
+        ///![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
+        ///![Stars](https://img.shields.io/github/stars/gpicchiar [stringa troncata]&quot;;.
+        /// </summary>
+        internal static string README {
+            get {
+                return ResourceManager.GetString("README", resourceCulture);
+            }
+        }
     }
 }

@@ -117,4 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AUTHORS" xml:space="preserve">
+    <value># Autori 🚀
+
+- **Giacomo Picchiarelli** (https://github.com/gpicchiarelli)
+- **ChatGPT** - Assistenza automatizzata
+- **Bing Chat** - Generazione automatica di immagini</value>
+  </data>
+  <data name="CONTRIBUTING" xml:space="preserve">
+    <value># Contribuire a Accorda
+
+Grazie per aver scelto di contribuire ad Accorda! La tua passione e le tue idee sono il motore che spinge questo progetto a crescere e migliorare.
+
+## 🚀 Pronti a Iniziare
+
+Contribuire ad Accorda è facile e gratificante. Ecco come puoi partecipare:
+
+1. 🍴 [Forka il repository](https://github.com/gpicchiarelli/accorda/fork) su GitHub.
+2. 👩‍💻 Clona il tuo fork sulla tua macchina locale.
+3. 🌿 Crea un nuovo branch per le tue modifiche.
+4. ✨ Apporta le tue modifiche e assicurati che tutto funzioni perfettamente.
+5. 📦 Fai il commit delle tue modifiche con messaggi chiari e descrittivi.
+6. 🚀 Fai push del tuo branch nel tuo fork.
+7. 🕊️ Crea una [Pull Request](https://github.com/gpicchiarelli/accorda/compare) nel repository principale.
+
+## 💡 Linee Guida per il Contributo
+
+- Segui le linee guida di stile specificate nel progetto.
+- Scrivi codice chiaro e conciso, con nomi di variabili e funzioni significativi.
+- Mantieni il codice pulito, senza commenti superflui.
+- Testa attentamente le tue modifiche per assicurarti che funzionino correttamente.
+
+## 🐛 Segnalazione Problemi
+
+Hai trovato un bug o hai un'idea brillante? [Apri una issue](https://github.com/gpicchiarelli/accorda/issues) su GitHub per condividere i dettagli.
+
+## 📄 Licenza
+
+Contribuendo ad Accorda, accetti che i tuoi contributi siano rilasciati sotto la [Licenza MIT](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE).
+
+---
+
+Grazie per essere parte del nostro team! I tuoi contributi sono preziosi e ci aiutano a rendere Accorda sempre migliore. 🎉</value>
+  </data>
+  <data name="LICENSE" xml:space="preserve">
+    <value>MIT License
+
+Copyright (c) 2023 Giacomo Picchiarelli
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</value>
+  </data>
+  <data name="README" xml:space="preserve">
+    <value># Accorda - Accordatore per Chitarra
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Open Issues](https://img.shields.io/github/issues-raw/gpicchiarelli/accorda.svg)
+![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/gpicchiarelli/accorda.svg)
+![Last Commit](https://img.shields.io/github/last-commit/gpicchiarelli/accorda.svg)
+![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
+![Stars](https://img.shields.io/github/stars/gpicchiarelli/accorda.svg)
+
+Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per mantenere le tue corde perfettamente accordate.
+
+## 🔥 Caratteristiche Principali
+
+- 💎 Accordatura precisa e affidabile per ogni corda della chitarra.
+- 🎸 Interfaccia intuitiva.
+- 🎵 Rilevazione istantanea della frequenza delle corde.
+
+## ⚙️ Requisiti
+
+- [Microsoft .NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- Sistema operativo: Windows 11
+
+## 🚀 Installazione e Utilizzo
+
+1. Scarica l'ultima versione di Accorda dal [repository GitHub](https://github.com/gpicchiarelli/accorda/releases).
+2. Esegui l'installazione.
+3. Collegherai la tua chitarra al computer e il nostro strumento farà il resto.
+
+## 📜 Licenza
+
+Questo progetto è rilasciato sotto la licenza MIT. Per i dettagli completi, consulta il [file di licenza](https://github.com/gpicchiarelli/accorda/blob/main/LICENSE).
+
+## 🐞 Segnalazione Problemi
+
+Hai una fantastica idea o hai trovato un bug? Condividilo con noi aprendo una [issue](https://github.com/gpicchiarelli/accorda/issues). Il tuo feedback ci aiuta a crescere!
+
+## 💪 Contributi
+
+Unisciti al nostro team! Per contribuire, segui le [linee guida per i contributi](CONTRIBUTING.md). Accogliamo con gioia i tuoi contributi e le tue idee!
+
+---
+
+**Nota:** Assicurati di seguire le norme di sicurezza e le raccomandazioni durante il collegamento e l'uso della tua chitarra con il computer.</value>
+  </data>
 </root>
