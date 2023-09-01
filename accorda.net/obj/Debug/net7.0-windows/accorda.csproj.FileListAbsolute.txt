@@ -52,3 +52,5 @@ C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\r
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.pdb
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\ref\Accorda.dll
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\bin\Debug\net7.0-windows\Accorda.xml
+C:\Users\Giacomo\source\repos\accorda.net\accorda.net\obj\Debug\net7.0-windows\Accorda.xml

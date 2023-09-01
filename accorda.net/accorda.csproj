@@ -7,7 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>Accorda.net.Program</StartupObject>
-    <SignAssembly>False</SignAssembly>
+    <SignAssembly>True</SignAssembly>
     <Title>Accorda</Title>
     <PackageProjectUrl>https://github.com/gpicchiarelli/accorda</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -19,6 +19,11 @@
     <RepositoryType>https://gpicchiarelli.github.io/accorda/</RepositoryType>
     <IncludeSymbols>False</IncludeSymbols>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
