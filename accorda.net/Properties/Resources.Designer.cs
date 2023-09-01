@@ -114,6 +114,26 @@ namespace Accorda.Properties {
         }
         
         /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoPictureBox_Image {
+            get {
+                object obj = ResourceManager.GetObject("logoPictureBox_Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+        /// </summary>
+        internal static System.Drawing.Icon logoPictureBox_Image1 {
+            get {
+                object obj = ResourceManager.GetObject("logoPictureBox_Image1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a # Accorda - Accordatore per Chitarra
         ///
         ///![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
