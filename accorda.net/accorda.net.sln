@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "El
 	ProjectSection(SolutionItems) = preProject
 		..\AUTHORS.md = ..\AUTHORS.md
 		..\CONTRIBUTING.md = ..\CONTRIBUTING.md
+		..\cspell.json = ..\cspell.json
 		..\LICENSE = ..\LICENSE
+		..\logo.jpeg = ..\logo.jpeg
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
