@@ -17,12 +17,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "El
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		All|x86 = All|x86
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.All|Any CPU.Build.0 = Release|Any CPU
+		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.All|x86.ActiveCfg = Release|Any CPU
+		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.All|x86.Build.0 = Release|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE84B1B8-31DF-40E3-9DE5-8C9851997A60}.Debug|x86.ActiveCfg = Debug|Any CPU
