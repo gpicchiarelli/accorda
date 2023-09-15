@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Accorda</id>
+    <version>1.0.0</version>
+    <title>Accorda</title>
+    <authors>Accorda</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>logoPictureBox.Image.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/gpicchiarelli/accorda</projectUrl>
+    <description>Package Description</description>
+    <repository type="https://gpicchiarelli.github.io/accorda/" url="https://github.com/gpicchiarelli/accorda" />
+    <dependencies>
+      <group targetFramework="net7.0-windows7.0">
+        <dependency id="Markdig" version="0.33.0" exclude="Build,Analyzers" />
+        <dependency id="NAudio" version="2.2.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net7.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\Giacomo\source\repos\accorda\accorda.net\bin\Debug\net7.0-windows\Accorda.runtimeconfig.json" target="lib\net7.0-windows7.0\Accorda.runtimeconfig.json" />
+    <file src="C:\Users\Giacomo\source\repos\accorda\accorda.net\bin\Debug\net7.0-windows\Accorda.dll" target="lib\net7.0-windows7.0\Accorda.dll" />
+    <file src="C:\Users\Giacomo\source\repos\accorda\accorda.net\bin\Debug\net7.0-windows\Accorda.xml" target="lib\net7.0-windows7.0\Accorda.xml" />
+    <file src="C:\Users\Giacomo\source\repos\accorda\accorda.net\Properties\logoPictureBox.Image.png" target="\Properties\logoPictureBox.Image.png" />
+    <file src="C:\Users\Giacomo\source\repos\accorda\LICENSE" target="\LICENSE" />
+    <file src="C:\Users\Giacomo\source\repos\accorda\README.md" target="\README.md" />
+  </files>
+</package>
