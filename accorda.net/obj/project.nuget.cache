@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/mdbn6lRHd/on1XB8XlDZiyEW+c9BehKqZ3InIe67jlaVXo62brukYucXgnaQNzCw6X/hy6m0I7GPu4UTKwVKQ==",
+  "dgSpecHash": "EUez0l2+LSnTit6/FYCcDmORSYZ4NyICC4fobxZQpPVX8SbyzGqyqf4pfDzCG4wrEjspfx+IrI5YqIELnUq9hw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
+  "projectFilePath": "C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gpicc\\.nuget\\packages\\markdig\\0.33.0\\markdig.0.33.0.nupkg.sha512",
     "C:\\Users\\gpicc\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
@@ -17,12 +17,5 @@
     "C:\\Users\\gpicc\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\gpicc\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Si è verificato un problema durante la lettura del file di cache c:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
