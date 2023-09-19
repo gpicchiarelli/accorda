@@ -1,21 +1,27 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "EUez0l2+LSnTit6/FYCcDmORSYZ4NyICC4fobxZQpPVX8SbyzGqyqf4pfDzCG4wrEjspfx+IrI5YqIELnUq9hw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
+=======
+  "dgSpecHash": "p8+3gWTK5Fvfrz95mc3u//4FQfxSmRoJ3rBTcTF1P7ti8DYaaFA6JAF6/+T2x8RTiIezIBm7YNOnKq+ODDNXag==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
+>>>>>>> b4b2e789c3570b62ad1d0da167450b68a4b1290a
   "expectedPackageFiles": [
-    "C:\\Users\\gpicc\\.nuget\\packages\\markdig\\0.33.0\\markdig.0.33.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio\\2.2.0\\naudio.2.2.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio.asio\\2.2.0\\naudio.asio.2.2.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio.core\\2.2.0\\naudio.core.2.2.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio.midi\\2.2.0\\naudio.midi.2.2.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio.wasapi\\22.0.0\\naudio.wasapi.22.0.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio.winforms\\2.2.0\\naudio.winforms.2.2.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\naudio.winmm\\2.2.0\\naudio.winmm.2.2.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\gpicc\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\Giacomo\\.nuget\\packages\\markdig\\0.33.0\\markdig.0.33.0.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio.midi\\2.2.1\\naudio.midi.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio.winforms\\2.2.1\\naudio.winforms.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Giacomo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
