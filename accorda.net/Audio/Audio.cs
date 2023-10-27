@@ -72,7 +72,6 @@ namespace Accorda.Audio
                         maxIndex = i;
                     }
                 }
-
                 double frequency = maxIndex * sampleRate / bufferSize;
                 DominantFrequencyDetected?.Invoke(this, frequency);
             }
