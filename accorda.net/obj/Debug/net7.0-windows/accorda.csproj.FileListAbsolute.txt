@@ -69,7 +69,6 @@ C:\Users\Giacomo\source\repos\accorda\accorda.net\bin\Debug\net7.0-windows\NAudi
 C:\Users\Giacomo\source\repos\accorda\accorda.net\bin\Debug\net7.0-windows\NAudio.WinForms.dll
 C:\Users\Giacomo\source\repos\accorda\accorda.net\bin\Debug\net7.0-windows\NAudio.WinMM.dll
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.csproj.AssemblyReference.cache
-C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.net.Accorda.resources
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.Informazioni.resources
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.Properties.Resources.resources
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.csproj.GenerateResource.cache
@@ -84,3 +83,4 @@ C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accor
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.pdb
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\ref\Accorda.dll
+C:\Users\Giacomo\source\repos\accorda\accorda.net\obj\Debug\net7.0-windows\Accorda.net.Accorda.resources
