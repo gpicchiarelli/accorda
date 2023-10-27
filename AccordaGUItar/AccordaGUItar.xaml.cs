@@ -2,6 +2,7 @@
 using System.Windows;
 using NAudio.Wave;
 using System.Collections.Generic;
+using System.Windows.Controls;
 
 namespace Accorda
 {
@@ -15,7 +16,6 @@ namespace Accorda
 
             audioRecorder = new Audio.Audio();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
-
             InizializzaDispositiviIngresso();
         }
 
@@ -49,6 +49,14 @@ namespace Accorda
         private void Chiudi_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void SelezionaCorda_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (SelezionaCorda.SelectedIndex == 0)
+            {
+                SelezionaCorda.SelectedIndex = -1; // Imposta la selezione su -1 per disabilitare la selezione della riga vuota
+            }
         }
     }
 }
