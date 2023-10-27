@@ -1,4 +1,4 @@
-﻿<Window x:Class="Accorda.MainWindow"
+﻿<Window x:Class="Accorda.AccordaGUI"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Accordatore per Chitarra" Height="300" Width="400">

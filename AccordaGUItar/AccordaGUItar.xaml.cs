@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace Accorda
 {
-    public partial class MainWindow : Window
+    public partial class AccordaGUI : Window
     {
         private Audio.Audio audioRecorder;
 
-        public MainWindow()
+        public AccordaGUI()
         {
             InitializeComponent();
 

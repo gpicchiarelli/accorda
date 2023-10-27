@@ -1,5 +1,4 @@
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.csproj.AssemblyReference.cache
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar_Content.g.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar_MarkupCompile.cache
@@ -16,7 +15,6 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\NAu
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\NAudio.Wasapi.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\NAudio.WinForms.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\NAudio.WinMM.dll
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.g.resources
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.Properties.Resources.resources
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.csproj.GenerateResource.cache
@@ -30,3 +28,5 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\ref
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.pdb
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\ref\AccordaGUItar.dll
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.baml
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.g.cs
