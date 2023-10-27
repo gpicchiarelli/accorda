@@ -1,28 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using NAudio.Wave;
+using System.Collections.Generic;
 
-namespace AccordaGUItar
+namespace Accorda
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private Audio.Audio audioRecorder;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            audioRecorder = new Audio.Audio();
+            audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+
+            InizializzaDispositiviIngresso();
+        }
+
+        private void InizializzaDispositiviIngresso()
+        {
+            List<string> dispositiviIngresso = audioRecorder.ElencaDispositiviIngresso();
+            InputDevices.ItemsSource = dispositiviIngresso;
+            InputDevices.SelectedIndex = 0;
+        }
+
+        private void InputDevices_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            // Aggiorna il dispositivo in ingresso selezionato
+            int indiceDispositivoSelezionato = InputDevices.SelectedIndex;
+            audioRecorder = new Audio.Audio(indiceDispositivoSelezionato);
+            audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+        }
+
+        private void AudioRecorder_DominantFrequencyDetected(object sender, double frequenzaDominante)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                FrequenzaAttuale.Text = frequenzaDominante.ToString("F2");
+            });
         }
     }
 }

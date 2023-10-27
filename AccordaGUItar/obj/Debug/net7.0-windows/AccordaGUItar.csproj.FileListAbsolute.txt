@@ -3,7 +3,6 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\Mai
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar_Content.g.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar_MarkupCompile.cache
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar_MarkupCompile.lref
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\AccordaGUItar.exe
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\AccordaGUItar.deps.json
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\AccordaGUItar.runtimeconfig.json
