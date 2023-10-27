@@ -3,6 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Accordatore per Chitarra" Height="300" Width="400">
     <Grid>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Licenza" Click="LeggiLicenza_Click"/>
+                <MenuItem Header="Chiudi" Click="Chiudi_Click"/>
+            </MenuItem>
+        </Menu>
         <TextBlock Text="Accordatore per Chitarra" FontSize="24" HorizontalAlignment="Center" Margin="0,20,0,0"/>
         <ComboBox Name="InputDevices" HorizontalAlignment="Center" Width="200" Margin="0,20,0,0" SelectionChanged="InputDevices_SelectionChanged"/>
         <TextBlock Text="Frequenza Rilevata" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0"/>

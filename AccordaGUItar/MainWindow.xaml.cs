@@ -41,5 +41,14 @@ namespace Accorda
                 FrequenzaAttuale.Text = frequenzaDominante.ToString("F2");
             });
         }
+        private void LeggiLicenza_Click(object sender, RoutedEventArgs e)
+        {
+            // Codice per visualizzare la licenza
+        }
+
+        private void Chiudi_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
