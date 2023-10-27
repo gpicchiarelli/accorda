@@ -14,7 +14,11 @@ namespace Accorda.Audio
         private readonly Complex[] complexBuffer;
         private readonly BiQuadFilter filter;
 
-        public event EventHandler<double> DominantFrequencyDetected; // Resto del codice come prima...
+        // Aggiunto un evento per rilevare la frequenza istantanea
+        public event EventHandler<double> DominantFrequencyDetected;
+
+        // Aggiunto un threshold per il volume minimo rilevabile
+        private double volumeThreshold = 0.1;
 
         public Audio(int InputDeviceSelector = 0)
         {
@@ -35,6 +39,8 @@ namespace Accorda.Audio
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
+            double maxVolume = 0.0;
+
             for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
                 short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
@@ -42,25 +48,34 @@ namespace Accorda.Audio
                 buffer[i] = filter.Transform(buffer[i]);
                 complexBuffer[i].X = buffer[i];
                 complexBuffer[i].Y = 0;
-            }
 
-            FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
-
-            int maxIndex = 0;
-            double maxMagnitude = 0;
-
-            for (int i = 0; i < bufferSize / 2; i++)
-            {
-                double magnitude = CalculateMagnitude(complexBuffer[i]);
-                if (magnitude > maxMagnitude)
+                double volume = Math.Abs(buffer[i]);
+                if (volume > maxVolume)
                 {
-                    maxMagnitude = magnitude;
-                    maxIndex = i;
+                    maxVolume = volume;
                 }
             }
 
-            double frequency = maxIndex * sampleRate / bufferSize;
-            DominantFrequencyDetected?.Invoke(this, frequency);
+            if (maxVolume > volumeThreshold)
+            {
+                FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
+
+                int maxIndex = 0;
+                double maxMagnitude = 0;
+
+                for (int i = 0; i < bufferSize / 2; i++)
+                {
+                    double magnitude = CalculateMagnitude(complexBuffer[i]);
+                    if (magnitude > maxMagnitude)
+                    {
+                        maxMagnitude = magnitude;
+                        maxIndex = i;
+                    }
+                }
+
+                double frequency = maxIndex * sampleRate / bufferSize;
+                DominantFrequencyDetected?.Invoke(this, frequency);
+            }
         }
 
         private double CalculateMagnitude(Complex complex)
@@ -88,6 +103,12 @@ namespace Accorda.Audio
         public void StopRecording()
         {
             waveIn.StopRecording();
+        }
+
+        // Aggiunto un metodo per impostare il threshold di volume
+        public void SetVolumeThreshold(double threshold)
+        {
+            volumeThreshold = threshold;
         }
     }
 }
