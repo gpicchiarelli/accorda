@@ -14,7 +14,7 @@
 
         <Menu>
             <MenuItem Header="File">
-                <MenuItem Header="Leggi Licenza" Click="LeggiLicenza_Click"/>
+                <MenuItem Header="Licenza" Click="LeggiLicenza_Click"/>
                 <MenuItem Header="Chiudi" Click="Chiudi_Click"/>
             </MenuItem>
         </Menu>
