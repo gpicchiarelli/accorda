@@ -77,15 +77,17 @@ namespace Accorda
         {
             if (FrequenzaAttuale.Text.Trim() != String.Empty)
             {
-                double targetFrequency = GetTargetFrequency();// Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
                 double currentFrequency = double.Parse(FrequenzaAttuale.Text);
 
-                double frequencyDifference = Math.Abs(currentFrequency - targetFrequency);
-                double differencePercentage = (frequencyDifference / targetFrequency) * 100.0;
+                double frequencyDifference = currentFrequency - targetFrequency;
+                double differencePercentage = (frequencyDifference / (targetFrequency / 2)) * 100.0;
 
                 const int MaxValue = 100;
                 int progressValue = MaxValue - (int)differencePercentage;
                 progressValue = Math.Max(0, Math.Min(MaxValue, progressValue));
+
+                gauge.Value = progressValue;
             }
         }
 
