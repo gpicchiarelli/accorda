@@ -66,14 +66,17 @@ namespace Accorda
                 {
                     // Calcola la soglia in base alla corda selezionata
                     ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
-                    string cordaInfo = cordaSelezionata.Content.ToString();
-                    if (cordaInfo is not null)
+                    if (cordaSelezionata is not null)
                     {
-                        double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
-                        gauge.FromValue = 0;
-                        gauge.ToValue = targetFrequency * 2;
-                        // Avvia l'accordatura con la nuova soglia
-                        AvviaAccordatura();
+                        string cordaInfo = cordaSelezionata.Content.ToString();
+                        if (cordaInfo is not null)
+                        {
+                            double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                            gauge.FromValue = 0;
+                            gauge.ToValue = targetFrequency * 2;
+                            // Avvia l'accordatura con la nuova soglia
+                            AvviaAccordatura();
+                        }
                     }
                 }
             }
