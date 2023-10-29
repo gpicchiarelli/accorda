@@ -81,6 +81,7 @@ namespace Accorda
             if (FrequenzaAttuale.Text.Trim() != String.Empty)
             {
                 double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                gauge.ToValue = targetFrequency;
                 double currentFrequency = double.Parse(FrequenzaAttuale.Text);
 
                 double frequencyDifference = currentFrequency - targetFrequency;
@@ -89,7 +90,6 @@ namespace Accorda
                 const int MaxValue = 100;
                 int progressValue = MaxValue - (int)differencePercentage;
                 progressValue = Math.Max(0, Math.Min(MaxValue, progressValue));
-
                 gauge.Value = progressValue;
             }
         }
@@ -124,7 +124,7 @@ namespace Accorda
             else if (cordaInfo.Contains("Mi (basso)"))
             {
                 return NoteMusicali.Mi_Basso;
-            }
+            }         
 
             return 0.0; // Valore predefinito se non viene riconosciuta una corda
         }

@@ -41,14 +41,13 @@
         </ComboBox>        
         <lvc:AngularGauge Name="gauge" 
                           Margin="10" Grid.Row="5" 
-                          FromValue="-50" 
-                          ToValue="+50" 
+                          FromValue="0" 
+                          ToValue="100" 
                           Width="200" 
                           Height="200" 
                           TicksForeground="White" 
                           Foreground="WhiteSmoke" 
-                          FontWeight="Bold" FontSize="16"
-                          >
+                          FontWeight="Bold" FontSize="18">
         </lvc:AngularGauge>        
     </Grid>
 </Window>
