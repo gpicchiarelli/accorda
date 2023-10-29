@@ -97,35 +97,37 @@ namespace Accorda
         private double GetTargetFrequency()
         {
             ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
-            string cordaInfo = cordaSelezionata?.Content.ToString();
+            if (cordaSelezionata is not null)
+            {
+                string cordaInfo = cordaSelezionata?.Content.ToString();
 
-            if (cordaInfo is null) return 0;
+                if (cordaInfo is null) return 0;
 
-            if (cordaInfo.Contains("Mi (alto)"))
-            {
-                return NoteMusicali.Mi_Alto;
+                if (cordaInfo.Contains("Mi (alto)"))
+                {
+                    return NoteMusicali.Mi_Alto;
+                }
+                else if (cordaInfo.Contains("Si"))
+                {
+                    return NoteMusicali.Si;
+                }
+                else if (cordaInfo.Contains("Sol"))
+                {
+                    return NoteMusicali.Sol;
+                }
+                else if (cordaInfo.Contains("Re"))
+                {
+                    return NoteMusicali.Re;
+                }
+                else if (cordaInfo.Contains("La"))
+                {
+                    return NoteMusicali.La;
+                }
+                else if (cordaInfo.Contains("Mi (basso)"))
+                {
+                    return NoteMusicali.Mi_Basso;
+                }
             }
-            else if (cordaInfo.Contains("Si"))
-            {
-                return NoteMusicali.Si;
-            }
-            else if (cordaInfo.Contains("Sol"))
-            {
-                return NoteMusicali.Sol;
-            }
-            else if (cordaInfo.Contains("Re"))
-            {
-                return NoteMusicali.Re;
-            }
-            else if (cordaInfo.Contains("La"))
-            {
-                return NoteMusicali.La;
-            }
-            else if (cordaInfo.Contains("Mi (basso)"))
-            {
-                return NoteMusicali.Mi_Basso;
-            }         
-
             return 0.0; // Valore predefinito se non viene riconosciuta una corda
         }
 
