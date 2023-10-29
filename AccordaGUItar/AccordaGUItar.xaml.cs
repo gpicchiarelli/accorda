@@ -69,6 +69,10 @@ namespace Accorda
                     string cordaInfo = cordaSelezionata.Content.ToString();
                     if (cordaInfo is not null)
                     {
+                        double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                        gauge.FromValue = 0;
+                        gauge.ToValue = targetFrequency * 2;
+
                         // Avvia l'accordatura con la nuova soglia
                         AvviaAccordatura();
                     }
@@ -81,16 +85,10 @@ namespace Accorda
             if (FrequenzaAttuale.Text.Trim() != String.Empty)
             {
                 double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
-                gauge.ToValue = targetFrequency;
+                gauge.FromValue = 0;
+                gauge.ToValue = targetFrequency * 2;
                 double currentFrequency = double.Parse(FrequenzaAttuale.Text);
-
-                double frequencyDifference = currentFrequency - targetFrequency;
-                double differencePercentage = (frequencyDifference / (targetFrequency / 2)) * 100.0;
-
-                const int MaxValue = 100;
-                int progressValue = MaxValue - (int)differencePercentage;
-                progressValue = Math.Max(0, Math.Min(MaxValue, progressValue));
-                gauge.Value = progressValue;
+                gauge.Value = currentFrequency;
             }
         }
 
