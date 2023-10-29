@@ -102,26 +102,20 @@ namespace Accorda
         }
         private void AvviaAccordatura(double soglia)
         {
-            // Ottieni la frequenza corrente
-            double currentFrequency = double.Parse(FrequenzaAttuale.Text);
-
-            // Calcola la differenza tra la frequenza corrente e la frequenza target
-            double frequencyDifference = Math.Abs(currentFrequency - GetTargetFrequency());
-
-            // Verifica se la frequenza corrente è all'interno della soglia specificata
-            if (frequencyDifference <= soglia)
+            if (FrequenzaAttuale.Text.Trim() != String.Empty)
             {
-                // La frequenza è nell'intervallo di accordatura
-                // Puoi eseguire le azioni desiderate, ad esempio, cambiare il colore della barra di progresso a verde
-                AccordaturaProgressBar.Value = 100; // Barra di progresso completa
-                AccordaturaProgressBar.Foreground = Brushes.Green; // Imposta il colore a verde
-            }
-            else
-            {
-                // La frequenza è al di fuori dell'intervallo di accordatura
-                // Puoi eseguire le azioni desiderate, ad esempio, cambiare il colore della barra di progresso a rosso
-                AccordaturaProgressBar.Value = 0; // Barra di progresso vuota
-                AccordaturaProgressBar.Foreground = Brushes.Red; // Imposta il colore a rosso
+                double targetFrequency = GetTargetFrequency();// Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                double currentFrequency = double.Parse(FrequenzaAttuale.Text);
+
+                double frequencyDifference = Math.Abs(currentFrequency - targetFrequency);
+                double differencePercentage = (frequencyDifference / targetFrequency) * 100.0;
+
+                const int MaxValue = 100;
+                int progressValue = MaxValue - (int)differencePercentage;
+                progressValue = Math.Max(0, Math.Min(MaxValue, progressValue));
+
+                AccordaturaProgressBar.Value = progressValue;
+                AccordaturaProgressBar.Foreground = progressValue == MaxValue ? new SolidColorBrush(Colors.Green) : new SolidColorBrush(Colors.Red);
             }
         }
 
