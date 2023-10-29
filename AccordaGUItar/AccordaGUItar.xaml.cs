@@ -3,6 +3,7 @@ using System.Windows;
 using NAudio.Wave;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Accorda
 {
@@ -58,5 +59,22 @@ namespace Accorda
                 SelezionaCorda.SelectedIndex = -1; // Imposta la selezione su -1 per disabilitare la selezione della riga vuota
             }
         }
+
+        private void AccordaturaProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            // Valore minimo per la conferma dell'accordatura
+            const double ValoreMinimoAccordatura = 95.0;
+
+            double valoreAttuale = AccordaturaProgressBar.Value;
+            if (valoreAttuale >= ValoreMinimoAccordatura)
+            {
+                AccordaturaProgressBar.Foreground = new SolidColorBrush(Colors.Green); // Colore verde per l'accordatura corretta
+            }
+            else
+            {
+                AccordaturaProgressBar.Foreground = new SolidColorBrush(Colors.Red); // Colore rosso per l'accordatura errata
+            }
+        }
+
     }
 }

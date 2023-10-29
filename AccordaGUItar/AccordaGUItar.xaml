@@ -38,5 +38,6 @@
             <ComboBoxItem Content="Corda 5 - La [A] - 110Hz"/>
             <ComboBoxItem Content="Corda 6 - Mi (basso) [E] - 82.41Hz"/>
         </ComboBox>
+        <ProgressBar Name="AccordaturaProgressBar" Height="50" VerticalAlignment="Center" Margin="0,10,0,0" Grid.Row="5" Minimum="0" Maximum="100" Value="0" Foreground="Green" Background="Red" ValueChanged="AccordaturaProgressBar_ValueChanged"/>
     </Grid>
 </Window>
