@@ -72,7 +72,6 @@ namespace Accorda
                         double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
                         gauge.FromValue = 0;
                         gauge.ToValue = targetFrequency * 2;
-
                         // Avvia l'accordatura con la nuova soglia
                         AvviaAccordatura();
                     }
