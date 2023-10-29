@@ -25,7 +25,7 @@
         <ComboBox Name="InputDevices" HorizontalAlignment="Center" Width="300" Margin="0,20,0,0" SelectionChanged="InputDevices_SelectionChanged" Grid.Row="1"/>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-            <TextBlock Name="FrequenzaLabel" Text="Frequenza Rilevata:" FontSize="18" Margin="0,0,10,0" VerticalAlignment="Center"/>
+            <TextBlock Name="FrequenzaLabel" Text="Frequenza Rilevata (Hz):" FontSize="18" Margin="0,0,10,0" VerticalAlignment="Center"/>
             <TextBlock Name="FrequenzaAttuale" FontSize="36" FontWeight="Bold" VerticalAlignment="Center"/>
         </StackPanel>
 
@@ -48,8 +48,6 @@
                           TicksForeground="White" 
                           Foreground="WhiteSmoke" 
                           FontWeight="Bold" FontSize="16"
-                          SectionsInnerRadius=".6"
-                          
                           >
         </lvc:AngularGauge>        
     </Grid>

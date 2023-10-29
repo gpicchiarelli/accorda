@@ -62,13 +62,16 @@ namespace Accorda
             }
             else
             {
-                // Calcola la soglia in base alla corda selezionata
-                ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
-                string cordaInfo = cordaSelezionata.Content.ToString();
-                if (cordaInfo is not null)
+                if (SelezionaCorda.SelectedIndex != -1)
                 {
-                    // Avvia l'accordatura con la nuova soglia
-                    AvviaAccordatura();
+                    // Calcola la soglia in base alla corda selezionata
+                    ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
+                    string cordaInfo = cordaSelezionata.Content.ToString();
+                    if (cordaInfo is not null)
+                    {
+                        // Avvia l'accordatura con la nuova soglia
+                        AvviaAccordatura();
+                    }
                 }
             }
         }
