@@ -86,9 +86,6 @@ namespace Accorda
                 const int MaxValue = 100;
                 int progressValue = MaxValue - (int)differencePercentage;
                 progressValue = Math.Max(0, Math.Min(MaxValue, progressValue));
-
-                AccordaturaProgressBar.Value = progressValue;
-                AccordaturaProgressBar.Foreground = progressValue == MaxValue ? new SolidColorBrush(Colors.Green) : new SolidColorBrush(Colors.Red);
             }
         }
 
@@ -130,14 +127,7 @@ namespace Accorda
 
         private void AccordaturaProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            // Valore minimo per la conferma dell'accordatura
-            const double ValoreMinimoAccordatura = 95.0;
 
-            double valoreAttuale = AccordaturaProgressBar.Value;
-            if (valoreAttuale >= ValoreMinimoAccordatura)
-            {
-                AccordaturaProgressBar.Foreground = new SolidColorBrush(Colors.Green); // Colore verde per l'accordatura corretta
-            }
         }
     }
 }

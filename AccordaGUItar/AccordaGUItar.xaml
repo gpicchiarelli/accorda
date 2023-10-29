@@ -1,8 +1,9 @@
 ﻿<Window x:Class="Accorda.AccordaGUI"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Accordatore per Chitarra" Height="349" Width="600">
-    <Grid Background="#F5F5F5">
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        Title="Accordatore per Chitarra" Height="500" Width="400">
+    <Grid Background="#F5F5F5" Margin="0,0,0,-238">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -38,6 +39,9 @@
             <ComboBoxItem Content="Corda 5 - La [A] - 110Hz"/>
             <ComboBoxItem Content="Corda 6 - Mi (basso) [E] - 82.41Hz"/>
         </ComboBox>
-        <ProgressBar Name="AccordaturaProgressBar" Height="50" VerticalAlignment="Center" Margin="0,10,0,0" Grid.Row="5" Minimum="0" Maximum="100" Value="0" Foreground="Green" Background="Red" ValueChanged="AccordaturaProgressBar_ValueChanged"/>
+        
+        <lvc:AngularGauge Name="gauge" Foreground="White" Margin="10" Grid.Row="5" FromValue="0" Width="200" Height="200" >
+        </lvc:AngularGauge>
+        
     </Grid>
 </Window>
