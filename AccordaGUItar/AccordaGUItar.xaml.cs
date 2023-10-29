@@ -41,6 +41,7 @@ namespace Accorda
             Dispatcher.Invoke(() =>
             {
                 FrequenzaAttuale.Text = frequenzaDominante.ToString("F2");
+                AvviaAccordatura();
             });
         }
         private void LeggiLicenza_Click(object sender, RoutedEventArgs e)
@@ -64,43 +65,15 @@ namespace Accorda
                 // Calcola la soglia in base alla corda selezionata
                 ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
                 string cordaInfo = cordaSelezionata.Content.ToString();
-                double soglia = CalcolaSogliaAccordatura(cordaInfo);
-
-                // Avvia l'accordatura con la nuova soglia
-                AvviaAccordatura(soglia);
+                if (cordaInfo is not null)
+                {
+                    // Avvia l'accordatura con la nuova soglia
+                    AvviaAccordatura();
+                }
             }
         }
-
-        private double CalcolaSogliaAccordatura(string cordaInfo)
-        {
-            double soglia = 0.0;
-            if (cordaInfo.Contains("Mi (alto)"))
-            {
-                soglia = 1.0; // Imposta la soglia per la corda 1
-            }
-            else if (cordaInfo.Contains("Si"))
-            {
-                soglia = 2.0; // Imposta la soglia per la corda 2
-            }
-            else if (cordaInfo.Contains("Sol"))
-            {
-                soglia = 3.0; // Imposta la soglia per la corda 3
-            }
-            else if (cordaInfo.Contains("Re"))
-            {
-                soglia = 4.0; // Imposta la soglia per la corda 4
-            }
-            else if (cordaInfo.Contains("La"))
-            {
-                soglia = 5.0; // Imposta la soglia per la corda 5
-            }
-            else if (cordaInfo.Contains("Mi (basso)"))
-            {
-                soglia = 6.0; // Imposta la soglia per la corda 6
-            }
-            return soglia;
-        }
-        private void AvviaAccordatura(double soglia)
+ 
+        private void AvviaAccordatura()
         {
             if (FrequenzaAttuale.Text.Trim() != String.Empty)
             {
@@ -122,7 +95,9 @@ namespace Accorda
         private double GetTargetFrequency()
         {
             ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
-            string cordaInfo = cordaSelezionata.Content.ToString();
+            string cordaInfo = cordaSelezionata?.Content.ToString();
+
+            if (cordaInfo is null) return 0;
 
             if (cordaInfo.Contains("Mi (alto)"))
             {
@@ -162,10 +137,6 @@ namespace Accorda
             if (valoreAttuale >= ValoreMinimoAccordatura)
             {
                 AccordaturaProgressBar.Foreground = new SolidColorBrush(Colors.Green); // Colore verde per l'accordatura corretta
-            }
-            else
-            {
-                AccordaturaProgressBar.Foreground = new SolidColorBrush(Colors.Red); // Colore rosso per l'accordatura errata
             }
         }
     }
