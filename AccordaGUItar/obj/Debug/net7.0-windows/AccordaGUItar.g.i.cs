@@ -93,7 +93,7 @@ namespace Accorda {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AccordaGUItar;V1.0.0.0;component/accordaguitar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AccordaGUItar;component/accordaguitar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AccordaGUItar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
