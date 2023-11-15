@@ -3,6 +3,8 @@ using System.Windows;
 using NAudio.Wave;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Media;
+using accorda.Note;
 
 namespace Accorda
 {
@@ -39,6 +41,7 @@ namespace Accorda
             Dispatcher.Invoke(() =>
             {
                 FrequenzaAttuale.Text = frequenzaDominante.ToString("F2");
+                AvviaAccordatura();
             });
         }
         private void LeggiLicenza_Click(object sender, RoutedEventArgs e)
@@ -57,6 +60,81 @@ namespace Accorda
             {
                 SelezionaCorda.SelectedIndex = -1; // Imposta la selezione su -1 per disabilitare la selezione della riga vuota
             }
+            else
+            {
+                if (SelezionaCorda.SelectedIndex != -1)
+                {
+                    // Calcola la soglia in base alla corda selezionata
+                    ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
+                    if (cordaSelezionata is not null)
+                    {
+                        string cordaInfo = cordaSelezionata.Content.ToString();
+                        if (cordaInfo is not null)
+                        {
+                            double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                            gauge.FromValue = 0;
+                            gauge.ToValue = targetFrequency * 2;
+                            // Avvia l'accordatura con la nuova soglia
+                            AvviaAccordatura();
+                        }
+                    }
+                }
+            }
+        }
+ 
+        private void AvviaAccordatura()
+        {
+            if (FrequenzaAttuale.Text.Trim() != String.Empty)
+            {
+                double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
+                gauge.FromValue = 0;
+                gauge.ToValue = targetFrequency * 2;
+                double currentFrequency = double.Parse(FrequenzaAttuale.Text);
+                gauge.Value = currentFrequency;
+            }
+        }
+
+        private double GetTargetFrequency()
+        {
+            ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
+            if (cordaSelezionata is not null)
+            {
+                string cordaInfo = cordaSelezionata?.Content.ToString();
+
+                if (cordaInfo is null) return 0;
+
+                if (cordaInfo.Contains("Mi (alto)"))
+                {
+                    return NoteMusicali.Mi_Alto;
+                }
+                else if (cordaInfo.Contains("Si"))
+                {
+                    return NoteMusicali.Si;
+                }
+                else if (cordaInfo.Contains("Sol"))
+                {
+                    return NoteMusicali.Sol;
+                }
+                else if (cordaInfo.Contains("Re"))
+                {
+                    return NoteMusicali.Re;
+                }
+                else if (cordaInfo.Contains("La"))
+                {
+                    return NoteMusicali.La;
+                }
+                else if (cordaInfo.Contains("Mi (basso)"))
+                {
+                    return NoteMusicali.Mi_Basso;
+                }
+            }
+            return 0.0; // Valore predefinito se non viene riconosciuta una corda
+        }
+
+
+        private void AccordaturaProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }
