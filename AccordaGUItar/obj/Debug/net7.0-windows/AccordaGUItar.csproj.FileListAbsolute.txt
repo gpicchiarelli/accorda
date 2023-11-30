@@ -32,3 +32,4 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\Acc
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.g.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\LiveCharts.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net7.0-windows\LiveCharts.Wpf.dll
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net7.0-windows\AccordaGUItar.sourcelink.json

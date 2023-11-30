@@ -18,14 +18,14 @@ Accorda è il compagno perfetto per ogni chitarrista! Un potente strumento per m
 
 ## ⚙️ Requisiti
 
-- [Microsoft .NET 7](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- [Microsoft .NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - Sistema operativo: Windows 11
 
 ## 🚀 Installazione e Utilizzo
 
 1. Scarica l'ultima versione di Accorda dal [repository GitHub](https://github.com/gpicchiarelli/accorda/releases).
 2. Esegui l'installazione.
-3. Collegherai la tua chitarra al computer e il nostro strumento farà il resto.
+3. Accendi il microfono.
 
 ## 📜 Licenza
 

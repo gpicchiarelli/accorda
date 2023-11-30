@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {
+    "net8.0-windows7.0": {
       "LiveCharts/0.9.7": {
         "type": "package",
         "compile": {
@@ -585,7 +585,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": [
+    "net8.0-windows7.0": [
       "LiveCharts.Wpf >= 0.9.7",
       "Markdig >= 0.33.0",
       "NAudio >= 2.2.1"
@@ -613,15 +613,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows"
+        "net8.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -632,8 +632,8 @@
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows7.0",
         "dependencies": {
           "LiveCharts.Wpf": {
             "target": "Package",
@@ -667,29 +667,35 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Si è verificato un problema durante la lettura del file di cache C:\\Users\\gpicc\\source\\repos\\accorda\\AccordaGUItar\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Il pacchetto 'LiveCharts 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net7.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "message": "Il pacchetto 'LiveCharts 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net8.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
       "libraryId": "LiveCharts",
       "targetGraphs": [
-        "net7.0-windows7.0"
+        "net8.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Il pacchetto 'LiveCharts.Wpf 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net7.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "message": "Il pacchetto 'LiveCharts.Wpf 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net8.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
       "libraryId": "LiveCharts.Wpf",
       "targetGraphs": [
-        "net7.0-windows7.0"
+        "net8.0-windows7.0"
       ]
     }
   ]

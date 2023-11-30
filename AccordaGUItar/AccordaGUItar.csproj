@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>logo.ico</ApplicationIcon>
@@ -10,6 +10,7 @@
     <PackageIcon>logoPictureBox.Image.jpg</PackageIcon>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <StartupObject>AccordaGUItar.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

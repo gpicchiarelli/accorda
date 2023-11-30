@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {
+    "net8.0-windows7.0": {
       "Markdig/0.33.0": {
         "type": "package",
         "compile": {
@@ -516,7 +516,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": [
+    "net8.0-windows7.0": [
       "Markdig >= 0.33.0",
       "NAudio >= 2.2.1"
     ]
@@ -543,15 +543,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows"
+        "net8.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -562,8 +562,8 @@
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows7.0",
         "dependencies": {
           "Markdig": {
             "target": "Package",
@@ -593,8 +593,16 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Si è verificato un problema durante la lettura del file di cache C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
