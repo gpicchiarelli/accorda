@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Accorda</name>
+    </assembly>
+    <members>
+        <member name="T:Accorda.net.Accorda">
+            <summary>
+            GUI for main windows
+            </summary>
+            <seealso cref="T:System.Windows.Forms.Form" />
+        </member>
+        <member name="P:Accorda.net.Accorda.audioRecorder">
+            <summary>
+            Gets or sets the audio recorder.
+            </summary>
+            <value>
+            The audio recorder.
+            </value>
+        </member>
+        <member name="M:Accorda.net.Accorda.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Accorda.net.Accorda"/> class.
+            </summary>
+        </member>
+        <member name="M:Accorda.net.Accorda.AggiornaFrequenza(System.Double)">
+            <summary>
+            Aggiornas the frequenza.
+            </summary>
+            <param name="dominantFrequency">The dominant frequency.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.AudioRecorder_DominantFrequencyDetected(System.Object,System.Double)">
+            <summary>
+            Audioes the recorder dominant frequency detected.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="dominantFrequency">The dominant frequency.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.Accorda_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event of the Accorda control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.richTextBox1_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the TextChanged event of the richTextBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.Accorda_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Shown event of the Accorda control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.Accorda_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Handles the FormClosing event of the Accorda control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.FormClosingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.DispositiviIngresso_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SelectedIndexChanged event of the DispositiviIngresso control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.chiudiToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the chiudiToolStripMenuItem control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.chiudiToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the chiudiToolStripMenuItem1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.informazioniToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the informazioniToolStripMenuItem1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.selezionaCorda_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SelectedIndexChanged event of the selezionaCorda control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:Accorda.net.Accorda.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Accorda.net.Accorda.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Accorda.net.Accorda.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Accorda.net.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Accorda.net.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Accorda.net.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:Accorda.net.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             global::System.Windows.Forms.Application.EnableVisualStyles();
+             global::System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+             global::System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+        <member name="F:Accorda.Informazioni.components">
+            <summary>
+            Variabile di progettazione necessaria.
+            </summary>
+        </member>
+        <member name="M:Accorda.Informazioni.Dispose(System.Boolean)">
+            <summary>
+            Pulire le risorse in uso.
+            </summary>
+        </member>
+        <member name="M:Accorda.Informazioni.InitializeComponent">
+            <summary>
+            Metodo necessario per il supporto della finestra di progettazione. Non modificare
+            il contenuto del metodo con l'editor di codice.
+            </summary>
+        </member>
+        <member name="T:Accorda.Properties.Resources">
+            <summary>
+              Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
+            </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.ResourceManager">
+            <summary>
+              Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
+            </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.Culture">
+            <summary>
+              Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
+              ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
+            </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.AUTHORS">
+             <summary>
+               Cerca una stringa localizzata simile a # Autori 🚀
+            
+            - **Giacomo Picchiarelli** (https://github.com/gpicchiarelli)
+            - **ChatGPT** - Assistenza automatizzata
+            - **Bing Chat** - Generazione automatica di immagini.
+             </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.CONTRIBUTING">
+             <summary>
+               Cerca una stringa localizzata simile a # Contribuire a Accorda
+            
+            Grazie per aver scelto di contribuire ad Accorda! La tua passione e le tue idee sono il motore che spinge questo progetto a crescere e migliorare.
+            
+            ## 🚀 Pronti a Iniziare
+            
+            Contribuire ad Accorda è facile e gratificante. Ecco come puoi partecipare:
+            
+            1. 🍴 [Forka il repository](https://github.com/gpicchiarelli/accorda/fork) su GitHub.
+            2. 👩‍💻 Clona il tuo fork sulla tua macchina locale.
+            3. 🌿 Crea un nuovo branch per le tue modifiche.
+            4. ✨ Apporta le tue modifiche e assic [stringa troncata]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.LICENSE">
+             <summary>
+               Cerca una stringa localizzata simile a MIT License
+            
+            Copyright (c) 2023 Giacomo Picchiarelli
+            
+            Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the &quot;Software&quot;), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:
+            
+            The above cop [stringa troncata]&quot;;.
+             </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.logoPictureBox_Image">
+            <summary>
+              Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.logoPictureBox_Image1">
+            <summary>
+              Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
+            </summary>
+        </member>
+        <member name="P:Accorda.Properties.Resources.README">
+             <summary>
+               Cerca una stringa localizzata simile a # Accorda - Accordatore per Chitarra
+            
+            ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+            ![Open Issues](https://img.shields.io/github/issues-raw/gpicchiarelli/accorda.svg)
+            ![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/gpicchiarelli/accorda.svg)
+            ![Last Commit](https://img.shields.io/github/last-commit/gpicchiarelli/accorda.svg)
+            ![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
+            ![Stars](https://img.shields.io/github/stars/gpicchiar [stringa troncata]&quot;;.
+             </summary>
+        </member>
+        <member name="T:accorda.Note.NoteMusicali">
+            <summary>
+            Class for frequency constants
+            </summary>
+        </member>
+        <member name="F:accorda.Note.NoteMusicali.Mi_Basso">
+            <summary>
+            The mi basso
+            </summary>
+        </member>
+        <member name="F:accorda.Note.NoteMusicali.La">
+            <summary>
+            The la
+            </summary>
+        </member>
+        <member name="F:accorda.Note.NoteMusicali.Re">
+            <summary>
+            The re
+            </summary>
+        </member>
+        <member name="F:accorda.Note.NoteMusicali.Sol">
+            <summary>
+            The sol
+            </summary>
+        </member>
+        <member name="F:accorda.Note.NoteMusicali.Si">
+            <summary>
+            The si
+            </summary>
+        </member>
+        <member name="F:accorda.Note.NoteMusicali.Mi_Alto">
+            <summary>
+            The mi alto
+            </summary>
+        </member>
+    </members>
+</doc>
