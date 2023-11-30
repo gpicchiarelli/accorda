@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ic+7dbntxTSp3CndtNYS3oOOqi+pNJx/YLiu59dVkjfFHRoTROdChHmxNImLCthnFcwzegF504opv8+P8hYqEA==",
+  "dgSpecHash": "8D88inovhHbEA8fbmMY81N/y0LzBRJ8FjQ94xgyDF1nV9/AMsFYsLIb+rY/c0QZkkecW0WTWJ3jGaizct9Ag3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
   "expectedPackageFiles": [
@@ -24,20 +24,20 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Il pacchetto 'LiveCharts 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net7.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "message": "Il pacchetto 'LiveCharts 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net8.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
       "libraryId": "LiveCharts",
       "targetGraphs": [
-        "net7.0-windows7.0"
+        "net8.0-windows7.0"
       ]
     },
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Il pacchetto 'LiveCharts.Wpf 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net7.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "message": "Il pacchetto 'LiveCharts.Wpf 0.9.7' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net8.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
       "libraryId": "LiveCharts.Wpf",
       "targetGraphs": [
-        "net7.0-windows7.0"
+        "net8.0-windows7.0"
       ]
     }
   ]
