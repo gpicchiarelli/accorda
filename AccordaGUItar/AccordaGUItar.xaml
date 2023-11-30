@@ -38,18 +38,6 @@
             <ComboBoxItem Content="Corda 4 - Re [D] - 146.83Hz"/>
             <ComboBoxItem Content="Corda 5 - La [A] - 110Hz"/>
             <ComboBoxItem Content="Corda 6 - Mi (basso) [E] - 82.41Hz"/>
-        </ComboBox>        
-        <lvc:AngularGauge Name="gauge" 
-                          Margin="10" Grid.Row="5" 
-                          FromValue="-50" 
-                          ToValue="+50" 
-                          Width="200" 
-                          Height="200" 
-                          TicksForeground="White" 
-                          Foreground="WhiteSmoke" 
-                          FontWeight="Bold" FontSize="16"
-                          SectionsInnerRadius=".6"                              
-                          >
-        </lvc:AngularGauge>        
+        </ComboBox>
     </Grid>
 </Window>
