@@ -45,10 +45,6 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows7.0",
           "dependencies": {
-            "LiveCharts.Wpf": {
-              "target": "Package",
-              "version": "[0.9.7, )"
-            },
             "Markdig": {
               "target": "Package",
               "version": "[0.33.0, )"
