@@ -36,8 +36,6 @@ C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\Ac
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\AccordaGUItar.runtimeconfig.json
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\AccordaGUItar.dll
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\AccordaGUItar.pdb
-C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\LiveCharts.dll
-C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\LiveCharts.Wpf.dll
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\Markdig.dll
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\NAudio.dll
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\NAudio.Asio.dll
