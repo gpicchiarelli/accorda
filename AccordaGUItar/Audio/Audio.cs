@@ -1,7 +1,7 @@
-﻿using NAudio.Dsp;
-using NAudio.Wave;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using NAudio.Dsp;
+using NAudio.Wave;
 
 namespace Accorda.Audio
 {
