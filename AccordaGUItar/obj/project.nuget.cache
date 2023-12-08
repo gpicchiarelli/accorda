@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "glcInHMJICwiTJjt5DgHOOMzUF//19nbgawm0n1TbKeao9yTWcrUUmykImti/oNRNpFglADbjQxlL3PNnSI+Jw==",
+  "dgSpecHash": "X9HBe7wSFL+afighKIqkaX/T3I6AJvJCL3hJbNAuIXbPNLlamgl+sfhibeg145KDilJUAU7/Mpm6OdMy73+4FQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Giacomo\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\mahapps.metro\\2.4.10\\mahapps.metro.2.4.10.nupkg.sha512",
-    "C:\\Users\\Giacomo\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\markdig\\0.33.0\\markdig.0.33.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

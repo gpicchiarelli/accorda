@@ -49,10 +49,6 @@
               "target": "Package",
               "version": "[2.4.10, )"
             },
-            "MahApps.Metro.IconPacks": {
-              "target": "Package",
-              "version": "[4.11.0, )"
-            },
             "Markdig": {
               "target": "Package",
               "version": "[0.33.0, )"
