@@ -10,7 +10,7 @@ namespace AccordaGUItar.Audio
     {
         private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
-        private const int bufferSize = 2048;
+        private const int bufferSize = 512;
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
         private readonly BiQuadFilter filter;
@@ -19,7 +19,7 @@ namespace AccordaGUItar.Audio
         public event EventHandler<double> SmoothedFrequencyDetected;
 
         // Aggiunto un threshold per il volume minimo rilevabile
-        private double volumeThreshold = 0.03;
+        private double volumeThreshold = 0.005;
 
         public Audio(int InputDeviceSelector = 0)
         {
@@ -42,13 +42,10 @@ namespace AccordaGUItar.Audio
             return Math.Sqrt(complex.X * complex.X + complex.Y * complex.Y);
         }
 
-        private Queue<double> recentFrequencies = new Queue<double>();
-        private int windowSize = 20; // Dimensione della finestra mobile
-
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
             double maxVolume = CalculateMaxVolume(e);
-            if (e.Buffer.Length >= 2 * bufferSize -1)
+            if (e.Buffer.Length >= 2 * bufferSize)
             {
                 if (maxVolume > volumeThreshold)
                 {
@@ -77,35 +74,42 @@ namespace AccordaGUItar.Audio
                     }
 
                     double frequency = maxIndex * sampleRate / bufferSize;
-                    SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(frequency));
+                    SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(maxVolume,frequency));
                 }
                 else 
                 {
-                    SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0));
+                    //SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0,0));
                 }
             }
         }
 
-        private double determinaFrequenzaMisurata(double frequenzaRilevata) 
+
+        private Queue<double> recentFrequencies = new Queue<double>();
+        private List<double> recentSamples = new List<double>(); // Lista di campioni effettivi
+        private int windowSize = 5; // Dimensione della finestra mobile
+
+        private double determinaFrequenzaMisurata(double frequenzaRilevata, double maxVolume) 
         {
             recentFrequencies.Enqueue(frequenzaRilevata);
+            recentSamples.Add(maxVolume); // Aggiungi il campione effettivo
+
             if (recentFrequencies.Count > windowSize)
             {
-                recentFrequencies.Dequeue(); // Rimuovi il campione più vecchio se la finestra è piena
+                recentFrequencies.Dequeue(); // Rimuovi il campione di frequenza più vecchio se la finestra è piena
+                recentSamples.RemoveAt(0); // Rimuovi il campione effettivo più vecchio
             }
-            double averageFrequency = recentFrequencies.Average();
 
             double weightedSum = 0.0;
             double weightSum = 0.0;
             int position = 0;
-            foreach (double freq in recentFrequencies)
+
+            foreach (double sample in recentSamples)
             {
                 double weight = 1.0 / Math.Pow(2, position); // Assegna un peso decrescente ai campioni
-                weightedSum += freq * weight;
+                weightedSum += sample * weight;
                 weightSum += weight;
                 position++;
             }
-
             double weightedAverageFrequency = weightedSum / weightSum;
             return weightedAverageFrequency;
         }
