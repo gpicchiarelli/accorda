@@ -78,7 +78,7 @@ namespace AccordaGUItar.Audio
                 }
                 else 
                 {
-                    //SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0,0));
+                    SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0,0));
                 }
             }
         }
@@ -90,28 +90,37 @@ namespace AccordaGUItar.Audio
 
         private double determinaFrequenzaMisurata(double frequenzaRilevata, double maxVolume) 
         {
-            recentFrequencies.Enqueue(frequenzaRilevata);
-            recentSamples.Add(maxVolume); // Aggiungi il campione effettivo
-
-            if (recentFrequencies.Count > windowSize)
+            if (frequenzaRilevata == 0 && maxVolume == 0)
             {
-                recentFrequencies.Dequeue(); // Rimuovi il campione di frequenza più vecchio se la finestra è piena
-                recentSamples.RemoveAt(0); // Rimuovi il campione effettivo più vecchio
+                recentFrequencies.Clear();
+                recentSamples.Clear();
+                return 0;
             }
-
-            double weightedSum = 0.0;
-            double weightSum = 0.0;
-            int position = 0;
-
-            foreach (double sample in recentSamples)
+            else
             {
-                double weight = 1.0 / Math.Pow(2, position); // Assegna un peso decrescente ai campioni
-                weightedSum += sample * weight;
-                weightSum += weight;
-                position++;
+                recentFrequencies.Enqueue(frequenzaRilevata);
+                recentSamples.Add(maxVolume); // Aggiungi il campione effettivo
+
+                if (recentFrequencies.Count > windowSize)
+                {
+                    recentFrequencies.Dequeue(); // Rimuovi il campione di frequenza più vecchio se la finestra è piena
+                    recentSamples.RemoveAt(0); // Rimuovi il campione effettivo più vecchio
+                }
+
+                double weightedSum = 0.0;
+                double weightSum = 0.0;
+                int position = 0;
+
+                foreach (double sample in recentSamples)
+                {
+                    double weight = 1.0 / Math.Pow(2, position); // Assegna un peso decrescente ai campioni
+                    weightedSum += sample * weight;
+                    weightSum += weight;
+                    position++;
+                }
+                double weightedAverageFrequency = weightedSum / weightSum;
+                return weightedAverageFrequency;
             }
-            double weightedAverageFrequency = weightedSum / weightSum;
-            return weightedAverageFrequency;
         }
 
         private double CalculateMaxVolume(WaveInEventArgs e)
