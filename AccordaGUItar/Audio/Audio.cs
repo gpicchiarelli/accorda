@@ -14,11 +14,6 @@ namespace AccordaGUItar.Audio
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
 
-        private readonly double previousFrequency = 0.0;
-        private double alpha = 0.2; // Valore alpha per il calcolo della media pesata
-        private readonly double smoothedFrequency = 0.0;
-        private readonly BiQuadFilter filter;
-
         // Evento per notificare la frequenza media calcolata
         public event EventHandler<double> SmoothedFrequencyDetected;
 
@@ -47,7 +42,7 @@ namespace AccordaGUItar.Audio
         }
 
         private Queue<double> recentFrequencies = new Queue<double>();
-        private int windowSize = 1000; // Dimensione della finestra mobile
+        private int windowSize = 100; // Dimensione della finestra mobile
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
