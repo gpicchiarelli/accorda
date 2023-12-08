@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Windows;
-using NAudio.Wave;
 using System.Collections.Generic;
 using System.Windows.Controls;
-using System.Windows.Media;
 using accorda.Note;
+using MahApps.Metro.Controls;
+using System.Diagnostics;
+using System.Windows.Threading;
 
 namespace Accorda
 {
-    public partial class AccordaGUI : Window
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
+    public partial class AccordaGUI : MetroWindow
     {
         private Audio.Audio audioRecorder;
 
@@ -51,7 +53,7 @@ namespace Accorda
 
         private void Chiudi_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            //Close();            
         }
 
         private void SelezionaCorda_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -132,6 +134,11 @@ namespace Accorda
         private void MetroProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
+        }
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
         }
     }
 }

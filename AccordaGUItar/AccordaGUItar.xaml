@@ -1,9 +1,11 @@
-﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Accorda.AccordaGUI"
-        Title="Accordatore per Chitarra" Height="500" Width="400">
-    <Grid Background="#F5F5F5" Margin="0,0,0,-238">
+﻿<mah:MetroWindow x:Class="Accorda.AccordaGUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" xmlns:mah1="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" xmlns:mah2="http://schemas.microsoft.com/expression/blend/2008" xmlns:mah3="http://schemas.microsoft.com/netfx/2009/xaml/presentation" xmlns:mah4="http://schemas.microsoft.com/xps/2005/06" xmlns:mah5="http://schemas.microsoft.com/netfx/2007/xaml/presentation"
+                 Title="Accordatore per Chitarra" Height="500" Width="400"
+    ShowTitleBar="True" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -11,29 +13,25 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="100*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Menu>
-            <MenuItem Header="File">
-                <MenuItem Header="Licenza" Click="LeggiLicenza_Click"/>
-                <MenuItem Header="Chiudi" Click="Chiudi_Click"/>
-            </MenuItem>
-        </Menu>
+        <mah:WindowCommands Grid.Row="0">
+            <Button Content="Licenza" Click="LeggiLicenza_Click"/>
+            <Button Content="Chiudi" Click="Chiudi_Click"/>
+        </mah:WindowCommands>
 
-        <TextBlock Text="Accordatore per Chitarra" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="0"/>
+        <TextBlock Text="Accordatore per Chitarra" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="1"/>        
+            <ComboBox x:Name="InputDevices" HorizontalAlignment="Center" Width="300" Margin="0,20,0,0" SelectionChanged="InputDevices_SelectionChanged" Grid.Row="2"/>
 
-        <ComboBox x:Name="InputDevices" HorizontalAlignment="Center" Width="300" Margin="0,20,0,0" SelectionChanged="InputDevices_SelectionChanged" Grid.Row="1"/>
-
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
             <TextBlock x:Name="FrequenzaLabel" Text="Frequenza Rilevata:" FontSize="18" Margin="0,0,10,0" VerticalAlignment="Center"/>
             <TextBlock x:Name="FrequenzaAttuale" FontSize="36" FontWeight="Bold" VerticalAlignment="Center"/>
         </StackPanel>
 
-        <TextBlock Text="Seleziona Corda:" FontSize="18" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="3"/>
+        <TextBlock Text="Seleziona Corda:" FontSize="18" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="4"/>
 
-        <ComboBox x:Name="SelezionaCorda" HorizontalAlignment="Center" Width="300" Margin="0,10,0,20" Grid.Row="4" SelectionChanged="SelezionaCorda_SelectionChanged" Grid.RowSpan="2">
+        <ComboBox x:Name="SelezionaCorda" HorizontalAlignment="Center" Width="300" Margin="0,10,0,20" Grid.Row="5" SelectionChanged="SelezionaCorda_SelectionChanged">
             <ComboBoxItem Content="Corda 1 - Mi (alto) [E] - 329.63Hz"/>
             <ComboBoxItem Content="Corda 2 - Si [B] - 246.94Hz"/>
             <ComboBoxItem Content="Corda 3 - Sol [G] - 196Hz"/>
@@ -42,4 +40,4 @@
             <ComboBoxItem Content="Corda 6 - Mi (basso) [E] - 82.41Hz"/>
         </ComboBox>
     </Grid>
-</Window>
+</mah:MetroWindow>
