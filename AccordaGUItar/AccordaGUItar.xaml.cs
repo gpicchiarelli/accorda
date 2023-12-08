@@ -17,7 +17,6 @@ namespace Accorda
         public AccordaGUI()
         {
             InitializeComponent();
-
             audioRecorder = new Audio.Audio();
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
             InizializzaDispositiviIngresso();
@@ -80,6 +79,8 @@ namespace Accorda
             }
         }
 
+
+
         private void AvviaAccordatura()
         {
             if (FrequenzaAttuale.Text.Trim() != String.Empty)
@@ -124,16 +125,6 @@ namespace Accorda
                 }
             }
             return 0.0;
-        }
-
-        private void AccordaturaProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-
-        }
-
-        private void MetroProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-
         }
 
         private string GetDebuggerDisplay()
