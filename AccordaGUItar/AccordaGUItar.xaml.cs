@@ -92,7 +92,7 @@ namespace Accorda
             ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
             if (cordaSelezionata is not null)
             {
-                string cordaInfo = cordaSelezionata?.Content.ToString();
+                string? cordaInfo = cordaSelezionata?.Content.ToString();
 
                 if (cordaInfo is null) return 0;
 
