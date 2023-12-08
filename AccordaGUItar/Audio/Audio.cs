@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
+using MathNet.Numerics;
+using MathNet.Numerics.IntegralTransforms;
+using MathNet.Numerics.Statistics;
 using NAudio.Dsp;
 using NAudio.Wave;
+
 
 namespace AccordaGUItar.Audio
 {
@@ -10,7 +15,7 @@ namespace AccordaGUItar.Audio
     {
         private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
-        private const int bufferSize = 512;
+        private const int bufferSize = 2048;
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
         private readonly BiQuadFilter filter;
@@ -37,131 +42,81 @@ namespace AccordaGUItar.Audio
             waveIn.DataAvailable += WaveIn_DataAvailable;
             StartRecording();
         }
-        private double CalculateMagnitude(Complex complex)
-        {
-            return Math.Sqrt(complex.X * complex.X + complex.Y * complex.Y);
-        }
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
-            double maxVolume = CalculateMaxVolume(e);
             if (e.Buffer.Length >= 2 * bufferSize)
             {
+                double maxVolume = CalculateMaxVolume(e);
                 if (maxVolume > volumeThreshold)
                 {
-                    for (int i = 0; i < bufferSize; i++)
-                    {
-                        short sample = (short)(e.Buffer[2 * i + 1] << 8 | e.Buffer[2 * i]);
-                        buffer[i] = (float)sample / short.MaxValue;
-                        buffer[i] = filter.Transform(buffer[i]);
-                        complexBuffer[i].X = buffer[i];
-                        complexBuffer[i].Y = 0;
+                    double[] autocorrelation = CalculateAutocorrelation(e.Buffer);
+                    double[] autocorrelationAbsolutes = new double[autocorrelation.Length];
+                    for(int u = 0; u < autocorrelation.Length; u++) {
+                        autocorrelationAbsolutes[u] = Math.Abs(autocorrelation[u]);
                     }
-
-                    FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
-
-                    int maxIndex = 0;
-                    double maxMagnitude = 0;
-
-                    for (int i = 0; i < bufferSize / 2; i++)
+                    double averageCorrelationValue = autocorrelationAbsolutes.Average();
+                    if (averageCorrelationValue > correlationThreshold)
                     {
-                        double magnitude = CalculateMagnitude(complexBuffer[i]);
-                        if (magnitude > maxMagnitude)
+                        byte[] audioBuffer = e.Buffer; // Esempio di buffer audio
+                        Complex32[] complexBuffer = new Complex32[bufferSize];
+
+                        // Converti i dati audio in formato complesso
+                        for (int i = 0; i < bufferSize; i++)
                         {
-                            maxMagnitude = magnitude;
-                            maxIndex = i;
+                            short sample = (short)((audioBuffer[(2 * i) + 1] << 8) | audioBuffer[2 * i]);
+                            complexBuffer[i] = new Complex32(sample / (float)short.MaxValue, 0);
                         }
-                    }
 
-                    double frequency = maxIndex * sampleRate / bufferSize;
-                    SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(maxVolume,frequency));
-                }
-                else 
-                {
-                    //SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0,0));
+                        // Esegui la FFT
+                        Fourier.Forward(complexBuffer, FourierOptions.Default);
+
+                        // Calcola lo spettro delle frequenze
+                        double[] spectrum = new double[bufferSize / 2];
+                        for (int i = 0; i < bufferSize / 2; i++)
+                        {
+                            spectrum[i] = complexBuffer[i].MagnitudeSquared();
+                        }
+
+                        // Trova la frequenza dominante nello spettro
+                        int dominantIndex = spectrum.ToList().IndexOf(spectrum.Max());
+                        double dominantFrequency = (double)dominantIndex * sampleRate / bufferSize;
+
+                        // Calcola la frequenza media delle altre frequenze rispetto alla dominante
+                        double sum = 0.0;
+                        int count = 0;
+
+                        for (int i = 0; i < spectrum.Length; i++)
+                        {
+                            if (i != dominantIndex)
+                            {
+                                sum += (double)i * sampleRate / bufferSize;
+                                count++;
+                            }
+                        }
+                        double averageFrequency = sum / count;
+                        SmoothedFrequencyDetected?.Invoke(this, averageFrequency);
+                    }
                 }
             }
         }
 
-        private const int correlationWindowSize = 4096; // Dimensione della finestra per l'autocorrelazione
-        private double AutocorrelationFrequency(byte[] buffer)
+        private const int correlationWindowSize = bufferSize; // Dimensione della finestra per l'autocorrelazione
+        private const double correlationThreshold = 0.80; // Soglia di autocorrelazione
+
+        public double[] CalculateAutocorrelation(byte[] buffer)
         {
             double[] samples = new double[correlationWindowSize];
 
             // Copia i dati audio nel buffer in un array di double normalizzato
             for (int i = 0; i < correlationWindowSize / 2; i++)
             {
-                short sample = (short)((buffer[2 * i + 1] << 8) | buffer[2 * i]);
+                short sample = (short)((buffer[(2 * i) + 1] << 8) | buffer[2 * i]);
                 samples[i] = (double)sample / short.MaxValue;
             }
-
-            // Calcola la funzione di autocorrelazione
-            double[] autocorrelation = new double[correlationWindowSize];
-            for (int lag = 0; lag < correlationWindowSize; lag++)
-            {
-                double sum = 0.0;
-                for (int i = 0; i < correlationWindowSize - lag; i++)
-                {
-                    sum += samples[i] * samples[i + lag];
-                }
-                autocorrelation[lag] = sum;
-            }
-
-            // Trova il primo picco nell'autocorrelazione (escludendo il picco in posizione zero)
-            int skipFirstSamples = (int)(0.02 * sampleRate); // Ignora i primi 20 ms
-            int maxIndex = skipFirstSamples;
-            double maxAutocorrelation = autocorrelation[skipFirstSamples];
-            for (int i = skipFirstSamples + 1; i < correlationWindowSize / 2; i++)
-            {
-                if (autocorrelation[i] > maxAutocorrelation)
-                {
-                    maxAutocorrelation = autocorrelation[i];
-                    maxIndex = i;
-                }
-            }
-
-            // Calcola la frequenza corrispondente al picco trovato
-            double frequency = sampleRate / maxIndex;
-            return frequency;
-        }
-
-        private Queue<double> recentFrequencies = new Queue<double>();
-        private List<double> recentSamples = new List<double>(); // Lista di campioni effettivi
-        private int windowSize = 10; // Dimensione della finestra mobile
-
-        private double determinaFrequenzaMisurata(double frequenzaRilevata, double maxVolume) 
-        {
-            if (frequenzaRilevata == 0 && maxVolume == 0)
-            {
-                recentFrequencies.Clear();
-                recentSamples.Clear();
-                return 0;
-            }
-            else
-            {
-                recentFrequencies.Enqueue(frequenzaRilevata);
-                recentSamples.Add(maxVolume); // Aggiungi il campione effettivo
-
-                if (recentFrequencies.Count > windowSize)
-                {
-                    recentFrequencies.Dequeue(); // Rimuovi il campione di frequenza più vecchio se la finestra è piena
-                    recentSamples.RemoveAt(0); // Rimuovi il campione effettivo più vecchio
-                }
-
-                double weightedSum = 0.0;
-                double weightSum = 0.0;
-                int position = 0;
-
-                foreach (double sample in recentSamples)
-                {
-                    double weight = 1.0 / Math.Pow(2, position); // Assegna un peso decrescente ai campioni
-                    weightedSum += sample * weight;
-                    weightSum += weight;
-                    position++;
-                }
-                double weightedAverageFrequency = weightedSum / weightSum;
-                return weightedAverageFrequency;
-            }
+            // Calcola la funzione di autocorrelazione usando MathNet.Numerics
+            double[] autocorrelation = Correlation.Auto(samples);
+            return autocorrelation;
         }
 
         private double CalculateMaxVolume(WaveInEventArgs e)
@@ -170,7 +125,7 @@ namespace AccordaGUItar.Audio
 
             for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
-                short sample = (short)(e.Buffer[2 * i + 1] << 8 | e.Buffer[2 * i]);
+                short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
                 double normalizedSample = (double)sample / short.MaxValue;
                 double volume = Math.Abs(normalizedSample);
 

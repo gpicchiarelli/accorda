@@ -69,3 +69,4 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.pdb
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\ref\AccordaGUItar.dll
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\MathNet.Numerics.dll
