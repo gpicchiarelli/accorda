@@ -78,7 +78,7 @@ namespace AccordaGUItar.Audio
                 }
                 else 
                 {
-                    SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0,0));
+                    //SmoothedFrequencyDetected?.Invoke(this, determinaFrequenzaMisurata(0,0));
                 }
             }
         }
@@ -86,7 +86,7 @@ namespace AccordaGUItar.Audio
 
         private Queue<double> recentFrequencies = new Queue<double>();
         private List<double> recentSamples = new List<double>(); // Lista di campioni effettivi
-        private int windowSize = 5; // Dimensione della finestra mobile
+        private int windowSize = 10; // Dimensione della finestra mobile
 
         private double determinaFrequenzaMisurata(double frequenzaRilevata, double maxVolume) 
         {
