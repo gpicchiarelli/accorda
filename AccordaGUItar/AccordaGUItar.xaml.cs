@@ -128,5 +128,10 @@ namespace Accorda
         {
 
         }
+
+        private void MetroProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }
