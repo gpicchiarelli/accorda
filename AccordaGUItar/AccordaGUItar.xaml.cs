@@ -30,7 +30,6 @@ namespace Accorda
 
         private void InputDevices_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            // Aggiorna il dispositivo in ingresso selezionato
             int indiceDispositivoSelezionato = InputDevices.SelectedIndex;
             audioRecorder = new Audio.Audio(indiceDispositivoSelezionato);
             audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
@@ -44,6 +43,7 @@ namespace Accorda
                 AvviaAccordatura();
             });
         }
+
         private void LeggiLicenza_Click(object sender, RoutedEventArgs e)
         {
             // Codice per visualizzare la licenza
@@ -58,36 +58,32 @@ namespace Accorda
         {
             if (SelezionaCorda.SelectedIndex == 0)
             {
-                SelezionaCorda.SelectedIndex = -1; // Imposta la selezione su -1 per disabilitare la selezione della riga vuota
+                SelezionaCorda.SelectedIndex = -1;
             }
             else
             {
                 if (SelezionaCorda.SelectedIndex != -1)
                 {
-                    // Calcola la soglia in base alla corda selezionata
                     ComboBoxItem cordaSelezionata = (ComboBoxItem)SelezionaCorda.SelectedItem;
                     if (cordaSelezionata is not null)
                     {
                         string cordaInfo = cordaSelezionata.Content.ToString();
                         if (cordaInfo is not null)
                         {
-                            double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
-                            //gauge.FromValue = 0;
-                            //gauge.ToValue = targetFrequency * 2;
-                            // Avvia l'accordatura con la nuova soglia
+                            double targetFrequency = GetTargetFrequency();
                             AvviaAccordatura();
                         }
                     }
                 }
             }
         }
- 
+
         private void AvviaAccordatura()
         {
             if (FrequenzaAttuale.Text.Trim() != String.Empty)
             {
-                double targetFrequency = GetTargetFrequency(); // Ottieni la frequenza target in base alla corda selezionata dal ComboBox
-                double currentFrequency = double.Parse(FrequenzaAttuale.Text);                
+                double targetFrequency = GetTargetFrequency();
+                double currentFrequency = double.Parse(FrequenzaAttuale.Text);
             }
         }
 
@@ -125,9 +121,8 @@ namespace Accorda
                     return NoteMusicali.Mi_Basso;
                 }
             }
-            return 0.0; // Valore predefinito se non viene riconosciuta una corda
+            return 0.0;
         }
-
 
         private void AccordaturaProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
