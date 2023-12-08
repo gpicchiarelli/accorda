@@ -13,6 +13,7 @@ namespace AccordaGUItar.Audio
         private const int bufferSize = 2048;
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
+        private readonly BiQuadFilter filter;
 
         // Evento per notificare la frequenza media calcolata
         public event EventHandler<double> SmoothedFrequencyDetected;
@@ -108,15 +109,6 @@ namespace AccordaGUItar.Audio
             }
 
             return maxVolume;
-        }
-
-        // Metodo per impostare il valore alpha per il calcolo della media pesata
-        public void SetAlpha(double newAlpha)
-        {
-            if (newAlpha is >= 0 and <= 1)
-            {
-                alpha = newAlpha;
-            }
         }
 
         public List<string> ElencaDispositiviIngresso()
