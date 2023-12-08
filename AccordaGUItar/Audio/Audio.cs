@@ -83,6 +83,47 @@ namespace AccordaGUItar.Audio
             }
         }
 
+        private const int correlationWindowSize = 4096; // Dimensione della finestra per l'autocorrelazione
+        private double AutocorrelationFrequency(byte[] buffer)
+        {
+            double[] samples = new double[correlationWindowSize];
+
+            // Copia i dati audio nel buffer in un array di double normalizzato
+            for (int i = 0; i < correlationWindowSize / 2; i++)
+            {
+                short sample = (short)((buffer[2 * i + 1] << 8) | buffer[2 * i]);
+                samples[i] = (double)sample / short.MaxValue;
+            }
+
+            // Calcola la funzione di autocorrelazione
+            double[] autocorrelation = new double[correlationWindowSize];
+            for (int lag = 0; lag < correlationWindowSize; lag++)
+            {
+                double sum = 0.0;
+                for (int i = 0; i < correlationWindowSize - lag; i++)
+                {
+                    sum += samples[i] * samples[i + lag];
+                }
+                autocorrelation[lag] = sum;
+            }
+
+            // Trova il primo picco nell'autocorrelazione (escludendo il picco in posizione zero)
+            int skipFirstSamples = (int)(0.02 * sampleRate); // Ignora i primi 20 ms
+            int maxIndex = skipFirstSamples;
+            double maxAutocorrelation = autocorrelation[skipFirstSamples];
+            for (int i = skipFirstSamples + 1; i < correlationWindowSize / 2; i++)
+            {
+                if (autocorrelation[i] > maxAutocorrelation)
+                {
+                    maxAutocorrelation = autocorrelation[i];
+                    maxIndex = i;
+                }
+            }
+
+            // Calcola la frequenza corrispondente al picco trovato
+            double frequency = sampleRate / maxIndex;
+            return frequency;
+        }
 
         private Queue<double> recentFrequencies = new Queue<double>();
         private List<double> recentSamples = new List<double>(); // Lista di campioni effettivi
