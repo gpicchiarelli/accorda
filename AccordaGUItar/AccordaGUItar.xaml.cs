@@ -6,19 +6,20 @@ using accorda.Note;
 using MahApps.Metro.Controls;
 using System.Diagnostics;
 using System.Windows.Threading;
+using AccordaGUItar.Audio;
 
 namespace Accorda
 {
     [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
     public partial class AccordaGUI : MetroWindow
     {
-        private Audio.Audio audioRecorder;
+        private Audio audioRecorder;
 
         public AccordaGUI()
         {
             InitializeComponent();
-            audioRecorder = new Audio.Audio();
-            audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+            audioRecorder = new AccordaGUItar.Audio.Audio();
+            audioRecorder.SmoothedFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
             InizializzaDispositiviIngresso();
         }
 
@@ -31,9 +32,10 @@ namespace Accorda
 
         private void InputDevices_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+            //TODO verificare la sovrapposizione di concatenazioni di eventi
             int indiceDispositivoSelezionato = InputDevices.SelectedIndex;
-            audioRecorder = new Audio.Audio(indiceDispositivoSelezionato);
-            audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+            audioRecorder = new AccordaGUItar.Audio.Audio(indiceDispositivoSelezionato);
+            audioRecorder.SmoothedFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
         }
 
         private void AudioRecorder_DominantFrequencyDetected(object sender, double frequenzaDominante)

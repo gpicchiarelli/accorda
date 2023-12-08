@@ -1,91 +1,133 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using NAudio.Dsp;
 using NAudio.Wave;
 
-namespace Accorda.Audio
+namespace AccordaGUItar.Audio
 {
     public class Audio
     {
         private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
-        private const int bufferSize = 1024;
+        private const int bufferSize = 2048;
         private readonly float[] buffer;
         private readonly Complex[] complexBuffer;
+
+        private readonly double previousFrequency = 0.0;
+        private double alpha = 0.2; // Valore alpha per il calcolo della media pesata
+        private readonly double smoothedFrequency = 0.0;
         private readonly BiQuadFilter filter;
 
-        // Aggiunto un evento per rilevare la frequenza istantanea
-        public event EventHandler<double> DominantFrequencyDetected;
+        // Evento per notificare la frequenza media calcolata
+        public event EventHandler<double> SmoothedFrequencyDetected;
 
         // Aggiunto un threshold per il volume minimo rilevabile
-        private double volumeThreshold = 0.1;
+        private double volumeThreshold = 0.05;
 
         public Audio(int InputDeviceSelector = 0)
         {
             waveIn = new WaveInEvent
             {
                 DeviceNumber = InputDeviceSelector,
-                BufferMilliseconds = bufferSize * 1000 / sampleRate,
+                BufferMilliseconds = bufferSize * 1000 * 2 / sampleRate,
                 WaveFormat = new WaveFormat(sampleRate, 1)
             };
 
+            filter = BiQuadFilter.LowPassFilter(44100, 20000, 1);
+
             buffer = new float[bufferSize];
             complexBuffer = new Complex[bufferSize];
-            filter = BiQuadFilter.LowPassFilter(sampleRate, 1000, (float)0.7071);
-
             waveIn.DataAvailable += WaveIn_DataAvailable;
             StartRecording();
         }
+        private double CalculateMagnitude(Complex complex)
+        {
+            return Math.Sqrt(complex.X * complex.X + complex.Y * complex.Y);
+        }
+
+        private Queue<double> recentFrequencies = new Queue<double>();
+        private int windowSize = 1000; // Dimensione della finestra mobile
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
+        {
+            double maxVolume = CalculateMaxVolume(e);
+            if (e.Buffer.Length >= 2 * bufferSize -1)
+            {
+                if (maxVolume > volumeThreshold)
+                {
+                    for (int i = 0; i < bufferSize; i++)
+                    {
+                        short sample = (short)(e.Buffer[2 * i + 1] << 8 | e.Buffer[2 * i]);
+                        buffer[i] = (float)sample / short.MaxValue;
+                        buffer[i] = filter.Transform(buffer[i]);
+                        complexBuffer[i].X = buffer[i];
+                        complexBuffer[i].Y = 0;
+                    }
+
+                    FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
+
+                    int maxIndex = 0;
+                    double maxMagnitude = 0;
+
+                    for (int i = 0; i < bufferSize / 2; i++)
+                    {
+                        double magnitude = CalculateMagnitude(complexBuffer[i]);
+                        if (magnitude > maxMagnitude)
+                        {
+                            maxMagnitude = magnitude;
+                            maxIndex = i;
+                        }
+                    }
+
+                    double frequency = maxIndex * sampleRate / bufferSize;
+                    recentFrequencies.Enqueue(frequency);
+                    if (recentFrequencies.Count > windowSize)
+                    {
+                        recentFrequencies.Dequeue(); // Rimuovi il campione più vecchio se la finestra è piena
+                    }
+                    double averageFrequency = recentFrequencies.Average();
+                    /*
+                    // Calcolo della frequenza media pesata
+                    smoothedFrequency = (previousFrequency * alpha) + (frequency * (1 - alpha));
+                    previousFrequency = smoothedFrequency;
+                    */
+                    SmoothedFrequencyDetected?.Invoke(this, averageFrequency);
+                }
+            }
+        }
+        private double CalculateMaxVolume(WaveInEventArgs e)
         {
             double maxVolume = 0.0;
 
             for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
-                short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
-                buffer[i] = (float)sample / short.MaxValue;
-                buffer[i] = filter.Transform(buffer[i]);
-                complexBuffer[i].X = buffer[i];
-                complexBuffer[i].Y = 0;
+                short sample = (short)(e.Buffer[2 * i + 1] << 8 | e.Buffer[2 * i]);
+                double normalizedSample = (double)sample / short.MaxValue;
+                double volume = Math.Abs(normalizedSample);
 
-                double volume = Math.Abs(buffer[i]);
                 if (volume > maxVolume)
                 {
                     maxVolume = volume;
                 }
             }
 
-            if (maxVolume > volumeThreshold)
-            {
-                FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
-
-                int maxIndex = 0;
-                double maxMagnitude = 0;
-
-                for (int i = 0; i < bufferSize / 2; i++)
-                {
-                    double magnitude = CalculateMagnitude(complexBuffer[i]);
-                    if (magnitude > maxMagnitude)
-                    {
-                        maxMagnitude = magnitude;
-                        maxIndex = i;
-                    }
-                }
-                double frequency = maxIndex * sampleRate / bufferSize;
-                DominantFrequencyDetected?.Invoke(this, frequency);
-            }
+            return maxVolume;
         }
 
-        private double CalculateMagnitude(Complex complex)
+        // Metodo per impostare il valore alpha per il calcolo della media pesata
+        public void SetAlpha(double newAlpha)
         {
-            return Math.Sqrt((complex.X * complex.X) + (complex.Y * complex.Y));
+            if (newAlpha is >= 0 and <= 1)
+            {
+                alpha = newAlpha;
+            }
         }
 
         public List<string> ElencaDispositiviIngresso()
         {
             int inputDeviceCount = WaveInEvent.DeviceCount;
-            List<string> dispositivi = new();
+            List<string> dispositivi = [];
             for (int deviceIndex = 0; deviceIndex < inputDeviceCount; deviceIndex++)
             {
                 WaveInCapabilities deviceInfo = WaveInEvent.GetCapabilities(deviceIndex);
