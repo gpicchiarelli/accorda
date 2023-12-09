@@ -12,7 +12,7 @@ namespace AccordaGUItar.Audio
     {
         private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
-        private const int bufferSize = 32768;
+        private const int bufferSize = 65536;
         private readonly double[] buffer;
         private readonly Complex[] complexBuffer;
 
