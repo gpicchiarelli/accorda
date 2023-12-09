@@ -51,8 +51,10 @@ namespace AccordaGUItar.Audio
                                             .OrderByDescending(x => x.Value)
                                             .First().Index;
 
-            double frequency = indexOfMaxValue * sampleRate / buffer.Length;
-            return frequency;
+            double fundamentalFrequency = indexOfMaxValue * sampleRate / buffer.Length;
+
+            // Trova la prima armonica            
+            return fundamentalFrequency;
         }
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
@@ -66,7 +68,7 @@ namespace AccordaGUItar.Audio
             if (maxVolume > volumeThreshold)
             {
                 double frequency = CalculateFrequencyFromFFT(buffer);
-                float cutoffFrequency = (float)(frequency * 0.3); // filtraggio
+                float cutoffFrequency = (float)(frequency * 0.1); // filtraggio
 
                 BiQuadFilter filter = BiQuadFilter.LowPassFilter(sampleRate, cutoffFrequency, 1.0f);
                 for (int i = 0; i < buffer.Length; i++)
@@ -88,19 +90,6 @@ namespace AccordaGUItar.Audio
                 dispositivi.Add($"Dispositivo {deviceIndex + 1}: {deviceInfo.ProductName}");
             }
             return dispositivi;
-        }
-
-        private double[] CalculateAutocorrelation(double[] buffer)
-        {
-            double[] autocorrelation = new double[buffer.Length];
-            for (int lag = 0; lag < buffer.Length; lag++)
-            {
-                for (int i = 0; i < buffer.Length - lag; i++)
-                {
-                    autocorrelation[lag] += buffer[i] * buffer[i + lag];
-                }
-            }
-            return autocorrelation;
         }
 
         private void StartRecording()
