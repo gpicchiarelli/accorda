@@ -21,7 +21,7 @@ namespace AccordaGUItar.Audio
         public event EventHandler<double> SmoothedFrequencyDetected;
 
         // Aggiunto un threshold per il volume minimo rilevabile
-        private double volumeThreshold = 0.01;
+        private double volumeThreshold = 0.09;
 
         public Audio(int InputDeviceSelector = 0)
         {
@@ -74,7 +74,7 @@ namespace AccordaGUItar.Audio
             if (maxVolume > volumeThreshold)
             {
                 double frequency = CalculateFrequencyFromFFT(buffer);
-                float cutoffFrequency = (float)(frequency * 0.1); // filtraggio
+                float cutoffFrequency = (float)(frequency * 0.2); // filtraggio
 
                 BiQuadFilter filter = BiQuadFilter.LowPassFilter(sampleRate, cutoffFrequency, 1.0f);
                 for (int i = 0; i < buffer.Length; i++)
