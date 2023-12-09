@@ -13,6 +13,7 @@ namespace AccordaGUItar.Audio
         private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
         private const int bufferSize = 65536;
+        private const int requiredSamplesFor500ms = sampleRate / 2; // 500ms
         private readonly double[] buffer;
         private readonly Complex[] complexBuffer;
 
@@ -59,6 +60,11 @@ namespace AccordaGUItar.Audio
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
+            if (e.BytesRecorded < requiredSamplesFor500ms * 2) // Controlla almeno 500ms di suono (con campionamento stereo)
+            {
+                return; // Ignora il suono se non è abbastanza lungo
+            }
+
             for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
                 short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
