@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using MathNet.Numerics.IntegralTransforms;
 using MathNet.Numerics;
+using MathNet.Numerics.IntegralTransforms;
 using NAudio.Dsp;
 using NAudio.Wave;
 
@@ -66,9 +66,9 @@ namespace AccordaGUItar.Audio
             if (maxVolume > volumeThreshold)
             {
                 double frequency = CalculateFrequencyFromFFT(buffer);
-                float cutoffFrequency = (float)(frequency * 1.5);
+                float cutoffFrequency = (float)(frequency * 0.5);
 
-                var filter = BiQuadFilter.LowPassFilter(sampleRate, cutoffFrequency, 1.0f);
+                BiQuadFilter filter = BiQuadFilter.LowPassFilter(sampleRate, cutoffFrequency, 1.0f);
                 for (int i = 0; i < buffer.Length; i++)
                 {
                     buffer[i] = filter.Transform((float)buffer[i]);
@@ -102,13 +102,6 @@ namespace AccordaGUItar.Audio
                 }
             }
             return autocorrelation;
-        }
-
-        private int FindPeakFrequency(double[] autocorrelation)
-        {
-            double maxValue = autocorrelation.Max();
-            int peakIndex = Array.IndexOf(autocorrelation, maxValue);
-            return peakIndex != -1 ? peakIndex : 0;
         }
 
         private void StartRecording()
