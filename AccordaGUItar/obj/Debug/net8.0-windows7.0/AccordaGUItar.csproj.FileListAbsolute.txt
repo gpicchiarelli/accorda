@@ -31,6 +31,12 @@ C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\re
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.pdb
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.genruntimeconfig.cache
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\ref\AccordaGUItar.dll
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.csproj.AssemblyReference.cache
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.baml
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.g.cs
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\App.g.cs
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.cache
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.lref
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\AccordaGUItar.exe
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\AccordaGUItar.deps.json
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\AccordaGUItar.runtimeconfig.json
@@ -39,6 +45,7 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\ControlzEx.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\MahApps.Metro.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\Markdig.dll
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\MathNet.Numerics.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\Microsoft.Xaml.Behaviors.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\NAudio.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\NAudio.Asio.dll
@@ -48,12 +55,6 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\NAudio.WinForms.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\NAudio.WinMM.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\de\MahApps.Metro.resources.dll
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.csproj.AssemblyReference.cache
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.baml
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.g.cs
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\App.g.cs
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.cache
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.lref
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\App.baml
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.g.resources
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.Properties.Resources.resources
@@ -69,4 +70,3 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.pdb
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\ref\AccordaGUItar.dll
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\MathNet.Numerics.dll
