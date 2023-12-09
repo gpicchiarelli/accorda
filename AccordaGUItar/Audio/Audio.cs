@@ -62,15 +62,22 @@ namespace AccordaGUItar.Audio
                 short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
                 buffer[i] = (double)sample / short.MaxValue;
             }
-
             double maxVolume = buffer.Max(Math.Abs);
             if (maxVolume > volumeThreshold)
             {
                 double frequency = CalculateFrequencyFromFFT(buffer);
+                float cutoffFrequency = (float)(frequency * 1.5);
+
+                var filter = BiQuadFilter.LowPassFilter(sampleRate, cutoffFrequency, 1.0f);
+                for (int i = 0; i < buffer.Length; i++)
+                {
+                    buffer[i] = filter.Transform((float)buffer[i]);
+                }
+
+                frequency = CalculateFrequencyFromFFT(buffer);
                 SmoothedFrequencyDetected?.Invoke(this, frequency);
             }
         }
-
 
         public List<string> ElencaDispositiviIngresso()
         {
