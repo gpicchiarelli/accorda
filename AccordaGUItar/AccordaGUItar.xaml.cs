@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Windows;
-using NAudio.Wave;
 using System.Collections.Generic;
 using System.Windows.Controls;
-using System.Windows.Media;
 using accorda.Note;
+using MahApps.Metro.Controls;
+using System.Diagnostics;
+using System.Windows.Threading;
+using AccordaGUItar.Audio;
 
 namespace Accorda
 {
-    public partial class AccordaGUI : Window
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
+    public partial class AccordaGUI : MetroWindow
     {
-        private Audio.Audio audioRecorder;
+        private Audio audioRecorder;
 
         public AccordaGUI()
         {
             InitializeComponent();
-
-            audioRecorder = new Audio.Audio();
-            audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+            audioRecorder = new AccordaGUItar.Audio.Audio();
+            audioRecorder.SmoothedFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
             InizializzaDispositiviIngresso();
         }
 
@@ -30,9 +32,10 @@ namespace Accorda
 
         private void InputDevices_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+            //TODO verificare la sovrapposizione di concatenazioni di eventi
             int indiceDispositivoSelezionato = InputDevices.SelectedIndex;
-            audioRecorder = new Audio.Audio(indiceDispositivoSelezionato);
-            audioRecorder.DominantFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
+            audioRecorder = new AccordaGUItar.Audio.Audio(indiceDispositivoSelezionato);
+            audioRecorder.SmoothedFrequencyDetected += AudioRecorder_DominantFrequencyDetected;
         }
 
         private void AudioRecorder_DominantFrequencyDetected(object sender, double frequenzaDominante)
@@ -51,7 +54,7 @@ namespace Accorda
 
         private void Chiudi_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            //Close();            
         }
 
         private void SelezionaCorda_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -77,6 +80,8 @@ namespace Accorda
                 }
             }
         }
+
+
 
         private void AvviaAccordatura()
         {
@@ -124,9 +129,9 @@ namespace Accorda
             return 0.0;
         }
 
-        private void AccordaturaProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private string GetDebuggerDisplay()
         {
-
+            return ToString();
         }
     }
 }

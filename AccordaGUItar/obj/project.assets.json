@@ -2,6 +2,50 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "ControlzEx/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "MahApps.Metro/2.4.10": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "[4.4.0, 6.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ],
+        "resource": {
+          "lib/netcoreapp3.1/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
       "Markdig/0.33.0": {
         "type": "package",
         "compile": {
@@ -11,6 +55,19 @@
         },
         "runtime": {
           "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MathNet.Numerics/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MathNet.Numerics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MathNet.Numerics.dll": {
             "related": ".xml"
           }
         }
@@ -50,6 +107,22 @@
             "rid": "win"
           }
         }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       },
       "NAudio/2.2.1": {
         "type": "package",
@@ -215,10 +288,81 @@
             "rid": "win"
           }
         }
+      },
+      "System.Text.Json/4.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
   "libraries": {
+    "ControlzEx/4.4.0": {
+      "sha512": "pZ5z4hYWwE4R13UMCVs6vII//nL7hz+Nwn4oJlnsZJRGqJNy6Z9KnJiTZfly6lKFu0pMc1aWBZpx+VqFTQKP1Q==",
+      "type": "package",
+      "path": "controlzex/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "controlzex.4.4.0.nupkg.sha512",
+        "controlzex.nuspec",
+        "lib/net45/ControlzEx.dll",
+        "lib/net45/ControlzEx.pdb",
+        "lib/net45/ControlzEx.xml",
+        "lib/net462/ControlzEx.dll",
+        "lib/net462/ControlzEx.pdb",
+        "lib/net462/ControlzEx.xml",
+        "lib/netcoreapp3.0/ControlzEx.dll",
+        "lib/netcoreapp3.0/ControlzEx.pdb",
+        "lib/netcoreapp3.0/ControlzEx.xml",
+        "lib/netcoreapp3.1/ControlzEx.dll",
+        "lib/netcoreapp3.1/ControlzEx.pdb",
+        "lib/netcoreapp3.1/ControlzEx.xml",
+        "logo-mini.png"
+      ]
+    },
+    "MahApps.Metro/2.4.10": {
+      "sha512": "45exHKJCVYaD1/rNr3ekZPECEBM4uHOt6aYp6yNaJbliFMUo+d3z8Gi1xG+qEkbiHKITX+dlz+BW1FOsjAbl/w==",
+      "type": "package",
+      "path": "mahapps.metro/2.4.10",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MahApps.Metro.dll",
+        "lib/net452/MahApps.Metro.pdb",
+        "lib/net452/MahApps.Metro.xml",
+        "lib/net452/de/MahApps.Metro.resources.dll",
+        "lib/net46/MahApps.Metro.dll",
+        "lib/net46/MahApps.Metro.pdb",
+        "lib/net46/MahApps.Metro.xml",
+        "lib/net46/de/MahApps.Metro.resources.dll",
+        "lib/net47/MahApps.Metro.dll",
+        "lib/net47/MahApps.Metro.pdb",
+        "lib/net47/MahApps.Metro.xml",
+        "lib/net47/de/MahApps.Metro.resources.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.pdb",
+        "lib/netcoreapp3.0/MahApps.Metro.xml",
+        "lib/netcoreapp3.0/de/MahApps.Metro.resources.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.pdb",
+        "lib/netcoreapp3.1/MahApps.Metro.xml",
+        "lib/netcoreapp3.1/de/MahApps.Metro.resources.dll",
+        "mahapps.metro.2.4.10.nupkg.sha512",
+        "mahapps.metro.logo.png",
+        "mahapps.metro.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
     "Markdig/0.33.0": {
       "sha512": "wwjLxuVZyzOUpQkwMnP2eVOgCZzjHqSNsTOWxLQ1S9J5UIk43vsrgwyUBg1x7AX1MlxWH65Uyfsojm4LBwN6iw==",
       "type": "package",
@@ -238,6 +382,28 @@
         "markdig.nuspec",
         "markdig.png",
         "readme.md"
+      ]
+    },
+    "MathNet.Numerics/5.0.0": {
+      "sha512": "pg1W2VwaEQMAiTpGK840hZgzavnqjlCMTVSbtVCXVyT+7AX4mc1o89SPv4TBlAjhgCOo9c1Y+jZ5m3ti2YgGgA==",
+      "type": "package",
+      "path": "mathnet.numerics/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/net48/MathNet.Numerics.dll",
+        "lib/net48/MathNet.Numerics.xml",
+        "lib/net5.0/MathNet.Numerics.dll",
+        "lib/net5.0/MathNet.Numerics.xml",
+        "lib/net6.0/MathNet.Numerics.dll",
+        "lib/net6.0/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.5.0.0.nupkg.sha512",
+        "mathnet.numerics.nuspec"
       ]
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
@@ -302,6 +468,27 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.19": {
+      "sha512": "5sPWkbqImc2t1aQwIfJcKsUo7tOg1Tr8+6xVzZJB56Nzt4u9NlpcLofgdX/aRYpPKdWDA3U23Akw1KQzU5e82g==",
+      "type": "package",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.19",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net45/Microsoft.Xaml.Behaviors.dll",
+        "lib/net45/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net45/Microsoft.Xaml.Behaviors.xml",
+        "lib/netcoreapp3.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/netcoreapp3.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/netcoreapp3.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/netcoreapp3.0/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.19.nupkg.sha512",
+        "microsoft.xaml.behaviors.wpf.nuspec",
+        "tools/Install.ps1"
       ]
     },
     "NAudio/2.2.1": {
@@ -513,32 +700,56 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "System.Text.Json/4.7.2": {
+      "sha512": "TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "type": "package",
+      "path": "system.text.json/4.7.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.4.7.2.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "MahApps.Metro >= 2.4.10",
       "Markdig >= 0.33.0",
+      "MathNet.Numerics >= 5.0.0",
       "NAudio >= 2.2.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gpicc\\.nuget\\packages\\": {},
+    "C:\\Users\\Giacomo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gpicc\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
+      "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
       "projectName": "AccordaGUItar",
-      "projectPath": "C:\\Users\\gpicc\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
-      "packagesPath": "C:\\Users\\gpicc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gpicc\\source\\repos\\accorda\\AccordaGUItar\\obj\\",
+      "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
+      "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gpicc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Giacomo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -547,6 +758,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -565,9 +777,17 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows7.0",
         "dependencies": {
+          "MahApps.Metro": {
+            "target": "Package",
+            "version": "[2.4.10, )"
+          },
           "Markdig": {
             "target": "Package",
             "version": "[0.33.0, )"
+          },
+          "MathNet.Numerics": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "NAudio": {
             "target": "Package",

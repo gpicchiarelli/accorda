@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using MathNet.Numerics;
+using MathNet.Numerics.IntegralTransforms;
 using NAudio.Dsp;
 using NAudio.Wave;
 
-namespace Accorda.Audio
+namespace AccordaGUItar.Audio
 {
     public class Audio
     {
         private readonly WaveInEvent waveIn;
         private const int sampleRate = 44100;
-        private const int bufferSize = 1024;
-        private readonly float[] buffer;
+        private const int bufferSize = 65536;
+        private const int requiredSamplesFor500ms = sampleRate / 2; // 500ms
+        private readonly double[] buffer;
         private readonly Complex[] complexBuffer;
-        private readonly BiQuadFilter filter;
 
-        // Aggiunto un evento per rilevare la frequenza istantanea
-        public event EventHandler<double> DominantFrequencyDetected;
+        // Evento per notificare la frequenza media calcolata
+        public event EventHandler<double> SmoothedFrequencyDetected;
 
         // Aggiunto un threshold per il volume minimo rilevabile
-        private double volumeThreshold = 0.1;
+        private double volumeThreshold = 0.09;
 
         public Audio(int InputDeviceSelector = 0)
         {
@@ -29,63 +32,64 @@ namespace Accorda.Audio
                 WaveFormat = new WaveFormat(sampleRate, 1)
             };
 
-            buffer = new float[bufferSize];
+            buffer = new double[bufferSize];
             complexBuffer = new Complex[bufferSize];
-            filter = BiQuadFilter.LowPassFilter(sampleRate, 1000, (float)0.7071);
-
             waveIn.DataAvailable += WaveIn_DataAvailable;
             StartRecording();
         }
 
+        private double CalculateFrequencyFromFFT(double[] buffer)
+        {
+            Complex32[] fftBuffer = new Complex32[buffer.Length];
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                fftBuffer[i] = new Complex32((float)buffer[i], 0);
+            }
+
+            Fourier.Forward(fftBuffer, FourierOptions.NoScaling);
+
+            int indexOfMaxValue = fftBuffer.Select((value, index) => new { Value = value.Magnitude, Index = index })
+                                            .OrderByDescending(x => x.Value)
+                                            .First().Index;
+
+            double fundamentalFrequency = indexOfMaxValue * sampleRate / buffer.Length;
+
+            // Trova la prima armonica            
+            return fundamentalFrequency;
+        }
+
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
-            double maxVolume = 0.0;
+            if (e.BytesRecorded < requiredSamplesFor500ms * 2) // Controlla almeno 500ms di suono (con campionamento stereo)
+            {
+                return; // Ignora il suono se non è abbastanza lungo
+            }
 
             for (int i = 0; i < e.BytesRecorded / 2; i++)
             {
                 short sample = (short)((e.Buffer[(2 * i) + 1] << 8) | e.Buffer[2 * i]);
-                buffer[i] = (float)sample / short.MaxValue;
-                buffer[i] = filter.Transform(buffer[i]);
-                complexBuffer[i].X = buffer[i];
-                complexBuffer[i].Y = 0;
-
-                double volume = Math.Abs(buffer[i]);
-                if (volume > maxVolume)
-                {
-                    maxVolume = volume;
-                }
+                buffer[i] = (double)sample / short.MaxValue;
             }
-
+            double maxVolume = buffer.Max(Math.Abs);
             if (maxVolume > volumeThreshold)
             {
-                FastFourierTransform.FFT(true, (int)Math.Log(bufferSize, 2.0), complexBuffer);
+                double frequency = CalculateFrequencyFromFFT(buffer);
+                float cutoffFrequency = (float)(frequency * 0.2); // filtraggio
 
-                int maxIndex = 0;
-                double maxMagnitude = 0;
-
-                for (int i = 0; i < bufferSize / 2; i++)
+                BiQuadFilter filter = BiQuadFilter.LowPassFilter(sampleRate, cutoffFrequency, 1.0f);
+                for (int i = 0; i < buffer.Length; i++)
                 {
-                    double magnitude = CalculateMagnitude(complexBuffer[i]);
-                    if (magnitude > maxMagnitude)
-                    {
-                        maxMagnitude = magnitude;
-                        maxIndex = i;
-                    }
+                    buffer[i] = filter.Transform((float)buffer[i]);
                 }
-                double frequency = maxIndex * sampleRate / bufferSize;
-                DominantFrequencyDetected?.Invoke(this, frequency);
+                frequency = CalculateFrequencyFromFFT(buffer);
+                SmoothedFrequencyDetected?.Invoke(this, frequency);
             }
-        }
-
-        private double CalculateMagnitude(Complex complex)
-        {
-            return Math.Sqrt((complex.X * complex.X) + (complex.Y * complex.Y));
         }
 
         public List<string> ElencaDispositiviIngresso()
         {
             int inputDeviceCount = WaveInEvent.DeviceCount;
-            List<string> dispositivi = new();
+            List<string> dispositivi = [];
             for (int deviceIndex = 0; deviceIndex < inputDeviceCount; deviceIndex++)
             {
                 WaveInCapabilities deviceInfo = WaveInEvent.GetCapabilities(deviceIndex);
