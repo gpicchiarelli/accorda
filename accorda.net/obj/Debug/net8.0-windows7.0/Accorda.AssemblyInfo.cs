@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Accorda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c897857ad9c19dbffab7f2dd52d764500f1fe1f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dff57221c75a3b3e5a8773cb672f8583ebc76b5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Accorda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Accorda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
