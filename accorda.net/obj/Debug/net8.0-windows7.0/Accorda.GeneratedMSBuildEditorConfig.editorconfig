@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Accorda
-build_property.ProjectDir = C:\Users\gpicc\source\repos\accorda\accorda.net\
+build_property.ProjectDir = C:\Users\Giacomo\source\repos\accorda\accorda.net\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
