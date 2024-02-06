@@ -4,16 +4,20 @@
 winexe
 C#
 .cs
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\
 AccordaGUItar
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\App.xaml
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\App.xaml
 1-1812784380
 
 8-1335952047
+<<<<<<< HEAD
+218187268512
+=======
 218-1432647240
+>>>>>>> 97944d7f26be4d0da2210b9349167247074d26ad
 AccordaGUItar.xaml;
 
 False

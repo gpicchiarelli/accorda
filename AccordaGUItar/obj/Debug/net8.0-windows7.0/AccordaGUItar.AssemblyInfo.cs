@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccordaGUItar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97944d7f26be4d0da2210b9349167247074d26ad")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8234b0b7cf8aed43f7ee4d347cadd3a7a3aec123")]
+>>>>>>> 01f9ad862716b6557552d2da95db35a3ea0e0e8c
 [assembly: System.Reflection.AssemblyProductAttribute("AccordaGUItar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccordaGUItar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
