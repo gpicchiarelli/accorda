@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nVuFMlWtLC+BAoAldXm+0R4MtV9yrYfaeL4w0qck6IvRrJOUB1+xIXs26Nz/aiJCzhlBqs5y5KBLDR/N9iIjWA==",
+  "dgSpecHash": "d1jq9kOyPhj8VeAx7UGmsEZ9epXtqJh/72/8HPmz/Zl39FK0jqEkbvq5Eh3SasV9/8Y+Ph6NklX6UVk0b5DQTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
   "expectedPackageFiles": [
@@ -22,12 +22,5 @@
     "C:\\Users\\Giacomo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Si è verificato un problema durante la lettura del file di cache C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
