@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Accorda")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("accorda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8234b0b7cf8aed43f7ee4d347cadd3a7a3aec123")]
-[assembly: System.Reflection.AssemblyProductAttribute("Accorda")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Accorda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60ea9072fbb94ac21ad64b5c1358de2aec23771d")]
+[assembly: System.Reflection.AssemblyProductAttribute("accorda")]
+[assembly: System.Reflection.AssemblyTitleAttribute("accorda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/gpicchiarelli/accorda")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]

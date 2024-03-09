@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "xluSHpvtHjGik/7sJUGPVpPtnFtVeX8KtrixkWfhFrh8OEN7x3oNv1ovFe1ACsRPCfuYIZNfo6IBD2zsSajKbA==",
-=======
-  "dgSpecHash": "nVuFMlWtLC+BAoAldXm+0R4MtV9yrYfaeL4w0qck6IvRrJOUB1+xIXs26Nz/aiJCzhlBqs5y5KBLDR/N9iIjWA==",
->>>>>>> 97944d7f26be4d0da2210b9349167247074d26ad
+  "dgSpecHash": "d1jq9kOyPhj8VeAx7UGmsEZ9epXtqJh/72/8HPmz/Zl39FK0jqEkbvq5Eh3SasV9/8Y+Ph6NklX6UVk0b5DQTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.csproj",
   "expectedPackageFiles": [
