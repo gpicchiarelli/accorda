@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\",
+  "WorkspaceRootPath": "C:\\Users\\gpicc\\source\\repos\\accorda\\accorda.net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FE7E45F-0004-4245-B284-2C654AF5E5B2}|..\\AccordaGUItar\\AccordaGUItar.csproj|c:\\users\\giacomo\\source\\repos\\accorda\\accordaguitar\\accordaguitar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1FE7E45F-0004-4245-B284-2C654AF5E5B2}|..\\AccordaGUItar\\AccordaGUItar.csproj|c:\\users\\gpicc\\source\\repos\\accorda\\accordaguitar\\accordaguitar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,12 +31,12 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AccordaGUItar.xaml",
-              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.xaml",
+              "DocumentMoniker": "C:\\Users\\gpicc\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.xaml",
               "RelativeDocumentMoniker": "..\\AccordaGUItar\\AccordaGUItar.xaml",
-              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.xaml",
+              "ToolTip": "C:\\Users\\gpicc\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.xaml",
               "RelativeToolTip": "..\\AccordaGUItar\\AccordaGUItar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2023-12-10T09:19:05.626Z",
+              "WhenOpened": "2024-03-09T12:55:35.169Z",
               "EditorCaption": ""
             }
           ]

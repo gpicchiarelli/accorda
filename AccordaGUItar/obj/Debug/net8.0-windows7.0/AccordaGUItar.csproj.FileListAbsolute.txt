@@ -15,7 +15,6 @@ C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\Ac
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.baml
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.g.cs
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\App.g.cs
-C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_Content.g.cs
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.cache
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.g.resources
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.Properties.Resources.resources
@@ -25,7 +24,6 @@ C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\Ac
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.AssemblyInfo.cs
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.csproj.CoreCompileInputs.cache
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.sourcelink.json
-C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.csproj.CopyComplete
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.dll
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\refint\AccordaGUItar.dll
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.pdb
@@ -70,3 +68,11 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.pdb
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.genruntimeconfig.cache
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\ref\AccordaGUItar.dll
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\ControlzEx.dll
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\MahApps.Metro.dll
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\MathNet.Numerics.dll
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\Microsoft.Xaml.Behaviors.dll
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\de\MahApps.Metro.resources.dll
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.lref
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\App.baml
+C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaG.4EE8D8B3.Up2Date
