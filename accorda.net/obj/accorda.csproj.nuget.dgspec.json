@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {}
+    "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\Accorda.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\accorda.csproj": {
+    "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\Accorda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
-        "projectName": "accorda",
-        "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\accorda.csproj",
+        "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
+        "projectName": "Accorda",
+        "projectPath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\Accorda.csproj",
         "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda.net\\obj\\",
         "projectStyle": "PackageReference",
