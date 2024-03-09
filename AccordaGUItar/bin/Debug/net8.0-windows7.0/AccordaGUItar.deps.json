@@ -9,7 +9,7 @@
       "AccordaGUItar/1.0.0": {
         "dependencies": {
           "MahApps.Metro": "2.4.10",
-          "Markdig": "0.33.0",
+          "Markdig": "0.35.0",
           "MathNet.Numerics": "5.0.0",
           "NAudio": "2.2.1"
         },
@@ -45,11 +45,11 @@
           }
         }
       },
-      "Markdig/0.33.0": {
+      "Markdig/0.35.0": {
         "runtime": {
-          "lib/net6.0/Markdig.dll": {
-            "assemblyVersion": "0.33.0.0",
-            "fileVersion": "0.33.0.0"
+          "lib/net8.0/Markdig.dll": {
+            "assemblyVersion": "0.35.0.0",
+            "fileVersion": "0.35.0.0"
           }
         }
       },
@@ -187,12 +187,12 @@
       "path": "mahapps.metro/2.4.10",
       "hashPath": "mahapps.metro.2.4.10.nupkg.sha512"
     },
-    "Markdig/0.33.0": {
+    "Markdig/0.35.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wwjLxuVZyzOUpQkwMnP2eVOgCZzjHqSNsTOWxLQ1S9J5UIk43vsrgwyUBg1x7AX1MlxWH65Uyfsojm4LBwN6iw==",
-      "path": "markdig/0.33.0",
-      "hashPath": "markdig.0.33.0.nupkg.sha512"
+      "sha512": "sha512-OedDgytYj2SwnfEW1YB3SsoV9fJwQSCOBFYid6yShaeSBRxT27n5DVpig35vhE6UKB3R2z/dc1oJwc366MpiCg==",
+      "path": "markdig/0.35.0",
+      "hashPath": "markdig.0.35.0.nupkg.sha512"
     },
     "MathNet.Numerics/5.0.0": {
       "type": "package",

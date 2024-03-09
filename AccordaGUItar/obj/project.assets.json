@@ -46,15 +46,15 @@
           }
         }
       },
-      "Markdig/0.33.0": {
+      "Markdig/0.35.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Markdig.dll": {
+          "lib/net8.0/Markdig.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Markdig.dll": {
+          "lib/net8.0/Markdig.dll": {
             "related": ".xml"
           }
         }
@@ -363,10 +363,10 @@
         "tools/VisualStudioToolsManifest.xml"
       ]
     },
-    "Markdig/0.33.0": {
-      "sha512": "wwjLxuVZyzOUpQkwMnP2eVOgCZzjHqSNsTOWxLQ1S9J5UIk43vsrgwyUBg1x7AX1MlxWH65Uyfsojm4LBwN6iw==",
+    "Markdig/0.35.0": {
+      "sha512": "OedDgytYj2SwnfEW1YB3SsoV9fJwQSCOBFYid6yShaeSBRxT27n5DVpig35vhE6UKB3R2z/dc1oJwc366MpiCg==",
       "type": "package",
-      "path": "markdig/0.33.0",
+      "path": "markdig/0.35.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -374,11 +374,13 @@
         "lib/net462/Markdig.xml",
         "lib/net6.0/Markdig.dll",
         "lib/net6.0/Markdig.xml",
+        "lib/net8.0/Markdig.dll",
+        "lib/net8.0/Markdig.xml",
         "lib/netstandard2.0/Markdig.dll",
         "lib/netstandard2.0/Markdig.xml",
         "lib/netstandard2.1/Markdig.dll",
         "lib/netstandard2.1/Markdig.xml",
-        "markdig.0.33.0.nupkg.sha512",
+        "markdig.0.35.0.nupkg.sha512",
         "markdig.nuspec",
         "markdig.png",
         "readme.md"
@@ -727,7 +729,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "MahApps.Metro >= 2.4.10",
-      "Markdig >= 0.33.0",
+      "Markdig >= 0.35.0",
       "MathNet.Numerics >= 5.0.0",
       "NAudio >= 2.2.1"
     ]
@@ -788,7 +790,7 @@
           },
           "Markdig": {
             "target": "Package",
-            "version": "[0.33.0, )"
+            "version": "[0.35.0, )"
           },
           "MathNet.Numerics": {
             "target": "Package",
