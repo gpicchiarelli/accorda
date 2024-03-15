@@ -62,7 +62,6 @@ C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.AssemblyInfo.cs
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.csproj.CoreCompileInputs.cache
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.sourcelink.json
-C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.csproj.CopyComplete
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\refint\AccordaGUItar.dll
 C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar.pdb
@@ -76,3 +75,4 @@ C:\Users\gpicc\source\repos\accorda\AccordaGUItar\bin\Debug\net8.0-windows7.0\de
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaGUItar_MarkupCompile.lref
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\App.baml
 C:\Users\gpicc\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaG.4EE8D8B3.Up2Date
+C:\Users\Giacomo\source\repos\accorda\AccordaGUItar\obj\Debug\net8.0-windows7.0\AccordaG.4EE8D8B3.Up2Date
