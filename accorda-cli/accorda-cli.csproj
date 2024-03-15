@@ -19,4 +19,12 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Spectre.Console" Version="0.48.0" />
+    <PackageReference Include="Spectre.Console.Cli" Version="0.48.0" />
+    <PackageReference Include="Spectre.Console.Json" Version="0.48.0" />
+    <PackageReference Include="Spectre.Console.Testing" Version="0.48.0" />
+  </ItemGroup>
+
 </Project>

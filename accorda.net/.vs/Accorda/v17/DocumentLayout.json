@@ -6,6 +6,9 @@
       "AbsoluteMoniker": "D:0:0:{EB24C7FD-1135-4133-A17A-308CDBD542A2}|..\\accorda-cli\\accorda-cli.csproj|c:\\users\\giacomo\\source\\repos\\accorda\\accorda-cli\\accorda-cli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EB24C7FD-1135-4133-A17A-308CDBD542A2}|..\\accorda-cli\\accorda-cli.csproj|c:\\users\\giacomo\\source\\repos\\accorda\\accorda-cli\\audio\\audio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1FE7E45F-0004-4245-B284-2C654AF5E5B2}|..\\AccordaGUItar\\AccordaGUItar.csproj|c:\\users\\giacomo\\source\\repos\\accorda\\accordaguitar\\accordaguitar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -16,7 +19,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -32,20 +35,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Audio.cs",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda-cli\\Audio\\Audio.cs",
+              "RelativeDocumentMoniker": "..\\accorda-cli\\Audio\\Audio.cs",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda-cli\\Audio\\Audio.cs",
+              "RelativeToolTip": "..\\accorda-cli\\Audio\\Audio.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAvwA4AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T12:49:13.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "accorda-cli.cs",
               "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda-cli\\accorda-cli.cs",
               "RelativeDocumentMoniker": "..\\accorda-cli\\accorda-cli.cs",
               "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\accorda\\accorda-cli\\accorda-cli.cs",
               "RelativeToolTip": "..\\accorda-cli\\accorda-cli.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-15T12:45:56.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AccordaGUItar.xaml",
               "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\accorda\\AccordaGUItar\\AccordaGUItar.xaml",
               "RelativeDocumentMoniker": "..\\AccordaGUItar\\AccordaGUItar.xaml",

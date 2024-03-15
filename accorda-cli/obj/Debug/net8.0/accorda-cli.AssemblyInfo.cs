@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("accorda-cli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa2f59693ba199c1c97ede6c668daceb30f44ea4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d8bd854d670730fa091c1dab19d770eb4359adb")]
 [assembly: System.Reflection.AssemblyProductAttribute("accorda-cli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("accorda-cli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
