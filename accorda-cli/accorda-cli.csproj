@@ -9,14 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE" Link="LICENSE">
+    <Resource Include="..\LICENSE" Link="LICENSE">
       <PackagePath>\</PackagePath>
       <Pack>True</Pack>
-    </None>
-    <None Include="..\README.md" Link="README.md">
+    </Resource>
+    <Resource Include="..\README.md" Link="README.md">
       <PackagePath>\</PackagePath>
       <Pack>True</Pack>
-    </None>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +25,21 @@
     <PackageReference Include="Spectre.Console.Cli" Version="0.48.0" />
     <PackageReference Include="Spectre.Console.Json" Version="0.48.0" />
     <PackageReference Include="Spectre.Console.Testing" Version="0.48.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

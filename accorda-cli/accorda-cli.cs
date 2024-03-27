@@ -1,44 +1,44 @@
-﻿using System;
+﻿using System.Reflection;
 using Spectre.Console;
 
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         while (true)
         {
             AnsiConsole.Clear();
             PrintHeader();
             PrintMenu();
-            var choice = PromptInput();
+            string choice = PromptInput();
             ProcessChoice(choice);
         }
     }
 
-    static void PrintHeader()
+    private static void PrintHeader()
     {
         AnsiConsole.WriteLine();
         AnsiConsole.WriteLine("[bold underline green]Guitar Tuner[/]");
         AnsiConsole.WriteLine();
     }
 
-    static void PrintMenu()
+    private static void PrintMenu()
     {
         AnsiConsole.WriteLine("[yellow]Select an option:[/]");
-        AnsiConsole.WriteLine("  [yellow]1[/] - Tune Guitar");
-        AnsiConsole.WriteLine("  [yellow]2[/] - Read License");
-        AnsiConsole.WriteLine("  [yellow]3[/] - Exit");
+        AnsiConsole.WriteLine("[yellow]1[/] - Tune Guitar");
+        AnsiConsole.WriteLine("[yellow]2[/] - Read License");
+        AnsiConsole.WriteLine("[yellow]3[/] - Exit");
         AnsiConsole.WriteLine();
     }
 
-    static string PromptInput()
+    private static string PromptInput()
     {
         return AnsiConsole.Prompt(new TextPrompt<string>("Enter your choice:")
             .InvalidChoiceMessage("[red]Invalid choice[/]")
             .DefaultValue("1"));
     }
 
-    static void ProcessChoice(string choice)
+    private static void ProcessChoice(string choice)
     {
         switch (choice.ToLower())
         {
@@ -57,7 +57,7 @@ class Program
         }
     }
 
-    static void TuneGuitar()
+    private static void TuneGuitar()
     {
         // Implementare la logica per l'accordatura della chitarra
         AnsiConsole.WriteLine("[yellow]Tuning guitar...[/]");
@@ -66,19 +66,40 @@ class Program
         AnsiConsole.WriteLine("[green]Guitar tuned successfully![/]");
         AnsiConsole.WriteLine();
         AnsiConsole.WriteLine("[yellow]Press any key to continue...[/]");
-        Console.ReadKey();
+        _ = Console.ReadKey();
     }
 
-    static void ReadLicense()
+    private static void ReadLicense()
     {
+        string resourceName = "LICENSE"; // Sostituisci con il nome corretto
+
+        // Ottieni l'assembly corrente
+        var assembly = Assembly.GetExecutingAssembly();
+
+        // Leggi il contenuto del file di licenza
+        string licenseText = string.Empty;
+        using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+        {
+            if (stream == null)
+            {
+                Console.WriteLine("File di licenza non trovato.");
+                return;
+            }
+
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                licenseText = reader.ReadToEnd();
+            }
+        }
+
+
         // Leggere il testo della licenza dal file o da una risorsa
-        string licenseText = "License text goes here...";
         AnsiConsole.WriteLine();
-        AnsiConsole.WriteLine("[bold underline]License[/]");
+        AnsiConsole.WriteLine("[bold underline]Licenza[/]");
         AnsiConsole.WriteLine(licenseText);
         AnsiConsole.WriteLine();
-        AnsiConsole.WriteLine("[yellow]Press any key to continue...[/]");
-        Console.ReadKey();
+        AnsiConsole.WriteLine("[yellow]Premere per chiudere la licenza.[/]");
+        _ = Console.ReadKey();
     }
 }
 
