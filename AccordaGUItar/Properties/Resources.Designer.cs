@@ -93,20 +93,6 @@ namespace AccordaGUItar.Properties {
             }
         }
         
-        /// <summary>
-        ///   Cerca una stringa localizzata simile a MIT License
-        ///
-        ///Copyright (c) 2023 Giacomo Picchiarelli
-        ///
-        ///Permission is hereby granted, free of charge, to any person obtaining a copy
-        ///of this software and associated documentation files (the &quot;Software&quot;), to deal
-        ///in the Software without restriction, including without limitation the rights
-        ///to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-        ///copies of the Software, and to permit persons to whom the Software is
-        ///furnished to do so, subject to the following conditions:
-        ///
-        ///The above cop [stringa troncata]&quot;;.
-        /// </summary>
         public static string LICENSE {
             get {
                 return ResourceManager.GetString("LICENSE", resourceCulture);
@@ -122,27 +108,14 @@ namespace AccordaGUItar.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Icon simile a (Icona).
-        /// </summary>
+
         public static System.Drawing.Icon logoPictureBox_Image1 {
             get {
                 object obj = ResourceManager.GetObject("logoPictureBox_Image1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Cerca una stringa localizzata simile a # Accorda - Accordatore per Chitarra
-        ///
-        ///![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-        ///![Open Issues](https://img.shields.io/github/issues-raw/gpicchiarelli/accorda.svg)
-        ///![Open Pull Requests](https://img.shields.io/github/issues-pr-raw/gpicchiarelli/accorda.svg)
-        ///![Last Commit](https://img.shields.io/github/last-commit/gpicchiarelli/accorda.svg)
-        ///![Downloads](https://img.shields.io/github/downloads/gpicchiarelli/repo/accorda.svg)
-        ///![Stars](https://img.shields.io/github/stars/gpicchiar [stringa troncata]&quot;;.
-        /// </summary>
+
         public static string README {
             get {
                 return ResourceManager.GetString("README", resourceCulture);
