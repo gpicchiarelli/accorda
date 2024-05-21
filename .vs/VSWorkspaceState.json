@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AccordaGUItar",
+    "\\AccordaGUItar\\Audio"
   ],
-  "SelectedNode": "\\Accorda.sln",
+  "SelectedNode": "\\accorda.sln",
   "PreviewInSolutionExplorer": false
 }
