@@ -53,7 +53,15 @@
           "dependencies": {
             "Markdig": {
               "target": "Package",
-              "version": "[0.33.0, )"
+              "version": "[0.38.0, )"
+            },
+            "Microsoft.NETCore.Platforms": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.Win32.Registry": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "NAudio": {
               "target": "Package",
