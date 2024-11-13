@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("accorda")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86a15742e4e7504afc9c0c0b69db9bd42df179c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f933eb505937d83273d16f9c1ef1b2d75997f6cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("accorda")]
 [assembly: System.Reflection.AssemblyTitleAttribute("accorda")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
